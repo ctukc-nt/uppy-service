@@ -1,0 +1,1094 @@
+2016-03-11 10:56:19.5261|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 10:56:24.4033|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 10:56:24.4113|INFO|UPPY.ServerService.UppyService|Raise method: GetAllFileDrawingsOrders
+2016-03-11 10:57:57.9640|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 10:58:02.0057|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 10:58:02.0057|INFO|UPPY.ServerService.UppyService|Raise method: GetAllFileDrawingsOrders
+2016-03-11 10:59:56.0514|INFO|UPPY.ServerService.UppyService|End method: GetAllFileDrawingsOrders
+2016-03-11 11:01:29.8874|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:02:37.1428|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:02:37.1428|INFO|UPPY.ServerService.UppyService|Raise method: GetAllFileDrawingsOrders
+2016-03-11 11:04:32.3336|INFO|UPPY.ServerService.UppyService|End method: GetAllFileDrawingsOrders
+2016-03-11 11:09:40.7291|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:10:22.7208|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:10:22.7208|INFO|UPPY.ServerService.UppyService|Raise method: GetAllFileDrawingsOrders
+2016-03-11 11:12:19.8660|INFO|UPPY.ServerService.UppyService|End method: GetAllFileDrawingsOrders
+2016-03-11 11:13:21.1790|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:13:21.1790|INFO|UPPY.ServerService.UppyService|Raise method: GetAllFileDrawingsOrders
+2016-03-11 11:14:57.5521|INFO|UPPY.ServerService.UppyService|End method: GetAllFileDrawingsOrders
+2016-03-11 11:15:28.0751|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:16:21.5460|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:16:21.5460|INFO|UPPY.ServerService.UppyService|Raise method: GetAllFileDrawingsOrders
+2016-03-11 11:16:21.7520|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/1
+2016-03-11 11:16:21.7520|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200017/1
+2016-03-11 11:16:21.7520|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/2
+2016-03-11 11:16:21.7520|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100234/1
+2016-03-11 11:16:21.7520|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100234/2
+2016-03-11 11:16:22.5361|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100251/1
+2016-03-11 11:16:23.5351|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100252/1
+2016-03-11 11:16:24.5332|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100153/2
+2016-03-11 11:16:25.5356|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200019/1
+2016-03-11 11:16:26.5346|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200019/2
+2016-03-11 11:16:27.5367|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100154/2
+2016-03-11 11:16:28.5387|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100153/3
+2016-03-11 11:16:29.5345|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100154/3
+2016-03-11 11:16:30.5337|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100262/1
+2016-03-11 11:16:31.5383|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100263/1
+2016-03-11 11:16:32.5376|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100264/1
+2016-03-11 11:16:33.5358|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100265/1
+2016-03-11 11:16:34.5336|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100266/1
+2016-03-11 11:16:35.5344|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100267/1
+2016-03-11 11:16:36.5346|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200023/1
+2016-03-11 11:16:37.5413|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100262/2
+2016-03-11 11:16:38.5363|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100263/2
+2016-03-11 11:16:39.5335|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100264/2
+2016-03-11 11:16:40.5345|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100265/2
+2016-03-11 11:16:41.5470|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100266/2
+2016-03-11 11:16:42.5371|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100267/2
+2016-03-11 11:16:43.5343|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100235/1
+2016-03-11 11:16:44.5403|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100236/1
+2016-03-11 11:16:45.5354|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100235/2
+2016-03-11 11:16:46.5340|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100242/1
+2016-03-11 11:16:47.5361|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100242/2
+2016-03-11 11:16:48.5355|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100268/3
+2016-03-11 11:16:49.5365|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100269/3
+2016-03-11 11:16:50.5371|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100270/3
+2016-03-11 11:16:51.5375|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100271/3
+2016-03-11 11:16:52.5337|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100274/1
+2016-03-11 11:16:53.5328|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100275/1
+2016-03-11 11:16:54.5389|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100102/2
+2016-03-11 11:16:55.5340|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100103/2
+2016-03-11 11:16:56.5377|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100004/72
+2016-03-11 11:16:57.5326|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100276/1
+2016-03-11 11:16:58.5347|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100277/1
+2016-03-11 11:16:59.5340|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100224/1
+2016-03-11 11:17:00.5335|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100231/3
+2016-03-11 11:17:01.5383|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100232/3
+2016-03-11 11:17:02.5344|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200012/1
+2016-03-11 11:17:03.5331|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200013/1
+2016-03-11 11:17:04.5343|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100272/1
+2016-03-11 11:17:05.5347|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100273/1
+2016-03-11 11:17:06.5354|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100262/4
+2016-03-11 11:17:07.5336|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100241/3
+2016-03-11 11:17:08.5400|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200011/1
+2016-03-11 11:17:09.5370|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100276/4
+2016-03-11 11:17:10.5349|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100277/4
+2016-03-11 11:17:11.5338|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100231/4
+2016-03-11 11:17:12.5360|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100232/4
+2016-03-11 11:17:13.5358|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100198/5
+2016-03-11 11:17:14.5348|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100004/73
+2016-03-11 11:17:15.5346|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100229/2
+2016-03-11 11:17:16.5360|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100230/2
+2016-03-11 11:17:17.5337|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100251/4
+2016-03-11 11:17:18.5337|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100252/4
+2016-03-11 11:17:19.5342|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 370049 
+2016-03-11 11:17:20.5358|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 370050 
+2016-03-11 11:17:21.5345|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 370051 
+2016-03-11 11:17:22.5404|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 370052
+2016-03-11 11:17:23.5452|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100270/1
+2016-03-11 11:17:24.5343|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100271/1
+2016-03-11 11:17:25.5345|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100261/1
+2016-03-11 11:17:26.5367|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100260/1
+2016-03-11 11:17:27.5350|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100259/1
+2016-03-11 11:17:28.5338|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100258/1
+2016-03-11 11:17:29.5392|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100197/6
+2016-03-11 11:17:30.5342|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100270/2
+2016-03-11 11:17:31.5340|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100271/2
+2016-03-11 11:17:32.5338|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 370053
+2016-03-11 11:17:33.5410|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/3
+2016-03-11 11:17:34.5349|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100234/3
+2016-03-11 11:17:35.5356|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100256/3
+2016-03-11 11:17:36.5395|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100257/3
+2016-03-11 11:17:37.5366|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100282/3
+2016-03-11 11:17:38.5354|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100283/3
+2016-03-11 11:17:39.5351|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100295/1
+2016-03-11 11:17:40.5352|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200027/1
+2016-03-11 11:17:41.5344|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100004/74
+2016-03-11 11:17:42.5337|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100299/1
+2016-03-11 11:17:43.5348|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100298/1
+2016-03-11 11:17:44.5340|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100283/1
+2016-03-11 11:17:45.5340|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100282/1
+2016-03-11 11:17:46.5354|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100283/2
+2016-03-11 11:17:47.5380|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100282/2
+2016-03-11 11:17:48.5352|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100269/2
+2016-03-11 11:17:49.5330|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100268/2
+2016-03-11 11:17:50.5382|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100269/1
+2016-03-11 11:17:51.5373|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100268/1
+2016-03-11 11:17:52.5368|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 370054
+2016-03-11 11:18:01.7854|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 370054
+2016-03-11 11:18:03.0624|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100268/1
+2016-03-11 11:18:05.1115|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100269/1
+2016-03-11 11:18:05.1845|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100268/2
+2016-03-11 11:18:07.9297|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100282/2
+2016-03-11 11:18:08.0687|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100269/2
+2016-03-11 11:18:08.6297|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100283/2
+2016-03-11 11:18:08.8027|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100282/1
+2016-03-11 11:18:09.3237|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/3
+2016-03-11 11:18:09.5517|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100004/74
+2016-03-11 11:18:09.5737|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100283/1
+2016-03-11 11:18:09.6037|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100298/1
+2016-03-11 11:18:09.8898|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200027/1
+2016-03-11 11:18:10.1718|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100282/3
+2016-03-11 11:18:10.5658|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 370050 
+2016-03-11 11:18:10.5888|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100234/3
+2016-03-11 11:18:10.6668|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100259/1
+2016-03-11 11:18:10.9128|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100270/2
+2016-03-11 11:18:10.9248|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100283/3
+2016-03-11 11:18:11.0208|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100260/1
+2016-03-11 11:18:11.0928|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100295/1
+2016-03-11 11:18:11.0928|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 370052
+2016-03-11 11:18:11.1648|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100271/2
+2016-03-11 11:18:11.1888|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 370053
+2016-03-11 11:18:11.2618|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100271/1
+2016-03-11 11:18:11.3008|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 370051 
+2016-03-11 11:18:11.3008|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100230/2
+2016-03-11 11:18:11.3008|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100258/1
+2016-03-11 11:18:11.4208|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100252/4
+2016-03-11 11:18:11.4948|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100261/1
+2016-03-11 11:18:11.5588|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100299/1
+2016-03-11 11:18:11.5588|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100270/1
+2016-03-11 11:18:11.5938|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100197/6
+2016-03-11 11:18:11.5938|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100229/2
+2016-03-11 11:18:11.6848|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100256/3
+2016-03-11 11:18:11.7268|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100251/4
+2016-03-11 11:18:11.7568|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100004/73
+2016-03-11 11:18:11.7898|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100257/3
+2016-03-11 11:18:11.7948|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100232/4
+2016-03-11 11:18:11.8948|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100231/4
+2016-03-11 11:18:11.9169|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100276/4
+2016-03-11 11:18:11.9169|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 370049 
+2016-03-11 11:18:11.9469|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100262/4
+2016-03-11 11:18:11.9759|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100198/5
+2016-03-11 11:18:12.0249|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100241/3
+2016-03-11 11:18:12.2169|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200011/1
+2016-03-11 11:18:12.3369|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100272/1
+2016-03-11 11:18:12.5149|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100273/1
+2016-03-11 11:18:12.7679|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100277/4
+2016-03-11 11:18:12.8589|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200013/1
+2016-03-11 11:18:12.8759|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100231/3
+2016-03-11 11:18:13.0779|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200012/1
+2016-03-11 11:18:13.1569|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100224/1
+2016-03-11 11:18:13.2829|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100277/1
+2016-03-11 11:18:13.3879|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100004/72
+2016-03-11 11:18:13.4859|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100276/1
+2016-03-11 11:18:13.5299|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100103/2
+2016-03-11 11:18:13.6559|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100102/2
+2016-03-11 11:18:13.9489|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100275/1
+2016-03-11 11:18:13.9639|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100271/3
+2016-03-11 11:18:14.0139|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100274/1
+2016-03-11 11:18:14.1250|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100270/3
+2016-03-11 11:18:14.3810|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100269/3
+2016-03-11 11:18:14.4510|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100268/3
+2016-03-11 11:18:14.5930|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100242/2
+2016-03-11 11:18:14.8360|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100235/2
+2016-03-11 11:18:14.8610|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100232/3
+2016-03-11 11:18:15.0050|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100236/1
+2016-03-11 11:18:15.3000|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100267/2
+2016-03-11 11:18:15.3390|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100235/1
+2016-03-11 11:18:15.3570|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100242/1
+2016-03-11 11:18:15.5190|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100266/2
+2016-03-11 11:18:15.7480|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100265/2
+2016-03-11 11:18:15.9000|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100264/2
+2016-03-11 11:18:15.9800|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100263/2
+2016-03-11 11:18:16.2031|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100262/2
+2016-03-11 11:18:16.6521|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100267/1
+2016-03-11 11:18:16.8651|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100266/1
+2016-03-11 11:18:16.9801|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200023/1
+2016-03-11 11:18:17.0881|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100265/1
+2016-03-11 11:18:17.3781|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100264/1
+2016-03-11 11:18:17.6061|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100263/1
+2016-03-11 11:18:17.7131|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100154/3
+2016-03-11 11:18:17.7131|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100262/1
+2016-03-11 11:18:17.8901|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100153/3
+2016-03-11 11:18:18.0711|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100154/2
+2016-03-11 11:18:18.6822|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100153/2
+2016-03-11 11:18:18.8132|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100252/1
+2016-03-11 11:18:18.8452|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200019/2
+2016-03-11 11:18:18.9962|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200019/1
+2016-03-11 11:18:19.3542|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100251/1
+2016-03-11 11:18:19.4412|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100234/1
+2016-03-11 11:18:19.4802|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200017/1
+2016-03-11 11:18:19.6732|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/1
+2016-03-11 11:18:19.8592|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100234/2
+2016-03-11 11:18:19.9302|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/2
+2016-03-11 11:18:19.9302|INFO|UPPY.ServerService.UppyService|End method: GetAllFileDrawingsOrders
+2016-03-11 11:21:55.2246|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:21:55.2296|INFO|UPPY.ServerService.UppyService|Raise method: GetAllFileDrawingsOrders
+2016-03-11 11:21:55.2296|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/1
+2016-03-11 11:21:55.2296|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/2
+2016-03-11 11:21:55.2436|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100251/1
+2016-03-11 11:21:55.2296|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100234/2
+2016-03-11 11:21:55.2296|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200017/1
+2016-03-11 11:21:55.2296|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100234/1
+2016-03-11 11:21:55.2636|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200019/1
+2016-03-11 11:21:55.2636|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100153/2
+2016-03-11 11:21:55.2746|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100154/2
+2016-03-11 11:21:55.2886|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100252/1
+2016-03-11 11:21:55.2886|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200019/2
+2016-03-11 11:21:55.2886|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100262/1
+2016-03-11 11:21:55.3076|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100154/3
+2016-03-11 11:21:55.3076|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100153/3
+2016-03-11 11:21:55.3076|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100263/1
+2016-03-11 11:21:55.3076|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100264/1
+2016-03-11 11:21:55.3076|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100265/1
+2016-03-11 11:21:55.3076|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100266/1
+2016-03-11 11:21:55.8085|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100267/1
+2016-03-11 11:21:56.8079|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200023/1
+2016-03-11 11:21:57.8093|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100262/2
+2016-03-11 11:21:58.8089|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100263/2
+2016-03-11 11:21:59.8097|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100264/2
+2016-03-11 11:22:00.8086|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100265/2
+2016-03-11 11:22:01.8099|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100266/2
+2016-03-11 11:22:02.8078|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100267/2
+2016-03-11 11:22:03.8083|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100235/1
+2016-03-11 11:22:04.8145|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100236/1
+2016-03-11 11:22:05.8084|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100235/2
+2016-03-11 11:22:06.8083|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100242/1
+2016-03-11 11:22:07.8131|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100242/2
+2016-03-11 11:22:08.8076|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100268/3
+2016-03-11 11:22:09.8092|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100269/3
+2016-03-11 11:22:10.8071|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100270/3
+2016-03-11 11:22:11.8089|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100271/3
+2016-03-11 11:22:12.8090|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100274/1
+2016-03-11 11:22:13.8106|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100275/1
+2016-03-11 11:22:14.8089|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100102/2
+2016-03-11 11:22:15.8077|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100103/2
+2016-03-11 11:22:16.8082|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100004/72
+2016-03-11 11:22:17.8080|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100276/1
+2016-03-11 11:22:18.8069|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100277/1
+2016-03-11 11:22:19.8077|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100224/1
+2016-03-11 11:22:20.8086|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100231/3
+2016-03-11 11:22:21.8112|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100232/3
+2016-03-11 11:22:22.8083|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200012/1
+2016-03-11 11:22:23.8079|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200013/1
+2016-03-11 11:22:24.8081|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100272/1
+2016-03-11 11:22:25.8081|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100273/1
+2016-03-11 11:22:26.8074|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100262/4
+2016-03-11 11:22:27.8086|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100241/3
+2016-03-11 11:22:28.8083|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200011/1
+2016-03-11 11:22:29.8102|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100276/4
+2016-03-11 11:22:30.8083|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100277/4
+2016-03-11 11:22:31.8075|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100231/4
+2016-03-11 11:22:32.8077|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100232/4
+2016-03-11 11:22:33.8092|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100198/5
+2016-03-11 11:22:34.8087|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100004/73
+2016-03-11 11:22:35.8099|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100229/2
+2016-03-11 11:22:36.8090|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100230/2
+2016-03-11 11:22:37.8139|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100251/4
+2016-03-11 11:22:38.8091|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100252/4
+2016-03-11 11:22:39.8086|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 370049 
+2016-03-11 11:22:40.8073|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 370050 
+2016-03-11 11:22:41.8076|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 370051 
+2016-03-11 11:22:42.8098|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 370052
+2016-03-11 11:22:43.8125|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100270/1
+2016-03-11 11:22:44.8129|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100271/1
+2016-03-11 11:22:45.8087|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100261/1
+2016-03-11 11:22:46.8091|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100260/1
+2016-03-11 11:22:47.8074|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100259/1
+2016-03-11 11:22:48.8084|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100258/1
+2016-03-11 11:22:49.8087|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100197/6
+2016-03-11 11:22:50.8092|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100270/2
+2016-03-11 11:22:51.8087|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100271/2
+2016-03-11 11:22:52.8081|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 370053
+2016-03-11 11:22:53.8075|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/3
+2016-03-11 11:22:54.8088|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100234/3
+2016-03-11 11:22:55.8102|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100256/3
+2016-03-11 11:22:56.8127|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100257/3
+2016-03-11 11:22:57.8089|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100282/3
+2016-03-11 11:22:58.8087|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100283/3
+2016-03-11 11:22:59.8089|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100295/1
+2016-03-11 11:23:00.8085|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200027/1
+2016-03-11 11:23:01.8076|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100004/74
+2016-03-11 11:23:02.8089|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100299/1
+2016-03-11 11:23:03.8088|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100298/1
+2016-03-11 11:23:04.8105|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100283/1
+2016-03-11 11:23:05.8085|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100282/1
+2016-03-11 11:23:06.8085|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100283/2
+2016-03-11 11:23:07.8087|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100282/2
+2016-03-11 11:23:08.8085|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100269/2
+2016-03-11 11:23:09.8100|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100268/2
+2016-03-11 11:23:10.8080|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100269/1
+2016-03-11 11:23:11.8088|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100268/1
+2016-03-11 11:23:12.8105|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 370054
+2016-03-11 11:23:17.3401|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100268/1
+2016-03-11 11:23:17.3621|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 370054
+2016-03-11 11:23:17.5511|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100269/1
+2016-03-11 11:23:18.0612|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100268/2
+2016-03-11 11:23:18.5712|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100282/2
+2016-03-11 11:23:18.5912|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100269/2
+2016-03-11 11:23:19.5142|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100283/2
+2016-03-11 11:23:19.6432|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100282/1
+2016-03-11 11:23:20.4263|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100298/1
+2016-03-11 11:23:20.6163|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100283/1
+2016-03-11 11:23:20.7013|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100299/1
+2016-03-11 11:23:20.9723|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100004/74
+2016-03-11 11:23:21.3343|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200027/1
+2016-03-11 11:23:21.9463|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100283/3
+2016-03-11 11:23:21.9933|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100295/1
+2016-03-11 11:23:22.6974|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100282/3
+2016-03-11 11:23:22.9574|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100257/3
+2016-03-11 11:23:23.3464|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100256/3
+2016-03-11 11:23:23.5584|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100234/3
+2016-03-11 11:23:23.7204|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/3
+2016-03-11 11:23:23.8264|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 370053
+2016-03-11 11:23:24.2494|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100271/2
+2016-03-11 11:23:24.6785|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100270/2
+2016-03-11 11:23:24.7105|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100197/6
+2016-03-11 11:23:25.1075|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100258/1
+2016-03-11 11:23:25.2145|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100259/1
+2016-03-11 11:23:25.4265|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100260/1
+2016-03-11 11:23:26.2275|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100271/1
+2016-03-11 11:23:26.3425|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100270/1
+2016-03-11 11:23:26.5825|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100261/1
+2016-03-11 11:23:26.6556|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 370052
+2016-03-11 11:23:26.8666|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 370051 
+2016-03-11 11:23:27.0866|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 370050 
+2016-03-11 11:23:27.2346|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 370049 
+2016-03-11 11:23:27.3076|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100252/4
+2016-03-11 11:23:27.5946|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100251/4
+2016-03-11 11:23:27.6376|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100230/2
+2016-03-11 11:23:27.8306|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100229/2
+2016-03-11 11:23:27.9866|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100004/73
+2016-03-11 11:23:28.0926|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100198/5
+2016-03-11 11:23:28.3056|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100232/4
+2016-03-11 11:23:28.3866|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100231/4
+2016-03-11 11:23:28.5596|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100277/4
+2016-03-11 11:23:28.6886|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100276/4
+2016-03-11 11:23:29.0097|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100241/3
+2016-03-11 11:23:29.0627|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200011/1
+2016-03-11 11:23:29.1807|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100262/4
+2016-03-11 11:23:29.5517|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100273/1
+2016-03-11 11:23:29.6507|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100272/1
+2016-03-11 11:23:30.1277|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200013/1
+2016-03-11 11:23:30.6297|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200012/1
+2016-03-11 11:23:30.6817|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100232/3
+2016-03-11 11:23:30.6817|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100231/3
+2016-03-11 11:23:30.9888|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100224/1
+2016-03-11 11:23:31.2658|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100277/1
+2016-03-11 11:23:31.3148|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100004/72
+2016-03-11 11:23:31.4028|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100276/1
+2016-03-11 11:23:31.5618|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100103/2
+2016-03-11 11:23:31.7338|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100102/2
+2016-03-11 11:23:32.0198|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100275/1
+2016-03-11 11:23:32.0778|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100274/1
+2016-03-11 11:23:32.2928|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100271/3
+2016-03-11 11:23:32.3778|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100270/3
+2016-03-11 11:23:32.5928|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100269/3
+2016-03-11 11:23:32.7528|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100268/3
+2016-03-11 11:23:32.8668|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100242/2
+2016-03-11 11:23:33.0298|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100235/2
+2016-03-11 11:23:33.2449|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100236/1
+2016-03-11 11:23:33.5659|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100235/1
+2016-03-11 11:23:33.6229|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100242/1
+2016-03-11 11:23:33.6229|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100267/2
+2016-03-11 11:23:33.8169|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100266/2
+2016-03-11 11:23:34.0689|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100265/2
+2016-03-11 11:23:34.2649|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100264/2
+2016-03-11 11:23:34.3899|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100263/2
+2016-03-11 11:23:34.5819|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100262/2
+2016-03-11 11:23:35.1039|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100267/1
+2016-03-11 11:23:35.2019|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100265/1
+2016-03-11 11:23:35.4750|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100266/1
+2016-03-11 11:23:35.4920|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200023/1
+2016-03-11 11:23:35.6740|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100264/1
+2016-03-11 11:23:35.8580|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100262/1
+2016-03-11 11:23:36.1530|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100153/3
+2016-03-11 11:23:36.1530|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100263/1
+2016-03-11 11:23:36.2580|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100154/2
+2016-03-11 11:23:36.4330|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100154/3
+2016-03-11 11:23:36.9110|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100153/2
+2016-03-11 11:23:37.1950|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100252/1
+2016-03-11 11:23:37.3490|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200019/2
+2016-03-11 11:23:37.5661|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100234/2
+2016-03-11 11:23:37.5881|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200019/1
+2016-03-11 11:23:37.6021|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100251/1
+2016-03-11 11:23:37.8611|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200017/1
+2016-03-11 11:23:37.9331|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/2
+2016-03-11 11:23:38.0081|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100234/1
+2016-03-11 11:23:38.0611|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/1
+2016-03-11 11:23:38.0611|INFO|UPPY.ServerService.UppyService|End method: GetAllFileDrawingsOrders
+2016-03-11 11:28:03.8746|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:28:21.8473|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:28:21.8543|INFO|UPPY.ServerService.UppyService|Raise method: GetAllFileDrawingsOrders
+2016-03-11 11:28:22.0563|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/1
+2016-03-11 11:28:22.0563|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/2
+2016-03-11 11:28:22.0563|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100234/1
+2016-03-11 11:28:22.0563|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100234/2
+2016-03-11 11:28:22.8159|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200017/1
+2016-03-11 11:28:23.8177|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100251/1
+2016-03-11 11:28:24.8178|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100252/1
+2016-03-11 11:28:25.8201|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100153/2
+2016-03-11 11:28:26.8178|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200019/1
+2016-03-11 11:28:27.8179|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200019/2
+2016-03-11 11:28:28.8187|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100154/2
+2016-03-11 11:28:29.3307|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100153/3
+2016-03-11 11:28:30.3186|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100154/3
+2016-03-11 11:28:31.3174|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100262/1
+2016-03-11 11:28:32.3178|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100263/1
+2016-03-11 11:28:33.3211|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100264/1
+2016-03-11 11:28:34.3193|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100265/1
+2016-03-11 11:28:35.3195|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100266/1
+2016-03-11 11:28:36.3267|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100267/1
+2016-03-11 11:28:36.8195|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200023/1
+2016-03-11 11:28:37.8182|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100262/2
+2016-03-11 11:28:38.8204|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100263/2
+2016-03-11 11:28:39.8221|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100264/2
+2016-03-11 11:28:40.8187|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100265/2
+2016-03-11 11:28:41.8184|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100266/2
+2016-03-11 11:28:42.8190|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100267/2
+2016-03-11 11:28:43.8173|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100235/1
+2016-03-11 11:28:44.8216|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100236/1
+2016-03-11 11:28:45.8197|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100235/2
+2016-03-11 11:28:46.8183|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100242/1
+2016-03-11 11:28:47.8176|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100242/2
+2016-03-11 11:28:48.8186|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100268/3
+2016-03-11 11:28:49.3202|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100269/3
+2016-03-11 11:28:50.3185|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100270/3
+2016-03-11 11:28:51.3197|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100271/3
+2016-03-11 11:28:52.3190|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100274/1
+2016-03-11 11:28:53.3182|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100275/1
+2016-03-11 11:28:54.3184|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100102/2
+2016-03-11 11:28:55.3181|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100103/2
+2016-03-11 11:28:56.3194|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100004/72
+2016-03-11 11:28:57.3190|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100276/1
+2016-03-11 11:28:58.3186|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100277/1
+2016-03-11 11:28:59.3186|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100224/1
+2016-03-11 11:29:00.3190|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100231/3
+2016-03-11 11:29:01.3187|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100232/3
+2016-03-11 11:29:02.3184|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200012/1
+2016-03-11 11:29:03.3232|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200013/1
+2016-03-11 11:29:04.3191|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100272/1
+2016-03-11 11:29:05.3188|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100273/1
+2016-03-11 11:29:06.3190|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100262/4
+2016-03-11 11:29:07.3188|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100241/3
+2016-03-11 11:29:08.3189|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200011/1
+2016-03-11 11:29:09.3200|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100276/4
+2016-03-11 11:29:10.3225|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100277/4
+2016-03-11 11:29:11.3189|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100231/4
+2016-03-11 11:29:11.8213|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100232/4
+2016-03-11 11:29:12.8204|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100198/5
+2016-03-11 11:29:13.8203|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100004/73
+2016-03-11 11:29:14.8212|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100229/2
+2016-03-11 11:29:15.8195|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100230/2
+2016-03-11 11:29:16.8199|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100251/4
+2016-03-11 11:29:17.8204|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100252/4
+2016-03-11 11:29:18.8209|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 370049 
+2016-03-11 11:29:19.8191|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 370050 
+2016-03-11 11:29:20.8284|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 370051 
+2016-03-11 11:29:21.8201|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 370052
+2016-03-11 11:29:22.8191|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100270/1
+2016-03-11 11:29:23.8255|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100271/1
+2016-03-11 11:29:24.8199|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100261/1
+2016-03-11 11:29:25.8198|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100260/1
+2016-03-11 11:29:26.8213|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100259/1
+2016-03-11 11:29:27.3221|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100258/1
+2016-03-11 11:29:28.3204|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100197/6
+2016-03-11 11:29:29.3201|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100270/2
+2016-03-11 11:29:30.3203|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100271/2
+2016-03-11 11:29:31.3193|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 370053
+2016-03-11 11:29:32.3216|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/3
+2016-03-11 11:29:33.3187|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100234/3
+2016-03-11 11:29:34.3271|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100256/3
+2016-03-11 11:29:35.3206|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100257/3
+2016-03-11 11:29:36.3210|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100282/3
+2016-03-11 11:29:37.3194|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100283/3
+2016-03-11 11:29:38.3192|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100295/1
+2016-03-11 11:29:38.8220|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200027/1
+2016-03-11 11:29:40.2092|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100004/74
+2016-03-11 11:29:40.8204|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100299/1
+2016-03-11 11:29:41.8209|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100298/1
+2016-03-11 11:29:42.8192|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100283/1
+2016-03-11 11:29:43.3220|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100282/1
+2016-03-11 11:29:44.3233|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100283/2
+2016-03-11 11:29:45.3233|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100282/2
+2016-03-11 11:29:46.3205|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100269/2
+2016-03-11 11:29:47.3194|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100268/2
+2016-03-11 11:29:48.3239|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100269/1
+2016-03-11 11:29:48.8227|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100268/1
+2016-03-11 11:29:49.8233|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 370054
+2016-03-11 11:29:56.8145|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100269/1
+2016-03-11 11:29:56.9165|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 370054
+2016-03-11 11:29:56.9315|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100268/2
+2016-03-11 11:29:56.9835|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100283/2
+2016-03-11 11:29:56.9835|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100269/2
+2016-03-11 11:29:57.0095|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100282/1
+2016-03-11 11:29:57.0715|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100299/1
+2016-03-11 11:29:57.1215|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100298/1
+2016-03-11 11:29:57.1375|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100282/2
+2016-03-11 11:29:57.1585|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100004/74
+2016-03-11 11:29:57.3375|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100282/3
+2016-03-11 11:29:57.3845|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100295/1
+2016-03-11 11:29:57.3985|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200027/1
+2016-03-11 11:29:57.5245|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100257/3
+2016-03-11 11:29:57.7055|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100256/3
+2016-03-11 11:29:57.9716|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100283/1
+2016-03-11 11:29:57.9716|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100234/3
+2016-03-11 11:29:58.2006|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/3
+2016-03-11 11:29:58.4406|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 370053
+2016-03-11 11:29:58.6956|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100271/2
+2016-03-11 11:29:58.9056|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100270/2
+2016-03-11 11:29:59.1906|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100197/6
+2016-03-11 11:29:59.6556|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100258/1
+2016-03-11 11:29:59.8707|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100259/1
+2016-03-11 11:30:00.1807|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100260/1
+2016-03-11 11:30:00.4187|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100261/1
+2016-03-11 11:30:00.7967|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100271/1
+2016-03-11 11:30:01.0777|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100270/1
+2016-03-11 11:30:01.1697|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 370052
+2016-03-11 11:30:01.4447|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 370051 
+2016-03-11 11:30:01.6888|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 370050 
+2016-03-11 11:30:01.9548|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 370049 
+2016-03-11 11:30:02.2248|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100252/4
+2016-03-11 11:30:02.4528|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100251/4
+2016-03-11 11:30:02.6558|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100230/2
+2016-03-11 11:30:02.9638|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100229/2
+2016-03-11 11:30:03.1598|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100004/73
+2016-03-11 11:30:03.4308|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100198/5
+2016-03-11 11:30:03.7009|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100232/4
+2016-03-11 11:30:03.9229|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100231/4
+2016-03-11 11:30:04.0819|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100283/3
+2016-03-11 11:30:04.3259|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100277/4
+2016-03-11 11:30:04.5299|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100276/4
+2016-03-11 11:30:04.9469|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100241/3
+2016-03-11 11:30:05.0219|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200011/1
+2016-03-11 11:30:05.2099|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100262/4
+2016-03-11 11:30:05.6510|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100273/1
+2016-03-11 11:30:05.9690|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100272/1
+2016-03-11 11:30:06.4050|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200013/1
+2016-03-11 11:30:06.5450|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100232/3
+2016-03-11 11:30:06.6350|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200012/1
+2016-03-11 11:30:06.8110|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100231/3
+2016-03-11 11:30:07.3761|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100224/1
+2016-03-11 11:30:07.5871|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100277/1
+2016-03-11 11:30:07.8061|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100276/1
+2016-03-11 11:30:07.8351|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100004/72
+2016-03-11 11:30:08.1041|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100103/2
+2016-03-11 11:30:08.3561|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100102/2
+2016-03-11 11:30:08.6871|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100268/1
+2016-03-11 11:30:08.7701|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100275/1
+2016-03-11 11:30:09.1171|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100274/1
+2016-03-11 11:30:09.2032|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100271/3
+2016-03-11 11:30:09.4282|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100270/3
+2016-03-11 11:30:09.6212|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100269/3
+2016-03-11 11:30:09.8312|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100268/3
+2016-03-11 11:30:10.0732|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100242/2
+2016-03-11 11:30:10.4912|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100235/2
+2016-03-11 11:30:10.6352|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100236/1
+2016-03-11 11:30:10.9412|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100242/1
+2016-03-11 11:30:11.0613|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100267/2
+2016-03-11 11:30:11.0613|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100235/1
+2016-03-11 11:30:11.3193|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100266/2
+2016-03-11 11:30:11.5743|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100265/2
+2016-03-11 11:30:11.7973|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100264/2
+2016-03-11 11:30:11.9743|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100263/2
+2016-03-11 11:30:12.1893|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100262/2
+2016-03-11 11:30:12.7953|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100267/1
+2016-03-11 11:30:12.9614|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100266/1
+2016-03-11 11:30:13.0794|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200023/1
+2016-03-11 11:30:13.2284|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100265/1
+2016-03-11 11:30:13.5444|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100264/1
+2016-03-11 11:30:13.8224|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100263/1
+2016-03-11 11:30:13.8994|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100262/1
+2016-03-11 11:30:13.9734|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100154/3
+2016-03-11 11:30:14.2114|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100153/3
+2016-03-11 11:30:14.4094|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100154/2
+2016-03-11 11:30:15.1995|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100153/2
+2016-03-11 11:30:15.3165|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200019/2
+2016-03-11 11:30:15.3285|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100252/1
+2016-03-11 11:30:15.5755|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200019/1
+2016-03-11 11:30:15.8875|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100251/1
+2016-03-11 11:30:15.9365|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100234/1
+2016-03-11 11:30:16.1465|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100234/2
+2016-03-11 11:30:16.3265|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/2
+2016-03-11 11:30:16.4295|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/1
+2016-03-11 11:30:16.5775|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200017/1
+2016-03-11 11:30:16.5775|INFO|UPPY.ServerService.UppyService|End method: GetAllFileDrawingsOrders
+2016-03-11 11:33:41.4218|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:33:57.5116|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:33:57.5116|INFO|UPPY.ServerService.UppyService|Raise method: GetAllFileDrawingsOrders
+2016-03-11 11:33:57.6806|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/1
+2016-03-11 11:33:57.6806|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100234/1
+2016-03-11 11:33:57.6806|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100234/2
+2016-03-11 11:33:57.6806|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/2
+2016-03-11 11:33:58.4969|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200017/1
+2016-03-11 11:33:59.4989|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100251/1
+2016-03-11 11:34:00.5133|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100252/1
+2016-03-11 11:34:01.4996|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100153/2
+2016-03-11 11:34:02.4995|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200019/1
+2016-03-11 11:34:03.5151|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200019/2
+2016-03-11 11:34:04.5002|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100154/2
+2016-03-11 11:34:05.4988|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100153/3
+2016-03-11 11:34:06.5000|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100154/3
+2016-03-11 11:34:07.5017|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100262/1
+2016-03-11 11:34:08.4993|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100263/1
+2016-03-11 11:34:09.5164|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100264/1
+2016-03-11 11:34:10.5009|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100265/1
+2016-03-11 11:34:11.4990|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100266/1
+2016-03-11 11:34:12.4997|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100267/1
+2016-03-11 11:34:13.4997|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200023/1
+2016-03-11 11:34:14.5003|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100262/2
+2016-03-11 11:34:15.4992|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100263/2
+2016-03-11 11:34:16.5000|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100264/2
+2016-03-11 11:34:17.4990|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100265/2
+2016-03-11 11:34:18.5004|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100266/2
+2016-03-11 11:34:19.5010|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100267/2
+2016-03-11 11:34:20.4992|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100235/1
+2016-03-11 11:34:21.4988|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100236/1
+2016-03-11 11:34:22.5009|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100235/2
+2016-03-11 11:34:23.4997|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100242/1
+2016-03-11 11:34:24.4990|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100242/2
+2016-03-11 11:34:25.5040|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100268/3
+2016-03-11 11:34:26.4996|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100269/3
+2016-03-11 11:34:27.4993|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100270/3
+2016-03-11 11:34:28.4998|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100271/3
+2016-03-11 11:34:29.5087|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100274/1
+2016-03-11 11:34:30.5002|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100275/1
+2016-03-11 11:34:31.4999|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100102/2
+2016-03-11 11:34:32.4988|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100103/2
+2016-03-11 11:34:33.5013|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100004/72
+2016-03-11 11:34:34.4997|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100276/1
+2016-03-11 11:34:35.5003|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100277/1
+2016-03-11 11:34:36.5131|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100224/1
+2016-03-11 11:34:37.4996|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100231/3
+2016-03-11 11:34:38.5000|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100232/3
+2016-03-11 11:34:39.5058|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200012/1
+2016-03-11 11:34:40.4994|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200013/1
+2016-03-11 11:34:41.5027|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100272/1
+2016-03-11 11:34:42.5061|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100273/1
+2016-03-11 11:34:43.5001|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100262/4
+2016-03-11 11:34:44.5002|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100241/3
+2016-03-11 11:34:45.5007|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200011/1
+2016-03-11 11:34:46.5011|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100276/4
+2016-03-11 11:34:47.4999|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100277/4
+2016-03-11 11:34:48.4999|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100231/4
+2016-03-11 11:34:49.5019|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100232/4
+2016-03-11 11:34:50.5007|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100198/5
+2016-03-11 11:34:51.5026|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100004/73
+2016-03-11 11:34:52.5116|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100229/2
+2016-03-11 11:34:53.5017|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100230/2
+2016-03-11 11:34:54.5018|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100251/4
+2016-03-11 11:34:55.5005|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100252/4
+2016-03-11 11:34:56.5009|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 370049 
+2016-03-11 11:34:57.5017|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 370050 
+2016-03-11 11:34:58.5020|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 370051 
+2016-03-11 11:34:59.5122|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 370052
+2016-03-11 11:35:00.5020|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100270/1
+2016-03-11 11:35:01.4991|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100271/1
+2016-03-11 11:35:02.5025|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100261/1
+2016-03-11 11:35:03.5034|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100260/1
+2016-03-11 11:35:04.5051|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100259/1
+2016-03-11 11:35:05.5003|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100258/1
+2016-03-11 11:35:06.5103|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100197/6
+2016-03-11 11:35:07.5001|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100270/2
+2016-03-11 11:35:08.4995|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100271/2
+2016-03-11 11:35:09.5165|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 370053
+2016-03-11 11:35:10.5018|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/3
+2016-03-11 11:35:11.5001|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100234/3
+2016-03-11 11:35:12.5013|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100256/3
+2016-03-11 11:35:13.5004|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100257/3
+2016-03-11 11:35:14.5013|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100282/3
+2016-03-11 11:35:15.5021|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100283/3
+2016-03-11 11:35:16.5003|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100295/1
+2016-03-11 11:35:17.5020|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200027/1
+2016-03-11 11:35:18.5007|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100004/74
+2016-03-11 11:35:19.4998|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100299/1
+2016-03-11 11:35:20.5003|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100298/1
+2016-03-11 11:35:21.5055|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100283/1
+2016-03-11 11:35:22.5003|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100282/1
+2016-03-11 11:35:23.5188|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100283/2
+2016-03-11 11:35:24.4999|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100282/2
+2016-03-11 11:35:25.5005|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100269/2
+2016-03-11 11:35:26.5063|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100268/2
+2016-03-11 11:35:27.5011|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100269/1
+2016-03-11 11:35:28.5009|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100268/1
+2016-03-11 11:35:29.4999|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 370054
+2016-03-11 11:35:37.4013|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 370054
+2016-03-11 11:35:37.4183|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100268/1
+2016-03-11 11:35:37.4723|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100269/1
+2016-03-11 11:35:37.6103|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100269/2
+2016-03-11 11:35:37.6393|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100282/2
+2016-03-11 11:35:37.6913|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100283/2
+2016-03-11 11:35:37.7853|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100282/1
+2016-03-11 11:35:38.2433|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100298/1
+2016-03-11 11:35:38.3263|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100004/74
+2016-03-11 11:35:38.3483|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100268/2
+2016-03-11 11:35:38.5364|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200027/1
+2016-03-11 11:35:38.7664|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100283/3
+2016-03-11 11:35:38.8534|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100295/1
+2016-03-11 11:35:38.8534|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100283/1
+2016-03-11 11:35:38.9684|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100282/3
+2016-03-11 11:35:39.0894|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100256/3
+2016-03-11 11:35:39.1224|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100257/3
+2016-03-11 11:35:39.1714|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100234/3
+2016-03-11 11:35:39.2164|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 370053
+2016-03-11 11:35:39.2914|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100271/2
+2016-03-11 11:35:39.3544|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100270/2
+2016-03-11 11:35:39.3924|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/3
+2016-03-11 11:35:39.5314|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100197/6
+2016-03-11 11:35:39.6244|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100258/1
+2016-03-11 11:35:39.8764|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100260/1
+2016-03-11 11:35:39.8874|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100259/1
+2016-03-11 11:35:40.3044|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100261/1
+2016-03-11 11:35:40.3174|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100270/1
+2016-03-11 11:35:40.3324|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100271/1
+2016-03-11 11:35:40.5104|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 370052
+2016-03-11 11:35:40.7495|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 370051 
+2016-03-11 11:35:40.9745|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 370050 
+2016-03-11 11:35:41.0745|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 370049 
+2016-03-11 11:35:41.3675|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100252/4
+2016-03-11 11:35:41.5555|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100251/4
+2016-03-11 11:35:41.7505|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100230/2
+2016-03-11 11:35:41.8575|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100229/2
+2016-03-11 11:35:42.1005|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100004/73
+2016-03-11 11:35:42.2745|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100198/5
+2016-03-11 11:35:42.5195|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100232/4
+2016-03-11 11:35:42.6475|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100231/4
+2016-03-11 11:35:42.8116|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100277/4
+2016-03-11 11:35:43.0396|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100276/4
+2016-03-11 11:35:43.4006|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100241/3
+2016-03-11 11:35:43.4866|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200011/1
+2016-03-11 11:35:43.6456|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100262/4
+2016-03-11 11:35:44.0586|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100273/1
+2016-03-11 11:35:44.1866|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100272/1
+2016-03-11 11:35:44.5606|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200013/1
+2016-03-11 11:35:44.6626|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200012/1
+2016-03-11 11:35:44.6836|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100232/3
+2016-03-11 11:35:44.9397|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100231/3
+2016-03-11 11:35:45.3627|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100224/1
+2016-03-11 11:35:45.5017|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100277/1
+2016-03-11 11:35:45.5987|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100299/1
+2016-03-11 11:35:45.7017|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100276/1
+2016-03-11 11:35:45.7347|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100004/72
+2016-03-11 11:35:45.9907|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100103/2
+2016-03-11 11:35:46.2237|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100102/2
+2016-03-11 11:35:46.5437|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100275/1
+2016-03-11 11:35:46.7847|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100274/1
+2016-03-11 11:35:46.8237|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100271/3
+2016-03-11 11:35:47.0628|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100270/3
+2016-03-11 11:35:47.2478|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100269/3
+2016-03-11 11:35:47.4448|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100268/3
+2016-03-11 11:35:47.6548|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100242/2
+2016-03-11 11:35:48.0358|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100235/2
+2016-03-11 11:35:48.2398|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100236/1
+2016-03-11 11:35:48.4198|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100242/1
+2016-03-11 11:35:48.5518|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100235/1
+2016-03-11 11:35:48.6788|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100267/2
+2016-03-11 11:35:48.9048|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100266/2
+2016-03-11 11:35:49.1278|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100265/2
+2016-03-11 11:35:49.3089|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100264/2
+2016-03-11 11:35:49.4559|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100263/2
+2016-03-11 11:35:49.6839|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100262/2
+2016-03-11 11:35:50.2419|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100267/1
+2016-03-11 11:35:50.3749|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100266/1
+2016-03-11 11:35:50.5029|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200023/1
+2016-03-11 11:35:50.6229|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100265/1
+2016-03-11 11:35:50.8339|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100264/1
+2016-03-11 11:35:51.1119|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100263/1
+2016-03-11 11:35:51.2799|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100262/1
+2016-03-11 11:35:51.3099|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100154/3
+2016-03-11 11:35:51.5520|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100153/3
+2016-03-11 11:35:51.7330|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100154/2
+2016-03-11 11:35:52.3650|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200019/2
+2016-03-11 11:35:52.4530|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100153/2
+2016-03-11 11:35:52.5500|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100252/1
+2016-03-11 11:35:52.7240|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200019/1
+2016-03-11 11:35:52.9590|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100251/1
+2016-03-11 11:35:53.0790|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/2
+2016-03-11 11:35:53.1790|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/1
+2016-03-11 11:35:53.3570|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100234/1
+2016-03-11 11:35:53.5671|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100234/2
+2016-03-11 11:35:53.6561|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200017/1
+2016-03-11 11:35:53.6561|INFO|UPPY.ServerService.UppyService|End method: GetAllFileDrawingsOrders
+2016-03-11 11:38:10.3671|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:38:44.0377|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:38:44.0377|INFO|UPPY.ServerService.UppyService|Raise method: GetAllFileDrawingsOrders
+2016-03-11 11:38:44.2137|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/1
+2016-03-11 11:38:44.2137|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/2
+2016-03-11 11:38:44.2137|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100234/2
+2016-03-11 11:38:44.2137|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200017/1
+2016-03-11 11:38:44.2137|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100234/1
+2016-03-11 11:38:44.9500|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100251/1
+2016-03-11 11:38:45.9423|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100252/1
+2016-03-11 11:38:46.9418|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100153/2
+2016-03-11 11:38:47.9429|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200019/1
+2016-03-11 11:38:48.9435|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200019/2
+2016-03-11 11:38:49.9432|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100154/2
+2016-03-11 11:38:50.9425|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100153/3
+2016-03-11 11:38:51.9414|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100154/3
+2016-03-11 11:38:52.9423|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100262/1
+2016-03-11 11:38:53.9426|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100263/1
+2016-03-11 11:38:54.9420|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100264/1
+2016-03-11 11:38:55.9425|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100265/1
+2016-03-11 11:38:56.9426|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100266/1
+2016-03-11 11:38:57.9436|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100267/1
+2016-03-11 11:38:58.9414|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200023/1
+2016-03-11 11:38:59.9436|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100262/2
+2016-03-11 11:39:00.9419|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100263/2
+2016-03-11 11:39:01.9426|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100264/2
+2016-03-11 11:39:02.9427|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100265/2
+2016-03-11 11:39:03.9432|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100266/2
+2016-03-11 11:39:04.9436|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100267/2
+2016-03-11 11:39:05.9420|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100235/1
+2016-03-11 11:39:06.9432|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100236/1
+2016-03-11 11:39:07.9421|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100235/2
+2016-03-11 11:39:08.9438|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100242/1
+2016-03-11 11:39:09.9420|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100242/2
+2016-03-11 11:39:10.9425|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100268/3
+2016-03-11 11:39:11.9420|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100269/3
+2016-03-11 11:39:12.9445|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100270/3
+2016-03-11 11:39:13.9434|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100271/3
+2016-03-11 11:39:14.9461|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100274/1
+2016-03-11 11:39:15.9466|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100275/1
+2016-03-11 11:39:16.9441|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100102/2
+2016-03-11 11:39:17.9428|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100103/2
+2016-03-11 11:39:18.9424|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100004/72
+2016-03-11 11:39:19.9422|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100276/1
+2016-03-11 11:39:20.9473|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100277/1
+2016-03-11 11:39:21.9430|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100224/1
+2016-03-11 11:39:22.9436|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100231/3
+2016-03-11 11:39:23.9452|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100232/3
+2016-03-11 11:39:24.9421|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200012/1
+2016-03-11 11:39:25.9418|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200013/1
+2016-03-11 11:39:26.9441|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100272/1
+2016-03-11 11:39:27.9445|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100273/1
+2016-03-11 11:39:28.9417|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100262/4
+2016-03-11 11:39:29.9432|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100241/3
+2016-03-11 11:39:30.9451|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200011/1
+2016-03-11 11:39:31.9441|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100276/4
+2016-03-11 11:39:32.9429|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100277/4
+2016-03-11 11:39:33.9437|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100231/4
+2016-03-11 11:39:34.9436|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100232/4
+2016-03-11 11:39:35.9420|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100198/5
+2016-03-11 11:39:36.9416|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100004/73
+2016-03-11 11:39:37.9451|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100229/2
+2016-03-11 11:39:38.9436|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100230/2
+2016-03-11 11:39:39.9425|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100251/4
+2016-03-11 11:39:40.9443|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100252/4
+2016-03-11 11:39:41.9414|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 370049 
+2016-03-11 11:39:42.9435|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 370050 
+2016-03-11 11:39:43.9450|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 370051 
+2016-03-11 11:39:44.9431|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 370052
+2016-03-11 11:39:45.9424|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100270/1
+2016-03-11 11:39:46.9426|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100271/1
+2016-03-11 11:39:47.9434|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100261/1
+2016-03-11 11:39:48.9566|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100260/1
+2016-03-11 11:39:49.9439|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100259/1
+2016-03-11 11:39:50.9429|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100258/1
+2016-03-11 11:39:51.9412|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100197/6
+2016-03-11 11:39:52.9481|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100270/2
+2016-03-11 11:39:53.9432|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100271/2
+2016-03-11 11:39:54.9424|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 370053
+2016-03-11 11:39:56.0066|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/3
+2016-03-11 11:39:56.9444|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100234/3
+2016-03-11 11:39:57.9440|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100256/3
+2016-03-11 11:39:58.9427|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100257/3
+2016-03-11 11:39:59.9424|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100282/3
+2016-03-11 11:40:00.9480|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100283/3
+2016-03-11 11:40:01.9468|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100295/1
+2016-03-11 11:40:02.9412|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 200027/1
+2016-03-11 11:40:03.9449|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100004/74
+2016-03-11 11:40:04.9426|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100299/1
+2016-03-11 11:40:05.9443|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100298/1
+2016-03-11 11:40:06.9413|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100283/1
+2016-03-11 11:40:07.9418|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100282/1
+2016-03-11 11:40:08.9413|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100283/2
+2016-03-11 11:40:09.9436|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100282/2
+2016-03-11 11:40:10.9430|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100269/2
+2016-03-11 11:40:11.9453|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100268/2
+2016-03-11 11:40:12.9432|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100269/1
+2016-03-11 11:40:13.9430|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100268/1
+2016-03-11 11:40:14.9421|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 370054
+2016-03-11 11:40:19.5851|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 370054
+2016-03-11 11:40:19.6091|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100268/1
+2016-03-11 11:40:19.7041|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100269/1
+2016-03-11 11:40:19.8541|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100268/2
+2016-03-11 11:40:20.0081|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100269/2
+2016-03-11 11:40:20.0541|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100282/2
+2016-03-11 11:40:20.2831|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100283/2
+2016-03-11 11:40:20.4291|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100282/1
+2016-03-11 11:40:20.7901|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100298/1
+2016-03-11 11:40:21.0222|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100299/1
+2016-03-11 11:40:21.1592|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100283/1
+2016-03-11 11:40:21.1592|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100004/74
+2016-03-11 11:40:21.6112|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200027/1
+2016-03-11 11:40:21.7602|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100295/1
+2016-03-11 11:40:21.8602|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100283/3
+2016-03-11 11:40:22.0892|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100282/3
+2016-03-11 11:40:22.3112|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100257/3
+2016-03-11 11:40:22.4622|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100256/3
+2016-03-11 11:40:22.6302|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100234/3
+2016-03-11 11:40:22.8702|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/3
+2016-03-11 11:40:23.0452|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 370053
+2016-03-11 11:40:23.2313|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100271/2
+2016-03-11 11:40:23.5383|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100270/2
+2016-03-11 11:40:23.7413|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100197/6
+2016-03-11 11:40:24.0073|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100258/1
+2016-03-11 11:40:24.3813|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100259/1
+2016-03-11 11:40:24.5913|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100260/1
+2016-03-11 11:40:24.8313|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100261/1
+2016-03-11 11:40:25.0623|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100271/1
+2016-03-11 11:40:25.3064|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100270/1
+2016-03-11 11:40:25.3694|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 370052
+2016-03-11 11:40:25.5194|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 370051 
+2016-03-11 11:40:25.7184|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 370050 
+2016-03-11 11:40:25.9404|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 370049 
+2016-03-11 11:40:26.1114|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100252/4
+2016-03-11 11:40:26.2854|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100251/4
+2016-03-11 11:40:26.5704|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100230/2
+2016-03-11 11:40:26.7594|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100229/2
+2016-03-11 11:40:26.9414|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100004/73
+2016-03-11 11:40:27.2584|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100198/5
+2016-03-11 11:40:27.4695|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100232/4
+2016-03-11 11:40:27.6445|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100231/4
+2016-03-11 11:40:27.8175|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100277/4
+2016-03-11 11:40:28.0375|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100276/4
+2016-03-11 11:40:28.4265|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200011/1
+2016-03-11 11:40:28.5375|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100262/4
+2016-03-11 11:40:28.9265|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100273/1
+2016-03-11 11:40:29.0645|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100272/1
+2016-03-11 11:40:29.2375|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100241/3
+2016-03-11 11:40:29.5555|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200013/1
+2016-03-11 11:40:29.6636|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100232/3
+2016-03-11 11:40:29.8166|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200012/1
+2016-03-11 11:40:29.9126|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100231/3
+2016-03-11 11:40:30.3156|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100224/1
+2016-03-11 11:40:30.6956|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100277/1
+2016-03-11 11:40:30.8746|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100276/1
+2016-03-11 11:40:30.9016|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100004/72
+2016-03-11 11:40:31.1786|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100103/2
+2016-03-11 11:40:31.2416|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100102/2
+2016-03-11 11:40:31.6726|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100275/1
+2016-03-11 11:40:31.7527|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100274/1
+2016-03-11 11:40:31.7847|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100271/3
+2016-03-11 11:40:31.9857|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100270/3
+2016-03-11 11:40:32.1897|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100269/3
+2016-03-11 11:40:32.3597|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100268/3
+2016-03-11 11:40:32.5177|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100242/2
+2016-03-11 11:40:32.8357|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100235/2
+2016-03-11 11:40:32.9957|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100236/1
+2016-03-11 11:40:33.3407|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100242/1
+2016-03-11 11:40:33.3637|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100235/1
+2016-03-11 11:40:33.4137|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100267/2
+2016-03-11 11:40:33.7117|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100266/2
+2016-03-11 11:40:33.8998|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100265/2
+2016-03-11 11:40:34.0428|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100264/2
+2016-03-11 11:40:34.2268|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100263/2
+2016-03-11 11:40:34.3858|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100262/2
+2016-03-11 11:40:34.9168|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100267/1
+2016-03-11 11:40:35.0718|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200023/1
+2016-03-11 11:40:35.1948|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100265/1
+2016-03-11 11:40:35.4068|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100264/1
+2016-03-11 11:40:35.6268|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100263/1
+2016-03-11 11:40:35.8488|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100154/3
+2016-03-11 11:40:35.9228|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100262/1
+2016-03-11 11:40:36.0769|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100153/3
+2016-03-11 11:40:36.2159|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100154/2
+2016-03-11 11:40:36.7139|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100266/1
+2016-03-11 11:40:36.9309|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100153/2
+2016-03-11 11:40:36.9459|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200019/2
+2016-03-11 11:40:37.1239|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100252/1
+2016-03-11 11:40:37.2769|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200019/1
+2016-03-11 11:40:37.5689|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/2
+2016-03-11 11:40:37.6619|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100251/1
+2016-03-11 11:40:37.7219|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100234/1
+2016-03-11 11:40:37.9059|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100234/2
+2016-03-11 11:40:38.0149|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/1
+2016-03-11 11:40:38.1470|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 200017/1
+2016-03-11 11:40:38.1470|INFO|UPPY.ServerService.UppyService|End method: GetAllFileDrawingsOrders
+2016-03-11 11:43:22.5673|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:43:26.1507|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:43:26.1507|INFO|UPPY.ServerService.UppyService|Raise method: GetAllFileDrawingsOrders
+2016-03-11 11:44:00.5487|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:44:04.3833|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:44:04.3833|INFO|UPPY.ServerService.UppyService|Raise method: GetAllFileDrawingsOrders
+2016-03-11 11:44:46.7804|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:44:50.0664|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:44:50.0724|INFO|UPPY.ServerService.UppyService|Raise method: GetAllFileDrawingsOrders
+2016-03-11 11:44:50.2284|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/2
+2016-03-11 11:44:50.2284|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/1
+2016-03-11 11:44:50.6015|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/1
+2016-03-11 11:44:50.6285|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/2
+2016-03-11 11:44:50.6295|INFO|UPPY.ServerService.UppyService|End method: GetAllFileDrawingsOrders
+2016-03-11 11:45:12.0221|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:45:15.7700|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:45:15.7770|INFO|UPPY.ServerService.UppyService|Raise method: GetAllFileDrawingsOrders
+2016-03-11 11:45:15.9500|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/1
+2016-03-11 11:45:15.9500|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/2
+2016-03-11 11:45:16.3290|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/1
+2016-03-11 11:45:16.3630|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/2
+2016-03-11 11:45:16.3630|INFO|UPPY.ServerService.UppyService|End method: GetAllFileDrawingsOrders
+2016-03-11 11:46:28.2656|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:46:31.2092|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:46:31.2142|INFO|UPPY.ServerService.UppyService|Raise method: GetAllFileDrawingsOrders
+2016-03-11 11:46:31.3882|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/2
+2016-03-11 11:46:31.3882|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/1
+2016-03-11 11:46:31.7932|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/1
+2016-03-11 11:46:31.8142|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/2
+2016-03-11 11:46:31.8142|INFO|UPPY.ServerService.UppyService|End method: GetAllFileDrawingsOrders
+2016-03-11 11:47:49.2849|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:47:53.1733|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:47:53.1733|INFO|UPPY.ServerService.UppyService|Raise method: GetAllFileDrawingsOrders
+2016-03-11 11:47:53.3433|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/1
+2016-03-11 11:47:53.3433|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/2
+2016-03-11 11:47:53.7503|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/1
+2016-03-11 11:47:53.7803|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/2
+2016-03-11 11:47:53.7803|INFO|UPPY.ServerService.UppyService|End method: GetAllFileDrawingsOrders
+2016-03-11 11:48:48.7045|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:48:52.5466|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:48:52.5466|INFO|UPPY.ServerService.UppyService|Raise method: GetAllFileDrawingsOrders
+2016-03-11 11:48:52.7146|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/1
+2016-03-11 11:48:52.7146|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/2
+2016-03-11 11:48:53.1197|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/1
+2016-03-11 11:48:53.1487|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/2
+2016-03-11 11:48:53.1487|INFO|UPPY.ServerService.UppyService|End method: GetAllFileDrawingsOrders
+2016-03-11 11:49:38.9891|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:49:43.9571|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:49:43.9630|INFO|UPPY.ServerService.UppyService|Raise method: GetAllFileDrawingsOrders
+2016-03-11 11:49:44.1200|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/2
+2016-03-11 11:49:44.1200|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/1
+2016-03-11 11:49:44.5161|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/1
+2016-03-11 11:49:44.5491|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/2
+2016-03-11 11:49:44.5491|INFO|UPPY.ServerService.UppyService|End method: GetAllFileDrawingsOrders
+2016-03-11 11:50:40.4633|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:50:45.3602|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:50:45.3602|INFO|UPPY.ServerService.UppyService|Raise method: GetAllFileDrawingsOrders
+2016-03-11 11:50:45.5582|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/2
+2016-03-11 11:50:45.5582|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/1
+2016-03-11 11:50:46.0472|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/1
+2016-03-11 11:50:46.0712|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/2
+2016-03-11 11:50:46.0712|INFO|UPPY.ServerService.UppyService|End method: GetAllFileDrawingsOrders
+2016-03-11 11:52:41.8636|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:52:57.0118|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:52:57.0118|INFO|UPPY.ServerService.UppyService|Raise method: GetAllFileDrawingsOrders
+2016-03-11 11:52:57.2578|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/1
+2016-03-11 11:52:57.2578|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/2
+2016-03-11 11:52:57.8728|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/1
+2016-03-11 11:52:57.8989|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/2
+2016-03-11 11:52:57.8989|INFO|UPPY.ServerService.UppyService|End method: GetAllFileDrawingsOrders
+2016-03-11 11:58:02.5191|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:58:58.7575|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:58:58.7575|INFO|UPPY.ServerService.UppyService|Raise method: GetAllFileDrawingsOrders
+2016-03-11 11:58:58.9305|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/2
+2016-03-11 11:58:58.9305|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/1
+2016-03-11 11:58:59.3285|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/1
+2016-03-11 11:58:59.3525|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/2
+2016-03-11 11:58:59.3525|INFO|UPPY.ServerService.UppyService|End method: GetAllFileDrawingsOrders
+2016-03-11 11:59:28.7451|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 11:59:28.7451|INFO|UPPY.ServerService.UppyService|Raise method: GetAllFileDrawingsOrders
+2016-03-11 11:59:28.7591|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/1
+2016-03-11 11:59:28.7591|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/2
+2016-03-11 11:59:29.0311|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/1
+2016-03-11 11:59:29.0431|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/2
+2016-03-11 11:59:29.0431|INFO|UPPY.ServerService.UppyService|End method: GetAllFileDrawingsOrders
+2016-03-11 13:20:31.5136|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 13:20:31.8436|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 13:20:32.3046|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 13:20:32.4776|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 13:21:47.0102|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 13:21:56.6586|INFO|UPPY.ServerService.UppyService|Create instance: UppyService
+2016-03-11 13:21:56.6656|INFO|UPPY.ServerService.UppyService|Raise method: GetAllFileDrawingsOrders
+2016-03-11 13:21:56.8206|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/1
+2016-03-11 13:21:56.8206|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, Begin get Order: 100233/2
+2016-03-11 13:21:57.2176|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/1
+2016-03-11 13:21:57.2526|INFO|UPPY.ServerService.UppyService|Method: GetAllFileDrawingsOrders, End Order: 100233/2
+2016-03-11 13:21:57.2526|INFO|UPPY.ServerService.UppyService|End method: GetAllFileDrawingsOrders
