@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Core.Domain.Comparers;
 using Core.Domain.Interdaces;
@@ -15,32 +16,69 @@ namespace UPPY.ServerService
     {
         private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
         private readonly IUppyDataManagersFactory _dataManagersFactory;
+        private static List<FileDrawingsOrders> _list = new List<FileDrawingsOrders>();
+        private static bool _taskInProgress;
+        private static bool _listInited;
+        private static Timer _timerRefreshList = new Timer(state =>
+        {
+            _listInited = false;
+            _logger.Debug("Drop flag");
+        }, _listInited, 60000, 60000);
 
         public UppyService(IUppyDataManagersFactory dataManagersFactory)
         {
-            _logger.Info("Create instance: {0}", "UppyService");
+            _logger.Trace("Create instance: {0}", "UppyService");
             _dataManagersFactory = dataManagersFactory;
+
+            GetAllFileDrawingsOrders();
         }
 
         public List<FileDrawingsOrders> GetAllFileDrawingsOrders()
         {
-            _logger.Info("Raise method: {0}", "GetAllFileDrawingsOrders");
+            if (!_listInited && !_taskInProgress)
+            {
+                CreateAllFileDrawingsOrders();
+                return _list;
+            }
+
+            while (!_listInited)
+            {
+                Thread.Sleep(100);
+            }
+
+            return _list;
+        }
+
+        private void CreateAllFileDrawingsOrders()
+        {
+            _taskInProgress = true;
+            _logger.Trace("Raise method: {0}", "GetAllFileDrawingsOrders");
 
             var orders = _dataManagersFactory.GetDataManager<Order>();
             var listOrders = orders.GetListCollection();
 
             var listTasks = new List<Task<List<FileDrawingsOrders>>>();
 
-            foreach (var order in listOrders.Take(2))
+            foreach (var order in listOrders.Take(10))
             {
                 var taskGetFiles = new Task<List<FileDrawingsOrders>>(() =>
                 {
+                    _logger.Trace("Method: {0}, Begin Order: {1}", "GetAllFileDrawingsOrders", order.OrderNo);
                     var copyOrder = order;
-                    var drawingsDataManager = _dataManagersFactory.GetFilteredByTopParentDrawingClassDataManager(copyOrder.DrawingId);
+                    var drawingsDataManager =
+                        _dataManagersFactory.GetFilteredByTopParentDrawingClassDataManager(copyOrder.DrawingId);
                     var draws = drawingsDataManager.GetListCollection();
 
-                    var res = (from drawing in draws from uppyFileInfo in drawing.Files select new FileDrawingsOrders() { FileInfo = uppyFileInfo, Drawings = new List<Drawing>() { drawing }, Orders = new List<Order>() { copyOrder } }).ToList();
-                    _logger.Info("Method: {0}, End Order: {1}", "GetAllFileDrawingsOrders", order.OrderNo);
+                    var res = (from drawing in draws
+                        from uppyFileInfo in drawing.Files
+                        select
+                            new FileDrawingsOrders
+                            {
+                                FileInfo = uppyFileInfo,
+                                Drawings = new List<Drawing> {drawing},
+                                Orders = new List<Order> {copyOrder}
+                            }).ToList();
+                    _logger.Trace("Method: {0}, End Order: {1}", "GetAllFileDrawingsOrders", order.OrderNo);
                     return res;
                 });
 
@@ -48,6 +86,7 @@ namespace UPPY.ServerService
                 listTasks.Add(taskGetFiles);
             }
 
+            _logger.Trace("Method: {0}, Wait tasks.", "GetAllFileDrawingsOrders");
             Task.WhenAll(listTasks.Cast<Task>().ToArray());
 
             var resFiles = new List<FileDrawingsOrders>();
@@ -56,29 +95,37 @@ namespace UPPY.ServerService
                 resFiles.AddRange(task.Result);
             }
 
-            var sss = resFiles.GroupBy(x => x.FileInfo, result => result, new UppyFileInfoComparer()).Select(g => new FileDrawingsOrders()
-            {
-                FileInfo = g.Key,
-                Drawings = g.Aggregate(
-                    (res1, res2) =>
+            _logger.Trace("Method: {0}, Group files.", "GetAllFileDrawingsOrders");
+
+            var list =
+                resFiles.GroupBy(x => x.FileInfo, result => result, new UppyFileInfoComparer())
+                    .Select(g => new FileDrawingsOrders
                     {
-                        res1.Drawings.AddRange(res2.Drawings);
-                        return res1;
-                    }).Drawings.Distinct(new DrawingByIdComparer()).ToList(),
-                Orders = g.Aggregate((res1, res2) =>
-                {
-                    res1.Orders.AddRange(res2.Orders);
-                    return res1;
-                }).Orders.Distinct(new OrderEqualityComparer()).ToList()
-            });
+                        FileInfo = g.Key,
+                        Drawings = g.Aggregate(
+                            (res1, res2) =>
+                            {
+                                res1.Drawings.AddRange(res2.Drawings);
+                                return res1;
+                            }).Drawings.Distinct(new DrawingByIdComparer()).ToList(),
+                        Orders = g.Aggregate((res1, res2) =>
+                        {
+                            res1.Orders.AddRange(res2.Orders);
+                            return res1;
+                        }).Orders.Distinct(new OrderEqualityComparer()).ToList()
+                    });
 
             _logger.Info("End method: {0}", "GetAllFileDrawingsOrders");
 
-            return sss.ToList();
+            _list = list.ToList();
+            _listInited = true;
+            _taskInProgress = false;
         }
 
         public void ChangesInFiles()
         {
+            _listInited = false;
+            _logger.Debug("Drop flag");
         }
     }
 }

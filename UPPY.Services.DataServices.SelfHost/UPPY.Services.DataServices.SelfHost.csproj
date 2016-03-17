@@ -33,8 +33,37 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Wcf, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Extensions.Wcf.3.2.0.0\lib\net45-full\Ninject.Extensions.Wcf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Wcf.SelfHost, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Extensions.Wcf.Selfhost.3.2.2.0\lib\net45-full\Ninject.Extensions.Wcf.SelfHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Web.Common, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.Common.3.2.0.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Web.Common.SelfHost, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.Common.Selfhost.3.2.0.0\lib\net45-full\Ninject.Web.Common.SelfHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.2.3\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Services" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,11 +72,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataServiceBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\core\Core.Domain\Core.Domain.csproj">
+      <Project>{4810D67A-7646-42F1-9806-920043665FE7}</Project>
+      <Name>Core.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\core\Core\Core.csproj">
+      <Project>{876F668F-5017-4CEE-8AE4-91E9B0E9E6B6}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\core\Mongo.Common\Mongo.Common.csproj">
+      <Project>{371A01EB-92FF-4FEF-871D-DA6E19A8FDD8}</Project>
+      <Name>Mongo.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\core\UPPY.MongoDataBase\UPPY.MongoDataBase.csproj">
+      <Project>{3DEAC9BA-56EE-41A1-9472-849E0574880F}</Project>
+      <Name>UPPY.MongoDataBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\core\UPPY.Services.Core\UPPY.Services.Core.csproj">
+      <Project>{3157a005-3765-48e3-a695-abec4d9a0c6a}</Project>
+      <Name>UPPY.Services.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UPPY.Services.DataService\UPPY.Services.DataService.csproj">
+      <Project>{5ba5e1d9-7e66-4873-b4f1-bcb14dd603b2}</Project>
+      <Name>UPPY.Services.DataService</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
