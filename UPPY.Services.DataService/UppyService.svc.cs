@@ -18,10 +18,11 @@ namespace UPPY.ServerService
         private readonly IUppyDataManagersFactory _dataManagersFactory;
         private static List<FileDrawingsOrders> _list = new List<FileDrawingsOrders>();
         private static bool _taskInProgress;
+        private static bool _raiseRefreshList;
         private static bool _listInited;
         private static Timer _timerRefreshList = new Timer(state =>
         {
-            _listInited = false;
+            _raiseRefreshList = true;
             _logger.Debug("Drop flag");
         }, _listInited, 60000, 60000);
 
@@ -30,7 +31,8 @@ namespace UPPY.ServerService
             _logger.Trace("Create instance: {0}", "UppyService");
             _dataManagersFactory = dataManagersFactory;
 
-            GetAllFileDrawingsOrders();
+            if (_raiseRefreshList)
+                GetAllFileDrawingsOrders();
         }
 
         public List<FileDrawingsOrders> GetAllFileDrawingsOrders()
@@ -52,6 +54,8 @@ namespace UPPY.ServerService
         private void CreateAllFileDrawingsOrders()
         {
             _taskInProgress = true;
+            _raiseRefreshList = false;
+           
             _logger.Trace("Raise method: {0}", "GetAllFileDrawingsOrders");
 
             var orders = _dataManagersFactory.GetDataManager<Order>();
@@ -59,7 +63,7 @@ namespace UPPY.ServerService
 
             var listTasks = new List<Task<List<FileDrawingsOrders>>>();
 
-            foreach (var order in listOrders.Take(10))
+            foreach (var order in listOrders)
             {
                 var taskGetFiles = new Task<List<FileDrawingsOrders>>(() =>
                 {
@@ -70,14 +74,14 @@ namespace UPPY.ServerService
                     var draws = drawingsDataManager.GetListCollection();
 
                     var res = (from drawing in draws
-                        from uppyFileInfo in drawing.Files
-                        select
-                            new FileDrawingsOrders
-                            {
-                                FileInfo = uppyFileInfo,
-                                Drawings = new List<Drawing> {drawing},
-                                Orders = new List<Order> {copyOrder}
-                            }).ToList();
+                               from uppyFileInfo in drawing.Files
+                               select
+                                   new FileDrawingsOrders
+                                   {
+                                       FileInfo = uppyFileInfo,
+                                       Drawings = new List<Drawing> { drawing },
+                                       Orders = new List<Order> { copyOrder }
+                                   }).ToList();
                     _logger.Trace("Method: {0}, End Order: {1}", "GetAllFileDrawingsOrders", order.OrderNo);
                     return res;
                 });
@@ -124,7 +128,7 @@ namespace UPPY.ServerService
 
         public void ChangesInFiles()
         {
-            _listInited = false;
+            _raiseRefreshList = false;
             _logger.Debug("Drop flag");
         }
     }
