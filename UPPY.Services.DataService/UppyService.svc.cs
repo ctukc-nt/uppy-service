@@ -6,8 +6,8 @@ using Core.Domain.Comparers;
 using Core.Domain.Interdaces;
 using Core.Domain.Model;
 using NLog;
-using UPPY.Logic.Classes;
 using UPPY.Services.Core;
+using UPPY.Services.Core.DataService;
 
 namespace UPPY.ServerService
 {
@@ -24,7 +24,7 @@ namespace UPPY.ServerService
         {
             _raiseRefreshList = true;
             _logger.Debug("Drop flag");
-        }, _listInited, 60000, 60000);
+        }, _listInited, (uint)20000, 10 * 60000);
 
         public UppyService(IUppyDataManagersFactory dataManagersFactory)
         {
@@ -32,7 +32,7 @@ namespace UPPY.ServerService
             _dataManagersFactory = dataManagersFactory;
 
             if (_raiseRefreshList)
-                GetAllFileDrawingsOrders();
+                CreateAllFileDrawingsOrders();
         }
 
         public List<FileDrawingsOrders> GetAllFileDrawingsOrders()
@@ -55,7 +55,7 @@ namespace UPPY.ServerService
         {
             _taskInProgress = true;
             _raiseRefreshList = false;
-           
+
             _logger.Trace("Raise method: {0}", "GetAllFileDrawingsOrders");
 
             var orders = _dataManagersFactory.GetDataManager<Order>();
