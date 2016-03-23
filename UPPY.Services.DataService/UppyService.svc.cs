@@ -18,7 +18,7 @@ namespace UPPY.ServerService
         private readonly IUppyDataManagersFactory _dataManagersFactory;
         private static List<FileDrawingsOrders> _list = new List<FileDrawingsOrders>();
         private static bool _taskInProgress;
-        private static bool _raiseRefreshList;
+        private static bool _raiseRefreshList = true;
         private static bool _listInited;
         private static Timer _timerRefreshList = new Timer(state =>
         {
@@ -32,7 +32,10 @@ namespace UPPY.ServerService
             _dataManagersFactory = dataManagersFactory;
 
             if (_raiseRefreshList)
-                CreateAllFileDrawingsOrders();
+            {
+                var task = new Task(CreateAllFileDrawingsOrders);
+                task.Start();
+            }
         }
 
         public List<FileDrawingsOrders> GetAllFileDrawingsOrders()
@@ -53,6 +56,9 @@ namespace UPPY.ServerService
 
         private void CreateAllFileDrawingsOrders()
         {
+            if (_taskInProgress)
+                return;
+
             _taskInProgress = true;
             _raiseRefreshList = false;
 
