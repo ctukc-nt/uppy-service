@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -62,75 +63,88 @@ namespace UPPY.ServerService
             _taskInProgress = true;
             _raiseRefreshList = false;
 
-            _logger.Trace("Raise method: {0}", "GetAllFileDrawingsOrders");
-
-            var orders = _dataManagersFactory.GetDataManager<Order>();
-            var listOrders = orders.GetListCollection();
-
-            var listTasks = new List<Task<List<FileDrawingsOrders>>>();
-
-            foreach (var order in listOrders)
+            try
             {
-                var taskGetFiles = new Task<List<FileDrawingsOrders>>(() =>
+                _logger.Trace("Raise method: {0}", "GetAllFileDrawingsOrders");
+
+                var orders = _dataManagersFactory.GetDataManager<Order>();
+                var listOrders = orders.GetListCollection();
+
+                var listTasks = new List<Task<List<FileDrawingsOrders>>>();
+
+                foreach (var order in listOrders)
                 {
-                    _logger.Trace("Method: {0}, Begin Order: {1}", "GetAllFileDrawingsOrders", order.OrderNo);
-                    var copyOrder = order;
-                    var drawingsDataManager =
-                        _dataManagersFactory.GetFilteredByTopParentDrawingClassDataManager(copyOrder.DrawingId);
-                    var draws = drawingsDataManager.GetListCollection();
-
-                    var res = (from drawing in draws
-                               from uppyFileInfo in drawing.Files
-                               select
-                                   new FileDrawingsOrders
-                                   {
-                                       FileInfo = uppyFileInfo,
-                                       Drawings = new List<Drawing> { drawing },
-                                       Orders = new List<Order> { copyOrder }
-                                   }).ToList();
-                    _logger.Trace("Method: {0}, End Order: {1}", "GetAllFileDrawingsOrders", order.OrderNo);
-                    return res;
-                });
-
-                taskGetFiles.Start();
-                listTasks.Add(taskGetFiles);
-            }
-
-            _logger.Trace("Method: {0}, Wait tasks.", "GetAllFileDrawingsOrders");
-            
-            Task.WhenAll(listTasks.Cast<Task>().ToArray());
-
-            var resFiles = new List<FileDrawingsOrders>();
-            foreach (var task in listTasks)
-            {
-                resFiles.AddRange(task.Result);
-            }
-
-            _logger.Trace("Method: {0}, Group files.", "GetAllFileDrawingsOrders");
-
-            var list =
-                resFiles.GroupBy(x => x.FileInfo, result => result, new UppyFileInfoComparer())
-                    .Select(g => new FileDrawingsOrders
+                    var taskGetFiles = new Task<List<FileDrawingsOrders>>(() =>
                     {
-                        FileInfo = g.Key,
-                        Drawings = g.Aggregate(
-                            (res1, res2) =>
-                            {
-                                res1.Drawings.AddRange(res2.Drawings);
-                                return res1;
-                            }).Drawings.Distinct(new DrawingByIdComparer()).ToList(),
-                        Orders = g.Aggregate((res1, res2) =>
-                        {
-                            res1.Orders.AddRange(res2.Orders);
-                            return res1;
-                        }).Orders.Distinct(new OrderEqualityComparer()).ToList()
+                        _logger.Trace("Method: {0}, Begin Order: {1}", "GetAllFileDrawingsOrders", order.OrderNo);
+                        var copyOrder = order;
+                        var drawingsDataManager =
+                            _dataManagersFactory.GetFilteredByTopParentDrawingClassDataManager(copyOrder.DrawingId);
+                        var draws = drawingsDataManager.GetListCollection();
+
+                        var res = (from drawing in draws
+                            from uppyFileInfo in drawing.Files
+                            select
+                                new FileDrawingsOrders
+                                {
+                                    FileInfo = uppyFileInfo,
+                                    Drawings = new List<Drawing> {drawing},
+                                    Orders = new List<Order> {copyOrder}
+                                }).ToList();
+                        _logger.Trace("Method: {0}, End Order: {1}", "GetAllFileDrawingsOrders", order.OrderNo);
+                        return res;
                     });
 
-            _logger.Info("End method: {0}", "GetAllFileDrawingsOrders");
+                    taskGetFiles.Start();
+                    listTasks.Add(taskGetFiles);
+                }
 
-            _list = list.ToList();
-            _listInited = true;
-            _taskInProgress = false;
+                _logger.Trace("Method: {0}, Wait tasks.", "GetAllFileDrawingsOrders");
+
+                Task.WhenAll(listTasks.Cast<Task>().ToArray());
+
+                var resFiles = new List<FileDrawingsOrders>();
+                foreach (var task in listTasks)
+                {
+                    resFiles.AddRange(task.Result);
+                }
+
+                _logger.Trace("Method: {0}, Group files.", "GetAllFileDrawingsOrders");
+
+                var list =
+                    resFiles.GroupBy(x => x.FileInfo, result => result, new UppyFileInfoComparer())
+                        .Select(g => new FileDrawingsOrders
+                        {
+                            FileInfo = g.Key,
+                            Drawings = g.Aggregate(
+                                (res1, res2) =>
+                                {
+                                    res1.Drawings.AddRange(res2.Drawings);
+                                    return res1;
+                                }).Drawings.Distinct(new DrawingByIdComparer()).ToList(),
+                            Orders = g.Aggregate((res1, res2) =>
+                            {
+                                res1.Orders.AddRange(res2.Orders);
+                                return res1;
+                            }).Orders.Distinct(new OrderEqualityComparer()).ToList()
+                        });
+
+                _logger.Info("End method: {0}", "GetAllFileDrawingsOrders");
+
+                _list = list.ToList();
+                _listInited = true;
+                _taskInProgress = false;
+
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e);
+            }
+            finally
+            {
+                _listInited = true;
+                _taskInProgress = false;
+            }
         }
 
         public void ChangesInFiles()
@@ -139,6 +153,5 @@ namespace UPPY.ServerService
             _logger.Debug("Drop flag");
         }
 
-        private string Get
     }
 }
