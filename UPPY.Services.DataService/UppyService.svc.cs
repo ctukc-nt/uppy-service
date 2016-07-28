@@ -97,6 +97,7 @@ namespace UPPY.ServerService
             }
 
             _logger.Trace("Method: {0}, Wait tasks.", "GetAllFileDrawingsOrders");
+            
             Task.WhenAll(listTasks.Cast<Task>().ToArray());
 
             var resFiles = new List<FileDrawingsOrders>();
@@ -137,5 +138,7 @@ namespace UPPY.ServerService
             _raiseRefreshList = false;
             _logger.Debug("Drop flag");
         }
+
+        private string Get
     }
 }
