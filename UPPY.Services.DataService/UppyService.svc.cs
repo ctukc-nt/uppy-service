@@ -153,5 +153,22 @@ namespace UPPY.ServerService
             _logger.Debug("Drop flag");
         }
 
+        public List<FileDrawingsOrders> GetAllFileDrawingsOrdersByName(string designation)
+        {
+            Func<FileDrawingsOrders, bool> filter = null;
+            if (false)
+                filter = x => x.FileInfo.FileName.ToLowerInvariant().StartsWith(designation.ToLowerInvariant());
+            else
+            {
+                filter = x => x.FileInfo.FileName.ToLowerInvariant().Contains(designation.ToLowerInvariant());
+            }
+
+            return CommonFind(filter);
+        }
+
+        private List<FileDrawingsOrders> CommonFind(Func<FileDrawingsOrders, bool> func)
+        {
+            return GetAllFileDrawingsOrders().Where(func).ToList();
+        }
     }
 }
