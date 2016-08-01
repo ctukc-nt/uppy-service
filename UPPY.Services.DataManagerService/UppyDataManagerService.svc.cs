@@ -23,6 +23,8 @@ namespace UPPY.Services.DataManagerService
             _logger.Trace("Created instance");
         }
 
+        #region BillInnerShift
+
         public List<BillInnerShift> GetListBillInnerShift()
         {
             return _dataManagers.GetListCollection<BillInnerShift>();
@@ -43,6 +45,10 @@ namespace UPPY.Services.DataManagerService
         {
             _dataManagers.Delete(doc, ticket);
         }
+
+        #endregion
+
+        #region BillShift
 
         public List<BillShift> GetListBillShift()
         {
@@ -65,6 +71,10 @@ namespace UPPY.Services.DataManagerService
             _dataManagers.Delete(doc, ticket);
         }
 
+        #endregion
+
+        #region Drawing
+
         public List<Drawing> GetListDrawing()
         {
             throw new NotImplementedException();
@@ -84,6 +94,10 @@ namespace UPPY.Services.DataManagerService
         {
             throw new NotImplementedException();
         }
+
+        #endregion
+
+        #region ExcludeDrawing
 
         public List<ExcludeDrawing> GetListExcludeDrawing()
         {
@@ -105,6 +119,10 @@ namespace UPPY.Services.DataManagerService
             throw new NotImplementedException();
         }
 
+        #endregion
+
+        #region Gost
+
         public List<Gost> GetListGost()
         {
             throw new NotImplementedException();
@@ -120,10 +138,13 @@ namespace UPPY.Services.DataManagerService
             throw new NotImplementedException();
         }
 
-        public void DeleteGost(ExcludeDrawing doc, ITicketAutUser ticket)
+        public void DeleteGost(Gost doc, ITicketAutUser ticket)
         {
             throw new NotImplementedException();
         }
+
+        #endregion
+
 
         public List<TechOperation> GetListTechOperation()
         {
