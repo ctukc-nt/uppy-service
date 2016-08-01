@@ -123,9 +123,9 @@
       <Project>{03B84A9B-3991-44F2-B2BC-BCAE609E798E}</Project>
       <Name>UPPY.Logic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\core\UPPY.MongoDataBase\UPPY.MongoDataBase.csproj">
+    <ProjectReference Include="..\core\UPPY.MongoDataBase\UPPY.DataBase.Mongo.csproj">
       <Project>{3DEAC9BA-56EE-41A1-9472-849E0574880F}</Project>
-      <Name>UPPY.MongoDataBase</Name>
+      <Name>UPPY.DataBase.Mongo</Name>
     </ProjectReference>
     <ProjectReference Include="..\core\UPPY.Services.Core\UPPY.Services.Core.csproj">
       <Project>{3157A005-3765-48E3-A695-ABEC4D9A0C6A}</Project>

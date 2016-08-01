@@ -7,7 +7,7 @@ using Microsoft.Web.Infrastructure.DynamicModuleHelper;
 using Mongo.Common;
 using Ninject;
 using Ninject.Web.Common;
-using UPPY.MongoDataBase;
+using UPPY.DataBase.Mongo;
 using UPPY.ServerService;
 using UPPY.Services.Core;
 

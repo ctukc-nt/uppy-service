@@ -1,16 +1,12 @@
 ﻿using System.Reflection;
 using System.ServiceProcess;
-using Core.Domain.Interdaces;
-using Core.Interfaces;
-using Core.Security;
 using Mongo.Common;
 using MongoDB.Driver;
 using Ninject;
 using Ninject.Extensions.Wcf;
 using Ninject.Extensions.Wcf.SelfHost;
 using Ninject.Web.Common.SelfHost;
-using UPPY.MongoDataBase;
-
+using UPPY.DataBase.Mongo;
 using UPPY.Services.Core;
 using UPPY.Services.DataManagers;
 using UPPY.Services.DataManagerService;

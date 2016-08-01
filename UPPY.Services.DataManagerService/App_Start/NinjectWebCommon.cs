@@ -5,7 +5,7 @@ using Mongo.Common;
 using MongoDB.Driver;
 using Ninject;
 using Ninject.Web.Common;
-using UPPY.MongoDataBase;
+using UPPY.DataBase.Mongo;
 using UPPY.Services.Core;
 using UPPY.Services.DataManagers;
 using UPPY.Services.DataManagerService;

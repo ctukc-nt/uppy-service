@@ -8,7 +8,7 @@ using Ninject;
 using Ninject.Extensions.Wcf;
 using Ninject.Extensions.Wcf.SelfHost;
 using Ninject.Web.Common.SelfHost;
-using UPPY.MongoDataBase;
+using UPPY.DataBase.Mongo;
 using UPPY.ServerService;
 
 namespace UPPY.Services.DataServicesSelfHost
