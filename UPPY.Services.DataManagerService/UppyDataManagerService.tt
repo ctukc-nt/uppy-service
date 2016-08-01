@@ -1,0 +1,73 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".cs" #>
+using System;
+using System.Collections.Generic;
+using Core.Domain.Model;
+using Core.Security;
+using UPPY.Services.Core;
+
+namespace UPPY.Services.DataManagerService
+{
+    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in code, svc and config file together.
+    // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
+    public partial class UppyDataManagerService : IUppyDataService
+    {
+		<#
+        var list = new List<string>
+        {
+            "BillInnerShift",
+            "BillShift",
+            "Drawing",
+            "ExcludeDrawing",
+            "Gost",
+            "Order",
+            "PackingList",
+            "ProfileWorkHour",
+            "RateWorkHour",
+            "Setting",
+            "Standart",
+            "StandartDrawing",
+            "SuperTaskToDistrict",
+            "TaskToDistrict",
+            "TechOperation",
+            "TechRoute"
+        };
+    
+	    foreach(var className in list)
+	    {
+	    #>
+	    #region <#= className #>
+	    
+        public List<<#= className #>> GetList<#= className #>()
+		{
+		    return _dataManagers.GetListCollection<<#= className #>>();
+		}
+		
+		public <#= className #> Insert<#= className #>(ITicketAutUser ticket, <#= className #> doc)
+		{
+		    _dataManagers.Insert(doc, ticket);
+		    return doc;
+		}
+		
+		public void Update<#= className #>(ITicketAutUser ticket, <#= className #> doc)
+		{
+		    _dataManagers.Update(doc, ticket);
+		}
+		
+		public void Delete<#= className #>(ITicketAutUser ticket, <#= className #> doc)
+		{
+		    _dataManagers.Delete(doc, ticket);
+		}
+	    
+        #endregion
+	    
+	    <#
+	    }
+	    #>
+
+	}
+}

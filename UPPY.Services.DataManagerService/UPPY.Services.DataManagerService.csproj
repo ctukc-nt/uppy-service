@@ -99,11 +99,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="UppyDataManagerService.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>UppyDataManagerService.cs</LastGenOutput>
+    </Content>
     <Content Include="UppyDataManagerService.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\NinjectWebCommon.cs" />
+    <Compile Include="UppyDataManagerService.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UppyDataManagerService.tt</DependentUpon>
+    </Compile>
     <Compile Include="UppyDataManagerService.svc.cs">
       <DependentUpon>UppyDataManagerService.svc</DependentUpon>
     </Compile>
@@ -154,6 +163,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
