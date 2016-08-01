@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Core.Domain.Model;
 using Core.Security;
 using UPPY.Services.Core;
@@ -10,485 +9,550 @@ namespace UPPY.Services.DataManagerService
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public partial class UppyDataManagerService : IUppyDataService
     {
-        #region BillInnerShift
-
+			    #region BillInnerShift
+	    
         public List<BillInnerShift> GetListBillInnerShift()
-        {
-            return _dataManagers.GetListCollection<BillInnerShift>();
-        }
+		{
+		    return _dataManagers.GetListCollection<BillInnerShift>();
+		}
 
-        public BillInnerShift InsertBillInnerShift(ITicketAutUser ticket, BillInnerShift doc)
-        {
-            _dataManagers.Insert(doc, ticket);
-            return doc;
-        }
-
-        public void UpdateBillInnerShift(ITicketAutUser ticket, BillInnerShift doc)
-        {
-            _dataManagers.Update(doc, ticket);
-        }
-
-        public void DeleteBillInnerShift(ITicketAutUser ticket, BillInnerShift doc)
-        {
-            _dataManagers.Delete(doc, ticket);
-        }
-
+        public BillInnerShift GetDocumentBillInnerShift(int id)
+		{
+			return _dataManagers.GetDocument<BillInnerShift>(id);
+		}
+		
+		public BillInnerShift InsertBillInnerShift(TicketAutUser ticket, BillInnerShift doc)
+		{
+			_logger.Trace("Trace method Insert for document {0}. User {1}", typeof(BillInnerShift).Name, ticket);
+		    _dataManagers.Insert(doc, ticket);
+		    return doc;
+		}
+		
+		public BillInnerShift UpdateBillInnerShift(TicketAutUser ticket, BillInnerShift doc)
+		{
+			_logger.Trace("Trace method Update for document {0}. Id {2}. User {1}", typeof(BillInnerShift).Name, ticket, doc.Id);
+		    _dataManagers.Update(doc, ticket);
+			return doc;
+		}
+		
+		public void DeleteBillInnerShift(TicketAutUser ticket, BillInnerShift doc)
+		{
+			_logger.Trace("Trace method Delete for document {0}. Id {2}. User {1}", typeof(BillInnerShift).Name, ticket, doc.Id);
+		    _dataManagers.Delete(doc, ticket);
+		}
+	    
         #endregion
-
-        #region BillShift
-
+	    
+	    	    #region BillShift
+	    
         public List<BillShift> GetListBillShift()
-        {
-            var res = _dataManagers.GetListCollection<BillShift>();
-            _logger.Trace("Created instance");
-            return res;
-        }
+		{
+		    return _dataManagers.GetListCollection<BillShift>();
+		}
 
-        public BillShift InsertBillShift(ITicketAutUser ticket, BillShift doc)
-        {
-            _dataManagers.Insert(doc, ticket);
-            return doc;
-        }
-
-        public void UpdateBillShift(ITicketAutUser ticket, BillShift doc)
-        {
-            _dataManagers.Update(doc, ticket);
-        }
-
-        public void DeleteBillShift(ITicketAutUser ticket, BillShift doc)
-        {
-            _dataManagers.Delete(doc, ticket);
-        }
-
+        public BillShift GetDocumentBillShift(int id)
+		{
+			return _dataManagers.GetDocument<BillShift>(id);
+		}
+		
+		public BillShift InsertBillShift(TicketAutUser ticket, BillShift doc)
+		{
+			_logger.Trace("Trace method Insert for document {0}. User {1}", typeof(BillShift).Name, ticket);
+		    _dataManagers.Insert(doc, ticket);
+		    return doc;
+		}
+		
+		public BillShift UpdateBillShift(TicketAutUser ticket, BillShift doc)
+		{
+			_logger.Trace("Trace method Update for document {0}. Id {2}. User {1}", typeof(BillShift).Name, ticket, doc.Id);
+		    _dataManagers.Update(doc, ticket);
+			return doc;
+		}
+		
+		public void DeleteBillShift(TicketAutUser ticket, BillShift doc)
+		{
+			_logger.Trace("Trace method Delete for document {0}. Id {2}. User {1}", typeof(BillShift).Name, ticket, doc.Id);
+		    _dataManagers.Delete(doc, ticket);
+		}
+	    
         #endregion
-
-        #region Drawing
-
+	    
+	    	    #region Drawing
+	    
         public List<Drawing> GetListDrawing()
-        {
-            return _dataManagers.GetListCollection<Drawing>();
-        }
+		{
+		    return _dataManagers.GetListCollection<Drawing>();
+		}
 
-        public Drawing InsertDrawing(ITicketAutUser ticket, Drawing doc)
-        {
-            _dataManagers.Insert(doc, ticket);
-            return doc;
-        }
-
-        public void UpdateDrawing(ITicketAutUser ticket, Drawing doc)
-        {
-            _dataManagers.Update(doc, ticket);
-        }
-
-        public void DeleteDrawing(ITicketAutUser ticket, Drawing doc)
-        {
-            _dataManagers.Delete(doc, ticket);
-        }
-
+        public Drawing GetDocumentDrawing(int id)
+		{
+			return _dataManagers.GetDocument<Drawing>(id);
+		}
+		
+		public Drawing InsertDrawing(TicketAutUser ticket, Drawing doc)
+		{
+			_logger.Trace("Trace method Insert for document {0}. User {1}", typeof(Drawing).Name, ticket);
+		    _dataManagers.Insert(doc, ticket);
+		    return doc;
+		}
+		
+		public Drawing UpdateDrawing(TicketAutUser ticket, Drawing doc)
+		{
+			_logger.Trace("Trace method Update for document {0}. Id {2}. User {1}", typeof(Drawing).Name, ticket, doc.Id);
+		    _dataManagers.Update(doc, ticket);
+			return doc;
+		}
+		
+		public void DeleteDrawing(TicketAutUser ticket, Drawing doc)
+		{
+			_logger.Trace("Trace method Delete for document {0}. Id {2}. User {1}", typeof(Drawing).Name, ticket, doc.Id);
+		    _dataManagers.Delete(doc, ticket);
+		}
+	    
         #endregion
-
-        #region ExcludeDrawing
-
+	    
+	    	    #region ExcludeDrawing
+	    
         public List<ExcludeDrawing> GetListExcludeDrawing()
-        {
-            return _dataManagers.GetListCollection<ExcludeDrawing>();
-        }
+		{
+		    return _dataManagers.GetListCollection<ExcludeDrawing>();
+		}
 
-        public ExcludeDrawing InsertExcludeDrawing(ITicketAutUser ticket, ExcludeDrawing doc)
-        {
-            _dataManagers.Insert(doc, ticket);
-            return doc;
-        }
-
-        public void UpdateExcludeDrawing(ITicketAutUser ticket, ExcludeDrawing doc)
-        {
-            _dataManagers.Update(doc, ticket);
-        }
-
-        public void DeleteExcludeDrawing(ITicketAutUser ticket, ExcludeDrawing doc)
-        {
-            _dataManagers.Delete(doc, ticket);
-        }
-
+        public ExcludeDrawing GetDocumentExcludeDrawing(int id)
+		{
+			return _dataManagers.GetDocument<ExcludeDrawing>(id);
+		}
+		
+		public ExcludeDrawing InsertExcludeDrawing(TicketAutUser ticket, ExcludeDrawing doc)
+		{
+			_logger.Trace("Trace method Insert for document {0}. User {1}", typeof(ExcludeDrawing).Name, ticket);
+		    _dataManagers.Insert(doc, ticket);
+		    return doc;
+		}
+		
+		public ExcludeDrawing UpdateExcludeDrawing(TicketAutUser ticket, ExcludeDrawing doc)
+		{
+			_logger.Trace("Trace method Update for document {0}. Id {2}. User {1}", typeof(ExcludeDrawing).Name, ticket, doc.Id);
+		    _dataManagers.Update(doc, ticket);
+			return doc;
+		}
+		
+		public void DeleteExcludeDrawing(TicketAutUser ticket, ExcludeDrawing doc)
+		{
+			_logger.Trace("Trace method Delete for document {0}. Id {2}. User {1}", typeof(ExcludeDrawing).Name, ticket, doc.Id);
+		    _dataManagers.Delete(doc, ticket);
+		}
+	    
         #endregion
-
-        #region Gost
-
+	    
+	    	    #region Gost
+	    
         public List<Gost> GetListGost()
-        {
-            return _dataManagers.GetListCollection<Gost>();
-        }
+		{
+		    return _dataManagers.GetListCollection<Gost>();
+		}
 
-        public Gost InsertGost(ITicketAutUser ticket, Gost doc)
-        {
-            _dataManagers.Insert(doc, ticket);
-            return doc;
-        }
-
-        public void UpdateGost(ITicketAutUser ticket, Gost doc)
-        {
-            _dataManagers.Update(doc, ticket);
-        }
-
-        public void DeleteGost(ITicketAutUser ticket, Gost doc)
-        {
-            _dataManagers.Delete(doc, ticket);
-        }
-
+        public Gost GetDocumentGost(int id)
+		{
+			return _dataManagers.GetDocument<Gost>(id);
+		}
+		
+		public Gost InsertGost(TicketAutUser ticket, Gost doc)
+		{
+			_logger.Trace("Trace method Insert for document {0}. User {1}", typeof(Gost).Name, ticket);
+		    _dataManagers.Insert(doc, ticket);
+		    return doc;
+		}
+		
+		public Gost UpdateGost(TicketAutUser ticket, Gost doc)
+		{
+			_logger.Trace("Trace method Update for document {0}. Id {2}. User {1}", typeof(Gost).Name, ticket, doc.Id);
+		    _dataManagers.Update(doc, ticket);
+			return doc;
+		}
+		
+		public void DeleteGost(TicketAutUser ticket, Gost doc)
+		{
+			_logger.Trace("Trace method Delete for document {0}. Id {2}. User {1}", typeof(Gost).Name, ticket, doc.Id);
+		    _dataManagers.Delete(doc, ticket);
+		}
+	    
         #endregion
-
-        #region Order
-
+	    
+	    	    #region Order
+	    
         public List<Order> GetListOrder()
-        {
-            var res = _dataManagers.GetListCollection<Order>();
-            _logger.Trace("trace order list");
-            return res;
-        }
+		{
+		    return _dataManagers.GetListCollection<Order>();
+		}
 
-        public Order InsertOrder(ITicketAutUser ticket, Order doc)
-        {
-            _dataManagers.Insert(doc, ticket);
-            return doc;
-        }
-
-        public void UpdateOrder(ITicketAutUser ticket, Order doc)
-        {
-            _dataManagers.Update(doc, ticket);
-        }
-
-        public void DeleteOrder(ITicketAutUser ticket, Order doc)
-        {
-            _dataManagers.Delete(doc, ticket);
-        }
-
+        public Order GetDocumentOrder(int id)
+		{
+			return _dataManagers.GetDocument<Order>(id);
+		}
+		
+		public Order InsertOrder(TicketAutUser ticket, Order doc)
+		{
+			_logger.Trace("Trace method Insert for document {0}. User {1}", typeof(Order).Name, ticket);
+		    _dataManagers.Insert(doc, ticket);
+		    return doc;
+		}
+		
+		public Order UpdateOrder(TicketAutUser ticket, Order doc)
+		{
+			_logger.Trace("Trace method Update for document {0}. Id {2}. User {1}", typeof(Order).Name, ticket, doc.Id);
+		    _dataManagers.Update(doc, ticket);
+			return doc;
+		}
+		
+		public void DeleteOrder(TicketAutUser ticket, Order doc)
+		{
+			_logger.Trace("Trace method Delete for document {0}. Id {2}. User {1}", typeof(Order).Name, ticket, doc.Id);
+		    _dataManagers.Delete(doc, ticket);
+		}
+	    
         #endregion
-
-        #region PackingList
-
+	    
+	    	    #region PackingList
+	    
         public List<PackingList> GetListPackingList()
-        {
-            return _dataManagers.GetListCollection<PackingList>();
-        }
+		{
+		    return _dataManagers.GetListCollection<PackingList>();
+		}
 
-        public PackingList InsertPackingList(ITicketAutUser ticket, PackingList doc)
-        {
-            _dataManagers.Insert(doc, ticket);
-            return doc;
-        }
-
-        public void UpdatePackingList(ITicketAutUser ticket, PackingList doc)
-        {
-            _dataManagers.Update(doc, ticket);
-        }
-
-        public void DeletePackingList(ITicketAutUser ticket, PackingList doc)
-        {
-            _dataManagers.Delete(doc, ticket);
-        }
-
+        public PackingList GetDocumentPackingList(int id)
+		{
+			return _dataManagers.GetDocument<PackingList>(id);
+		}
+		
+		public PackingList InsertPackingList(TicketAutUser ticket, PackingList doc)
+		{
+			_logger.Trace("Trace method Insert for document {0}. User {1}", typeof(PackingList).Name, ticket);
+		    _dataManagers.Insert(doc, ticket);
+		    return doc;
+		}
+		
+		public PackingList UpdatePackingList(TicketAutUser ticket, PackingList doc)
+		{
+			_logger.Trace("Trace method Update for document {0}. Id {2}. User {1}", typeof(PackingList).Name, ticket, doc.Id);
+		    _dataManagers.Update(doc, ticket);
+			return doc;
+		}
+		
+		public void DeletePackingList(TicketAutUser ticket, PackingList doc)
+		{
+			_logger.Trace("Trace method Delete for document {0}. Id {2}. User {1}", typeof(PackingList).Name, ticket, doc.Id);
+		    _dataManagers.Delete(doc, ticket);
+		}
+	    
         #endregion
-
-        #region ProfileWorkHour
-
+	    
+	    	    #region ProfileWorkHour
+	    
         public List<ProfileWorkHour> GetListProfileWorkHour()
-        {
-            return _dataManagers.GetListCollection<ProfileWorkHour>();
-        }
+		{
+		    return _dataManagers.GetListCollection<ProfileWorkHour>();
+		}
 
-        public ProfileWorkHour InsertProfileWorkHour(ITicketAutUser ticket, ProfileWorkHour doc)
-        {
-            _dataManagers.Insert(doc, ticket);
-            return doc;
-        }
-
-        public void UpdateProfileWorkHour(ITicketAutUser ticket, ProfileWorkHour doc)
-        {
-            _dataManagers.Update(doc, ticket);
-        }
-
-        public void DeleteProfileWorkHour(ITicketAutUser ticket, ProfileWorkHour doc)
-        {
-            _dataManagers.Delete(doc, ticket);
-        }
-
+        public ProfileWorkHour GetDocumentProfileWorkHour(int id)
+		{
+			return _dataManagers.GetDocument<ProfileWorkHour>(id);
+		}
+		
+		public ProfileWorkHour InsertProfileWorkHour(TicketAutUser ticket, ProfileWorkHour doc)
+		{
+			_logger.Trace("Trace method Insert for document {0}. User {1}", typeof(ProfileWorkHour).Name, ticket);
+		    _dataManagers.Insert(doc, ticket);
+		    return doc;
+		}
+		
+		public ProfileWorkHour UpdateProfileWorkHour(TicketAutUser ticket, ProfileWorkHour doc)
+		{
+			_logger.Trace("Trace method Update for document {0}. Id {2}. User {1}", typeof(ProfileWorkHour).Name, ticket, doc.Id);
+		    _dataManagers.Update(doc, ticket);
+			return doc;
+		}
+		
+		public void DeleteProfileWorkHour(TicketAutUser ticket, ProfileWorkHour doc)
+		{
+			_logger.Trace("Trace method Delete for document {0}. Id {2}. User {1}", typeof(ProfileWorkHour).Name, ticket, doc.Id);
+		    _dataManagers.Delete(doc, ticket);
+		}
+	    
         #endregion
-
-        #region RateWorkHour
-
+	    
+	    	    #region RateWorkHour
+	    
         public List<RateWorkHour> GetListRateWorkHour()
-        {
-            return _dataManagers.GetListCollection<RateWorkHour>();
-        }
+		{
+		    return _dataManagers.GetListCollection<RateWorkHour>();
+		}
 
-        public RateWorkHour InsertRateWorkHour(ITicketAutUser ticket, RateWorkHour doc)
-        {
-            _dataManagers.Insert(doc, ticket);
-            return doc;
-        }
-
-        public void UpdateRateWorkHour(ITicketAutUser ticket, RateWorkHour doc)
-        {
-            _dataManagers.Update(doc, ticket);
-        }
-
-        public void DeleteRateWorkHour(ITicketAutUser ticket, RateWorkHour doc)
-        {
-            _dataManagers.Delete(doc, ticket);
-        }
-
+        public RateWorkHour GetDocumentRateWorkHour(int id)
+		{
+			return _dataManagers.GetDocument<RateWorkHour>(id);
+		}
+		
+		public RateWorkHour InsertRateWorkHour(TicketAutUser ticket, RateWorkHour doc)
+		{
+			_logger.Trace("Trace method Insert for document {0}. User {1}", typeof(RateWorkHour).Name, ticket);
+		    _dataManagers.Insert(doc, ticket);
+		    return doc;
+		}
+		
+		public RateWorkHour UpdateRateWorkHour(TicketAutUser ticket, RateWorkHour doc)
+		{
+			_logger.Trace("Trace method Update for document {0}. Id {2}. User {1}", typeof(RateWorkHour).Name, ticket, doc.Id);
+		    _dataManagers.Update(doc, ticket);
+			return doc;
+		}
+		
+		public void DeleteRateWorkHour(TicketAutUser ticket, RateWorkHour doc)
+		{
+			_logger.Trace("Trace method Delete for document {0}. Id {2}. User {1}", typeof(RateWorkHour).Name, ticket, doc.Id);
+		    _dataManagers.Delete(doc, ticket);
+		}
+	    
         #endregion
-
-        #region Setting
-
+	    
+	    	    #region Setting
+	    
         public List<Setting> GetListSetting()
-        {
-            return _dataManagers.GetListCollection<Setting>();
-        }
+		{
+		    return _dataManagers.GetListCollection<Setting>();
+		}
 
-        public Setting InsertSetting(ITicketAutUser ticket, Setting doc)
-        {
-            _dataManagers.Insert(doc, ticket);
-            return doc;
-        }
-
-        public void UpdateSetting(ITicketAutUser ticket, Setting doc)
-        {
-            _dataManagers.Update(doc, ticket);
-        }
-
-        public void DeleteSetting(ITicketAutUser ticket, Setting doc)
-        {
-            _dataManagers.Delete(doc, ticket);
-        }
-
+        public Setting GetDocumentSetting(int id)
+		{
+			return _dataManagers.GetDocument<Setting>(id);
+		}
+		
+		public Setting InsertSetting(TicketAutUser ticket, Setting doc)
+		{
+			_logger.Trace("Trace method Insert for document {0}. User {1}", typeof(Setting).Name, ticket);
+		    _dataManagers.Insert(doc, ticket);
+		    return doc;
+		}
+		
+		public Setting UpdateSetting(TicketAutUser ticket, Setting doc)
+		{
+			_logger.Trace("Trace method Update for document {0}. Id {2}. User {1}", typeof(Setting).Name, ticket, doc.Id);
+		    _dataManagers.Update(doc, ticket);
+			return doc;
+		}
+		
+		public void DeleteSetting(TicketAutUser ticket, Setting doc)
+		{
+			_logger.Trace("Trace method Delete for document {0}. Id {2}. User {1}", typeof(Setting).Name, ticket, doc.Id);
+		    _dataManagers.Delete(doc, ticket);
+		}
+	    
         #endregion
-
-        #region Standart
-
+	    
+	    	    #region Standart
+	    
         public List<Standart> GetListStandart()
-        {
-            return _dataManagers.GetListCollection<Standart>();
-        }
+		{
+		    return _dataManagers.GetListCollection<Standart>();
+		}
 
-        public Standart InsertStandart(ITicketAutUser ticket, Standart doc)
-        {
-            _dataManagers.Insert(doc, ticket);
-            return doc;
-        }
-
-        public void UpdateStandart(ITicketAutUser ticket, Standart doc)
-        {
-            _dataManagers.Update(doc, ticket);
-        }
-
-        public void DeleteStandart(ITicketAutUser ticket, Standart doc)
-        {
-            _dataManagers.Delete(doc, ticket);
-        }
-
+        public Standart GetDocumentStandart(int id)
+		{
+			return _dataManagers.GetDocument<Standart>(id);
+		}
+		
+		public Standart InsertStandart(TicketAutUser ticket, Standart doc)
+		{
+			_logger.Trace("Trace method Insert for document {0}. User {1}", typeof(Standart).Name, ticket);
+		    _dataManagers.Insert(doc, ticket);
+		    return doc;
+		}
+		
+		public Standart UpdateStandart(TicketAutUser ticket, Standart doc)
+		{
+			_logger.Trace("Trace method Update for document {0}. Id {2}. User {1}", typeof(Standart).Name, ticket, doc.Id);
+		    _dataManagers.Update(doc, ticket);
+			return doc;
+		}
+		
+		public void DeleteStandart(TicketAutUser ticket, Standart doc)
+		{
+			_logger.Trace("Trace method Delete for document {0}. Id {2}. User {1}", typeof(Standart).Name, ticket, doc.Id);
+		    _dataManagers.Delete(doc, ticket);
+		}
+	    
         #endregion
-
-        #region StandartDrawing
-
+	    
+	    	    #region StandartDrawing
+	    
         public List<StandartDrawing> GetListStandartDrawing()
-        {
-            return _dataManagers.GetListCollection<StandartDrawing>();
-        }
+		{
+		    return _dataManagers.GetListCollection<StandartDrawing>();
+		}
 
-        public StandartDrawing InsertStandartDrawing(ITicketAutUser ticket, StandartDrawing doc)
-        {
-            _dataManagers.Insert(doc, ticket);
-            return doc;
-        }
-
-        public void UpdateStandartDrawing(ITicketAutUser ticket, StandartDrawing doc)
-        {
-            _dataManagers.Update(doc, ticket);
-        }
-
-        public void DeleteStandartDrawing(ITicketAutUser ticket, StandartDrawing doc)
-        {
-            _dataManagers.Delete(doc, ticket);
-        }
-
+        public StandartDrawing GetDocumentStandartDrawing(int id)
+		{
+			return _dataManagers.GetDocument<StandartDrawing>(id);
+		}
+		
+		public StandartDrawing InsertStandartDrawing(TicketAutUser ticket, StandartDrawing doc)
+		{
+			_logger.Trace("Trace method Insert for document {0}. User {1}", typeof(StandartDrawing).Name, ticket);
+		    _dataManagers.Insert(doc, ticket);
+		    return doc;
+		}
+		
+		public StandartDrawing UpdateStandartDrawing(TicketAutUser ticket, StandartDrawing doc)
+		{
+			_logger.Trace("Trace method Update for document {0}. Id {2}. User {1}", typeof(StandartDrawing).Name, ticket, doc.Id);
+		    _dataManagers.Update(doc, ticket);
+			return doc;
+		}
+		
+		public void DeleteStandartDrawing(TicketAutUser ticket, StandartDrawing doc)
+		{
+			_logger.Trace("Trace method Delete for document {0}. Id {2}. User {1}", typeof(StandartDrawing).Name, ticket, doc.Id);
+		    _dataManagers.Delete(doc, ticket);
+		}
+	    
         #endregion
-
-        #region SuperTaskToDistrict
-
+	    
+	    	    #region SuperTaskToDistrict
+	    
         public List<SuperTaskToDistrict> GetListSuperTaskToDistrict()
-        {
-            return _dataManagers.GetListCollection<SuperTaskToDistrict>();
-        }
+		{
+		    return _dataManagers.GetListCollection<SuperTaskToDistrict>();
+		}
 
-        public SuperTaskToDistrict InsertSuperTaskToDistrict(ITicketAutUser ticket, SuperTaskToDistrict doc)
-        {
-            _dataManagers.Insert(doc, ticket);
-            return doc;
-        }
-
-        public void UpdateSuperTaskToDistrict(ITicketAutUser ticket, SuperTaskToDistrict doc)
-        {
-            _dataManagers.Update(doc, ticket);
-        }
-
-        public void DeleteSuperTaskToDistrict(ITicketAutUser ticket, SuperTaskToDistrict doc)
-        {
-            _dataManagers.Delete(doc, ticket);
-        }
-
+        public SuperTaskToDistrict GetDocumentSuperTaskToDistrict(int id)
+		{
+			return _dataManagers.GetDocument<SuperTaskToDistrict>(id);
+		}
+		
+		public SuperTaskToDistrict InsertSuperTaskToDistrict(TicketAutUser ticket, SuperTaskToDistrict doc)
+		{
+			_logger.Trace("Trace method Insert for document {0}. User {1}", typeof(SuperTaskToDistrict).Name, ticket);
+		    _dataManagers.Insert(doc, ticket);
+		    return doc;
+		}
+		
+		public SuperTaskToDistrict UpdateSuperTaskToDistrict(TicketAutUser ticket, SuperTaskToDistrict doc)
+		{
+			_logger.Trace("Trace method Update for document {0}. Id {2}. User {1}", typeof(SuperTaskToDistrict).Name, ticket, doc.Id);
+		    _dataManagers.Update(doc, ticket);
+			return doc;
+		}
+		
+		public void DeleteSuperTaskToDistrict(TicketAutUser ticket, SuperTaskToDistrict doc)
+		{
+			_logger.Trace("Trace method Delete for document {0}. Id {2}. User {1}", typeof(SuperTaskToDistrict).Name, ticket, doc.Id);
+		    _dataManagers.Delete(doc, ticket);
+		}
+	    
         #endregion
-
-        #region TaskToDistrict
-
+	    
+	    	    #region TaskToDistrict
+	    
         public List<TaskToDistrict> GetListTaskToDistrict()
-        {
-            return _dataManagers.GetListCollection<TaskToDistrict>();
-        }
+		{
+		    return _dataManagers.GetListCollection<TaskToDistrict>();
+		}
 
-        public TaskToDistrict InsertTaskToDistrict(ITicketAutUser ticket, TaskToDistrict doc)
-        {
-            _dataManagers.Insert(doc, ticket);
-            return doc;
-        }
-
-        public void UpdateTaskToDistrict(ITicketAutUser ticket, TaskToDistrict doc)
-        {
-            _dataManagers.Update(doc, ticket);
-        }
-
-        public void DeleteTaskToDistrict(ITicketAutUser ticket, TaskToDistrict doc)
-        {
-            _dataManagers.Delete(doc, ticket);
-        }
-
+        public TaskToDistrict GetDocumentTaskToDistrict(int id)
+		{
+			return _dataManagers.GetDocument<TaskToDistrict>(id);
+		}
+		
+		public TaskToDistrict InsertTaskToDistrict(TicketAutUser ticket, TaskToDistrict doc)
+		{
+			_logger.Trace("Trace method Insert for document {0}. User {1}", typeof(TaskToDistrict).Name, ticket);
+		    _dataManagers.Insert(doc, ticket);
+		    return doc;
+		}
+		
+		public TaskToDistrict UpdateTaskToDistrict(TicketAutUser ticket, TaskToDistrict doc)
+		{
+			_logger.Trace("Trace method Update for document {0}. Id {2}. User {1}", typeof(TaskToDistrict).Name, ticket, doc.Id);
+		    _dataManagers.Update(doc, ticket);
+			return doc;
+		}
+		
+		public void DeleteTaskToDistrict(TicketAutUser ticket, TaskToDistrict doc)
+		{
+			_logger.Trace("Trace method Delete for document {0}. Id {2}. User {1}", typeof(TaskToDistrict).Name, ticket, doc.Id);
+		    _dataManagers.Delete(doc, ticket);
+		}
+	    
         #endregion
-
-        #region TechOperation
-
+	    
+	    	    #region TechOperation
+	    
         public List<TechOperation> GetListTechOperation()
-        {
-            return _dataManagers.GetListCollection<TechOperation>();
-        }
+		{
+		    return _dataManagers.GetListCollection<TechOperation>();
+		}
 
-        public TechOperation InsertTechOperation(ITicketAutUser ticket, TechOperation doc)
-        {
-            _dataManagers.Insert(doc, ticket);
-            return doc;
-        }
-
-        public void UpdateTechOperation(ITicketAutUser ticket, TechOperation doc)
-        {
-            _dataManagers.Update(doc, ticket);
-        }
-
-        public void DeleteTechOperation(ITicketAutUser ticket, TechOperation doc)
-        {
-            _dataManagers.Delete(doc, ticket);
-        }
-
+        public TechOperation GetDocumentTechOperation(int id)
+		{
+			return _dataManagers.GetDocument<TechOperation>(id);
+		}
+		
+		public TechOperation InsertTechOperation(TicketAutUser ticket, TechOperation doc)
+		{
+			_logger.Trace("Trace method Insert for document {0}. User {1}", typeof(TechOperation).Name, ticket);
+		    _dataManagers.Insert(doc, ticket);
+		    return doc;
+		}
+		
+		public TechOperation UpdateTechOperation(TicketAutUser ticket, TechOperation doc)
+		{
+			_logger.Trace("Trace method Update for document {0}. Id {2}. User {1}", typeof(TechOperation).Name, ticket, doc.Id);
+		    _dataManagers.Update(doc, ticket);
+			return doc;
+		}
+		
+		public void DeleteTechOperation(TicketAutUser ticket, TechOperation doc)
+		{
+			_logger.Trace("Trace method Delete for document {0}. Id {2}. User {1}", typeof(TechOperation).Name, ticket, doc.Id);
+		    _dataManagers.Delete(doc, ticket);
+		}
+	    
         #endregion
-
-        #region TechRoute
-
+	    
+	    	    #region TechRoute
+	    
         public List<TechRoute> GetListTechRoute()
-        {
-            return _dataManagers.GetListCollection<TechRoute>();
-        }
+		{
+		    return _dataManagers.GetListCollection<TechRoute>();
+		}
 
-        public TechRoute InsertTechRoute(ITicketAutUser ticket, TechRoute doc)
-        {
-            _dataManagers.Insert(doc, ticket);
-            return doc;
-        }
-
-        public void UpdateTechRoute(ITicketAutUser ticket, TechRoute doc)
-        {
-            _dataManagers.Update(doc, ticket);
-        }
-
-        public void DeleteTechRoute(ITicketAutUser ticket, TechRoute doc)
-        {
-            _dataManagers.Delete(doc, ticket);
-        }
-
-        BillInnerShift IUppyDataService.InsertBillShift(ITicketAutUser ticket, BillShift doc)
-        {
-            throw new NotImplementedException();
-        }
-
-        BillInnerShift IUppyDataService.InsertDrawing(ITicketAutUser ticket, Drawing doc)
-        {
-            throw new NotImplementedException();
-        }
-
-        BillInnerShift IUppyDataService.InsertExcludeDrawing(ITicketAutUser ticket, ExcludeDrawing doc)
-        {
-            throw new NotImplementedException();
-        }
-
-        BillInnerShift IUppyDataService.InsertGost(ITicketAutUser ticket, Gost doc)
-        {
-            throw new NotImplementedException();
-        }
-
-        BillInnerShift IUppyDataService.InsertOrder(ITicketAutUser ticket, Order doc)
-        {
-            throw new NotImplementedException();
-        }
-
-        BillInnerShift IUppyDataService.InsertPackingList(ITicketAutUser ticket, PackingList doc)
-        {
-            throw new NotImplementedException();
-        }
-
-        BillInnerShift IUppyDataService.InsertProfileWorkHour(ITicketAutUser ticket, ProfileWorkHour doc)
-        {
-            throw new NotImplementedException();
-        }
-
-        BillInnerShift IUppyDataService.InsertRateWorkHour(ITicketAutUser ticket, RateWorkHour doc)
-        {
-            throw new NotImplementedException();
-        }
-
-        BillInnerShift IUppyDataService.InsertSetting(ITicketAutUser ticket, Setting doc)
-        {
-            throw new NotImplementedException();
-        }
-
-        BillInnerShift IUppyDataService.InsertStandart(ITicketAutUser ticket, Standart doc)
-        {
-            throw new NotImplementedException();
-        }
-
-        BillInnerShift IUppyDataService.InsertStandartDrawing(ITicketAutUser ticket, StandartDrawing doc)
-        {
-            throw new NotImplementedException();
-        }
-
-        BillInnerShift IUppyDataService.InsertSuperTaskToDistrict(ITicketAutUser ticket, SuperTaskToDistrict doc)
-        {
-            throw new NotImplementedException();
-        }
-
-        BillInnerShift IUppyDataService.InsertTaskToDistrict(ITicketAutUser ticket, TaskToDistrict doc)
-        {
-            throw new NotImplementedException();
-        }
-
-        BillInnerShift IUppyDataService.InsertTechOperation(ITicketAutUser ticket, TechOperation doc)
-        {
-            throw new NotImplementedException();
-        }
-
-        BillInnerShift IUppyDataService.InsertTechRoute(ITicketAutUser ticket, TechRoute doc)
-        {
-            throw new NotImplementedException();
-        }
-
+        public TechRoute GetDocumentTechRoute(int id)
+		{
+			return _dataManagers.GetDocument<TechRoute>(id);
+		}
+		
+		public TechRoute InsertTechRoute(TicketAutUser ticket, TechRoute doc)
+		{
+			_logger.Trace("Trace method Insert for document {0}. User {1}", typeof(TechRoute).Name, ticket);
+		    _dataManagers.Insert(doc, ticket);
+		    return doc;
+		}
+		
+		public TechRoute UpdateTechRoute(TicketAutUser ticket, TechRoute doc)
+		{
+			_logger.Trace("Trace method Update for document {0}. Id {2}. User {1}", typeof(TechRoute).Name, ticket, doc.Id);
+		    _dataManagers.Update(doc, ticket);
+			return doc;
+		}
+		
+		public void DeleteTechRoute(TicketAutUser ticket, TechRoute doc)
+		{
+			_logger.Trace("Trace method Delete for document {0}. Id {2}. User {1}", typeof(TechRoute).Name, ticket, doc.Id);
+		    _dataManagers.Delete(doc, ticket);
+		}
+	    
         #endregion
-
-
-    }
+	    
+	    
+	}
 }

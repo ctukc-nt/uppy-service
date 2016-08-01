@@ -102,7 +102,7 @@
       <Project>{371A01EB-92FF-4FEF-871D-DA6E19A8FDD8}</Project>
       <Name>Mongo.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\core\UPPY.MongoDataBase\UPPY.DataBase.Mongo.csproj">
+    <ProjectReference Include="..\core\UPPY.DataBase.Mongo\UPPY.DataBase.Mongo.csproj">
       <Project>{3DEAC9BA-56EE-41A1-9472-849E0574880F}</Project>
       <Name>UPPY.DataBase.Mongo</Name>
     </ProjectReference>

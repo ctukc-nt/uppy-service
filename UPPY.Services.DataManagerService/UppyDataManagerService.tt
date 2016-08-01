@@ -4,7 +4,6 @@
 <#@ import namespace="System.Text" #>
 <#@ import namespace="System.Collections.Generic" #>
 <#@ output extension=".cs" #>
-using System;
 using System.Collections.Generic;
 using Core.Domain.Model;
 using Core.Security;
@@ -46,20 +45,29 @@ namespace UPPY.Services.DataManagerService
 		{
 		    return _dataManagers.GetListCollection<<#= className #>>();
 		}
-		
-		public <#= className #> Insert<#= className #>(ITicketAutUser ticket, <#= className #> doc)
+
+        public <#= className #> GetDocument<#= className #>(int id)
 		{
+			return _dataManagers.GetDocument<<#= className #>>(id);
+		}
+		
+		public <#= className #> Insert<#= className #>(TicketAutUser ticket, <#= className #> doc)
+		{
+			_logger.Trace("Trace method Insert for document {0}. User {1}", typeof(<#= className #>).Name, ticket);
 		    _dataManagers.Insert(doc, ticket);
 		    return doc;
 		}
 		
-		public void Update<#= className #>(ITicketAutUser ticket, <#= className #> doc)
+		public <#= className #> Update<#= className #>(TicketAutUser ticket, <#= className #> doc)
 		{
+			_logger.Trace("Trace method Update for document {0}. Id {2}. User {1}", typeof(<#= className #>).Name, ticket, doc.Id);
 		    _dataManagers.Update(doc, ticket);
+			return doc;
 		}
 		
-		public void Delete<#= className #>(ITicketAutUser ticket, <#= className #> doc)
+		public void Delete<#= className #>(TicketAutUser ticket, <#= className #> doc)
 		{
+			_logger.Trace("Trace method Delete for document {0}. Id {2}. User {1}", typeof(<#= className #>).Name, ticket, doc.Id);
 		    _dataManagers.Delete(doc, ticket);
 		}
 	    

@@ -31,7 +31,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPPY.Services.DataManagersS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPPY.Services.DataManagerService", "UPPY.Services.DataManagerService\UPPY.Services.DataManagerService.csproj", "{D7195D1F-C294-4A6B-B601-61D6AB10DF1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPPY.DataBase.Mongo", "core\UPPY.MongoDataBase\UPPY.DataBase.Mongo.csproj", "{3DEAC9BA-56EE-41A1-9472-849E0574880F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPPY.DataBase.Mongo", "core\UPPY.DataBase.Mongo\UPPY.DataBase.Mongo.csproj", "{3DEAC9BA-56EE-41A1-9472-849E0574880F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
