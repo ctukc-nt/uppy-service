@@ -39,7 +39,9 @@ namespace UPPY.Services.DataManagerService
 
         public List<BillShift> GetListBillShift()
         {
-            return _dataManagers.GetListCollection<BillShift>();
+            var res = _dataManagers.GetListCollection<BillShift>();
+            _logger.Trace("Created instance");
+            return res;
         }
 
         public BillShift InsertBillShift(ITicketAutUser ticket, BillShift doc)
@@ -139,7 +141,9 @@ namespace UPPY.Services.DataManagerService
 
         public List<Order> GetListOrder()
         {
-            return _dataManagers.GetListCollection<Order>();
+            var res = _dataManagers.GetListCollection<Order>();
+            _logger.Trace("trace order list");
+            return res;
         }
 
         public Order InsertOrder(ITicketAutUser ticket, Order doc)
