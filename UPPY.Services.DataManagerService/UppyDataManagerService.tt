@@ -43,31 +43,33 @@ namespace UPPY.Services.DataManagerService
 	    
         public List<<#= className #>> GetList<#= className #>()
 		{
+		_logger.Trace("Trace method GetList for document: {0}", typeof(<#= className #>).Name);
 		    return _dataManagers.GetListCollection<<#= className #>>();
 		}
 
         public <#= className #> GetDocument<#= className #>(int id)
 		{
+			_logger.Trace("Trace method GetDocument for document: {0}. Id: {1}", typeof(<#= className #>).Name, id);
 			return _dataManagers.GetDocument<<#= className #>>(id);
 		}
 		
 		public <#= className #> Insert<#= className #>(TicketAutUser ticket, <#= className #> doc)
 		{
-			_logger.Trace("Trace method Insert for document {0}. User {1}", typeof(<#= className #>).Name, ticket);
+			_logger.Trace("Trace method Insert for document: {0}. User: {1}", typeof(<#= className #>).Name, ticket);
 		    _dataManagers.Insert(doc, ticket);
 		    return doc;
 		}
 		
 		public <#= className #> Update<#= className #>(TicketAutUser ticket, <#= className #> doc)
 		{
-			_logger.Trace("Trace method Update for document {0}. Id {2}. User {1}", typeof(<#= className #>).Name, ticket, doc.Id);
+			_logger.Trace("Trace method Update for document: {0}. Id: {2}. User: {1}", typeof(<#= className #>).Name, ticket, doc.Id);
 		    _dataManagers.Update(doc, ticket);
 			return doc;
 		}
 		
 		public void Delete<#= className #>(TicketAutUser ticket, <#= className #> doc)
 		{
-			_logger.Trace("Trace method Delete for document {0}. Id {2}. User {1}", typeof(<#= className #>).Name, ticket, doc.Id);
+			_logger.Trace("Trace method Delete for document: {0}. Id: {2}. User: {1}", typeof(<#= className #>).Name, ticket, doc.Id);
 		    _dataManagers.Delete(doc, ticket);
 		}
 	    
