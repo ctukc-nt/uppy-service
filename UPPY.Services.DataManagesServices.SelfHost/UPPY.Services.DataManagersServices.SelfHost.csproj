@@ -115,13 +115,13 @@
       <Project>{3157a005-3765-48e3-a695-abec4d9a0c6a}</Project>
       <Name>UPPY.Services.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\core\UPPY.Services.DataManagers\UPPY.Services.DataManagers.csproj">
-      <Project>{5D89B938-8766-4BAA-BE3A-7F922341B80C}</Project>
-      <Name>UPPY.Services.DataManagers</Name>
-    </ProjectReference>
     <ProjectReference Include="..\UPPY.Services.DataManagerService\UPPY.Services.DataManagerService.csproj">
       <Project>{D7195D1F-C294-4A6B-B601-61D6AB10DF1F}</Project>
       <Name>UPPY.Services.DataManagerService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UPPY.Services.DataManagers\UPPY.Services.DataManagers.csproj">
+      <Project>{5d89b938-8766-4baa-be3a-7f922341b80c}</Project>
+      <Name>UPPY.Services.DataManagers</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -144,8 +144,8 @@
       <Project>{3157A005-3765-48E3-A695-ABEC4D9A0C6A}</Project>
       <Name>UPPY.Services.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\core\UPPY.Services.DataManagers\UPPY.Services.DataManagers.csproj">
-      <Project>{5D89B938-8766-4BAA-BE3A-7F922341B80C}</Project>
+    <ProjectReference Include="..\UPPY.Services.DataManagers\UPPY.Services.DataManagers.csproj">
+      <Project>{5d89b938-8766-4baa-be3a-7f922341b80c}</Project>
       <Name>UPPY.Services.DataManagers</Name>
     </ProjectReference>
   </ItemGroup>

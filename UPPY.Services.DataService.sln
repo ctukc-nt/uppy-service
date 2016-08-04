@@ -25,13 +25,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPPY.DIE", "core\UPPY.DIE\U
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPPY.Security", "core\UPPY.Security\UPPY.Security.csproj", "{84191153-D5BF-4A5A-BBB8-8809AFF593C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPPY.Services.DataManagers", "core\UPPY.Services.DataManagers\UPPY.Services.DataManagers.csproj", "{5D89B938-8766-4BAA-BE3A-7F922341B80C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPPY.Services.DataManagersServices.SelfHost", "UPPY.Services.DataManagesServices.SelfHost\UPPY.Services.DataManagersServices.SelfHost.csproj", "{0D13DBFC-5EAD-4F08-B30B-03290A28C99D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPPY.Services.DataManagerService", "UPPY.Services.DataManagerService\UPPY.Services.DataManagerService.csproj", "{D7195D1F-C294-4A6B-B601-61D6AB10DF1F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPPY.DataBase.Mongo", "core\UPPY.DataBase.Mongo\UPPY.DataBase.Mongo.csproj", "{3DEAC9BA-56EE-41A1-9472-849E0574880F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPPY.Services.DataManagers", "UPPY.Services.DataManagers\UPPY.Services.DataManagers.csproj", "{5D89B938-8766-4BAA-BE3A-7F922341B80C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,10 +79,6 @@ Global
 		{84191153-D5BF-4A5A-BBB8-8809AFF593C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84191153-D5BF-4A5A-BBB8-8809AFF593C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84191153-D5BF-4A5A-BBB8-8809AFF593C7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5D89B938-8766-4BAA-BE3A-7F922341B80C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5D89B938-8766-4BAA-BE3A-7F922341B80C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5D89B938-8766-4BAA-BE3A-7F922341B80C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5D89B938-8766-4BAA-BE3A-7F922341B80C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0D13DBFC-5EAD-4F08-B30B-03290A28C99D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0D13DBFC-5EAD-4F08-B30B-03290A28C99D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D13DBFC-5EAD-4F08-B30B-03290A28C99D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -95,6 +91,10 @@ Global
 		{3DEAC9BA-56EE-41A1-9472-849E0574880F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DEAC9BA-56EE-41A1-9472-849E0574880F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DEAC9BA-56EE-41A1-9472-849E0574880F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D89B938-8766-4BAA-BE3A-7F922341B80C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D89B938-8766-4BAA-BE3A-7F922341B80C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D89B938-8766-4BAA-BE3A-7F922341B80C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D89B938-8766-4BAA-BE3A-7F922341B80C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -108,7 +108,6 @@ Global
 		{49232DD5-96D7-45CD-A063-09FA9C148849} = {B01690B2-2CA1-4FAE-A927-58DA570B0BCC}
 		{04B0D4BE-D7A1-4F6A-8A97-BBE47746BB44} = {B01690B2-2CA1-4FAE-A927-58DA570B0BCC}
 		{84191153-D5BF-4A5A-BBB8-8809AFF593C7} = {B01690B2-2CA1-4FAE-A927-58DA570B0BCC}
-		{5D89B938-8766-4BAA-BE3A-7F922341B80C} = {B01690B2-2CA1-4FAE-A927-58DA570B0BCC}
 		{3DEAC9BA-56EE-41A1-9472-849E0574880F} = {B01690B2-2CA1-4FAE-A927-58DA570B0BCC}
 	EndGlobalSection
 EndGlobal
