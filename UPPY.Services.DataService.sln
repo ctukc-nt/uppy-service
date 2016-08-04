@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPPY.Services.DataServices.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPPY.Services.DataService", "UPPY.Services.DataService\UPPY.Services.DataService.csproj", "{5BA5E1D9-7E66-4873-B4F1-BCB14DD603B2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Uppy", "Uppy", "{B01690B2-2CA1-4FAE-A927-58DA570B0BCC}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "core", "core", "{B01690B2-2CA1-4FAE-A927-58DA570B0BCC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "core\Core\Core.csproj", "{876F668F-5017-4CEE-8AE4-91E9B0E9E6B6}"
 EndProject
