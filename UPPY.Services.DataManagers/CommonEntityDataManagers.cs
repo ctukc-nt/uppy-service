@@ -22,6 +22,7 @@ namespace UPPY.Services.DataManagers
             var docColl = CollectionsContainer.GetBsonDocumentByType(t);
             var coll = CollectionsContainer.GetMongoCollection(docColl);
             var res = coll.FindAsync(x => true).Result.ToListAsync().Result;
+
             return res;
         }
 
@@ -33,10 +34,9 @@ namespace UPPY.Services.DataManagers
             return coll.FindAsync(x => true).Result.ToListAsync().Result;
         }
 
-        public T GetDocument<T>(int? id)
+        public T GetDocument<T>(int id)
         {
-            var docColl = CollectionsContainer.GetBsonDocumentByType(typeof (T));
-
+            var docColl = CollectionsContainer.GetBsonDocumentContainsId(typeof (T), id);
             var coll = CollectionsContainer.GetMongoCollection(docColl);
             var filter = Builders<BsonDocument>.Filter.Eq("_id", id);
 
@@ -53,6 +53,19 @@ namespace UPPY.Services.DataManagers
             }
 
             return null;
+        }
+
+        public List<T> GetHierarchicalListCollection<T>(int id)
+        {
+            var docColl = CollectionsContainer.GetBsonDocumentContainsId(typeof(T), id);
+            var coll = CollectionsContainer.GetMongoCollection<T>(docColl);
+
+            return coll.FindAsync(x => true).Result.ToListAsync().Result;
+        }
+
+        public void Insert(IHierarchyEntity doc, ITicketAutUser user)
+        {
+            
         }
 
         public void Insert(IEntity doc, ITicketAutUser user)
@@ -72,6 +85,11 @@ namespace UPPY.Services.DataManagers
             Auditor?.AuditOperation(OperationType.Insert, doc, user);
         }
 
+        public void Update(IHierarchyEntity doc, ITicketAutUser user)
+        {
+
+        }
+
         public void Update(IEntity doc, ITicketAutUser user)
         {
             if (doc?.Id == null)
@@ -87,6 +105,11 @@ namespace UPPY.Services.DataManagers
             coll.ReplaceOneAsync(filter, bson);
 
             Auditor?.AuditOperation(OperationType.Insert, doc, user);
+        }
+
+        public void Delete(IHierarchyEntity doc, ITicketAutUser user)
+        {
+
         }
 
         public void Delete(IEntity doc, ITicketAutUser user)
