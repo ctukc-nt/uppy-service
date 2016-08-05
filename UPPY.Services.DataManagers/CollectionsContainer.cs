@@ -16,23 +16,15 @@ namespace UPPY.Services.DataManagers
             _mongoDb = mongoDb;
         }
 
-        private List<BsonDocument> GetCashedCollection()
+        public BsonDocument CreateCollection(string name)
         {
-            return _mongoDb.ListCollectionsAsync().Result.ToListAsync().Result;
+            _mongoDb.CreateCollectionAsync(name).Wait();
+            return GetCollectionsByName(name).FirstOrDefault();
         }
 
         public BsonDocument GetBsonDocumentByType(Type t)
         {
             var collections = GetBsonDocumentsByType(t);
-            var col = collections.FirstOrDefault();
-            if (col == null)
-            {
-                _mongoDb.CreateCollectionAsync(GetNameCollectionByType(t)).Wait();
-               
-            }
-
-            collections = GetBsonDocumentsByType(t);
-
             return collections.FirstOrDefault();
         }
 
@@ -48,30 +40,13 @@ namespace UPPY.Services.DataManagers
 
         public List<BsonDocument> GetCollectionsByName(string name)
         {
-           var  collections = GetCashedCollection();
-
-            var filtCollections = (from coll in collections
-                                   let elemName = coll.Elements.FirstOrDefault(y => y.Name == "name")
-                               where elemName.Value.AsString == name
-                               select coll).ToList();
-            return filtCollections;
-        }
-
-        private List<BsonDocument> GetBsonDocumentsByType(Type t)
-        {
             var collections = GetCashedCollection();
 
             var filtCollections = (from coll in collections
-                               let elemName = coll.Elements.FirstOrDefault(y => y.Name == "name")
-                where elemName.Value.AsString == GetNameCollectionByType(t)
-                select coll).ToList();
-
+                                   let elemName = coll.Elements.FirstOrDefault(y => y.Name == "name")
+                                   where elemName.Value.AsString == name
+                                   select coll).ToList();
             return filtCollections;
-        }
-
-        private string GetNameCollectionByType(Type t)
-        {
-            return t.Name.ToLowerInvariant() + "s";
         }
 
         public BsonDocument GetBsonDocumentContainsId(Type t, int id)
@@ -93,5 +68,34 @@ namespace UPPY.Services.DataManagers
 
             return null;
         }
+
+        private List<BsonDocument> GetCashedCollection()
+        {
+            return _mongoDb.ListCollectionsAsync().Result.ToListAsync().Result;
+        }
+
+        private List<BsonDocument> GetBsonDocumentsByType(Type t)
+        {
+            var collections = GetCashedCollection();
+
+            var filtCollections = (from coll in collections
+                                   let elemName = coll.Elements.FirstOrDefault(y => y.Name == "name")
+                                   where elemName.Value.AsString == GetNameCollection(t) || (elemName.Value.AsString.Contains("_") && elemName.Value.AsString.StartsWith(GetNameCollection(t)))
+                                   select coll).ToList();
+
+            return filtCollections;
+        }
+
+        public static string GetNameCollection(Type t)
+        {
+            return t.Name.ToLowerInvariant() + "s";
+        }
+
+        public static string GetNameCollection(Type t, int id)
+        {
+            return t.Name.ToLowerInvariant() + "s" + "_" + id;
+        }
+
+
     }
 }

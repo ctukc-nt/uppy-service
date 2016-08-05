@@ -2,6 +2,7 @@
 using Core.Domain.Model;
 using Core.Security;
 using UPPY.Services.Core;
+using System.Linq;
 
 namespace UPPY.Services.DataManagerService
 {
@@ -14,7 +15,7 @@ namespace UPPY.Services.DataManagerService
         public List<BillInnerShift> GetListBillInnerShift()
 		{
 			_logger.Trace("Trace method GetList for document: {0}", typeof(BillInnerShift).Name);
-		    return _dataManagers.GetListCollection<BillInnerShift>();
+		    return _dataManagers.GetListCollection<BillInnerShift>().OrderBy(x => x.Id).ToList();
 		}
 
         public BillInnerShift GetDocumentBillInnerShift(int id)
@@ -50,7 +51,7 @@ namespace UPPY.Services.DataManagerService
         public List<BillShift> GetListBillShift()
 		{
 			_logger.Trace("Trace method GetList for document: {0}", typeof(BillShift).Name);
-		    return _dataManagers.GetListCollection<BillShift>();
+		    return _dataManagers.GetListCollection<BillShift>().OrderBy(x => x.Id).ToList();
 		}
 
         public BillShift GetDocumentBillShift(int id)
@@ -86,7 +87,7 @@ namespace UPPY.Services.DataManagerService
         public List<ExcludeDrawing> GetListExcludeDrawing()
 		{
 			_logger.Trace("Trace method GetList for document: {0}", typeof(ExcludeDrawing).Name);
-		    return _dataManagers.GetListCollection<ExcludeDrawing>();
+		    return _dataManagers.GetListCollection<ExcludeDrawing>().OrderBy(x => x.Id).ToList();
 		}
 
         public ExcludeDrawing GetDocumentExcludeDrawing(int id)
@@ -122,7 +123,7 @@ namespace UPPY.Services.DataManagerService
         public List<Gost> GetListGost()
 		{
 			_logger.Trace("Trace method GetList for document: {0}", typeof(Gost).Name);
-		    return _dataManagers.GetListCollection<Gost>();
+		    return _dataManagers.GetListCollection<Gost>().OrderBy(x => x.Id).ToList();
 		}
 
         public Gost GetDocumentGost(int id)
@@ -158,7 +159,7 @@ namespace UPPY.Services.DataManagerService
         public List<Order> GetListOrder()
 		{
 			_logger.Trace("Trace method GetList for document: {0}", typeof(Order).Name);
-		    return _dataManagers.GetListCollection<Order>();
+		    return _dataManagers.GetListCollection<Order>().OrderBy(x => x.Id).ToList();
 		}
 
         public Order GetDocumentOrder(int id)
@@ -194,7 +195,7 @@ namespace UPPY.Services.DataManagerService
         public List<PackingList> GetListPackingList()
 		{
 			_logger.Trace("Trace method GetList for document: {0}", typeof(PackingList).Name);
-		    return _dataManagers.GetListCollection<PackingList>();
+		    return _dataManagers.GetListCollection<PackingList>().OrderBy(x => x.Id).ToList();
 		}
 
         public PackingList GetDocumentPackingList(int id)
@@ -230,7 +231,7 @@ namespace UPPY.Services.DataManagerService
         public List<ProfileWorkHour> GetListProfileWorkHour()
 		{
 			_logger.Trace("Trace method GetList for document: {0}", typeof(ProfileWorkHour).Name);
-		    return _dataManagers.GetListCollection<ProfileWorkHour>();
+		    return _dataManagers.GetListCollection<ProfileWorkHour>().OrderBy(x => x.Id).ToList();
 		}
 
         public ProfileWorkHour GetDocumentProfileWorkHour(int id)
@@ -266,7 +267,7 @@ namespace UPPY.Services.DataManagerService
         public List<RateWorkHour> GetListRateWorkHour()
 		{
 			_logger.Trace("Trace method GetList for document: {0}", typeof(RateWorkHour).Name);
-		    return _dataManagers.GetListCollection<RateWorkHour>();
+		    return _dataManagers.GetListCollection<RateWorkHour>().OrderBy(x => x.Id).ToList();
 		}
 
         public RateWorkHour GetDocumentRateWorkHour(int id)
@@ -302,7 +303,7 @@ namespace UPPY.Services.DataManagerService
         public List<Setting> GetListSetting()
 		{
 			_logger.Trace("Trace method GetList for document: {0}", typeof(Setting).Name);
-		    return _dataManagers.GetListCollection<Setting>();
+		    return _dataManagers.GetListCollection<Setting>().OrderBy(x => x.Id).ToList();
 		}
 
         public Setting GetDocumentSetting(int id)
@@ -338,7 +339,7 @@ namespace UPPY.Services.DataManagerService
         public List<Standart> GetListStandart()
 		{
 			_logger.Trace("Trace method GetList for document: {0}", typeof(Standart).Name);
-		    return _dataManagers.GetListCollection<Standart>();
+		    return _dataManagers.GetListCollection<Standart>().OrderBy(x => x.Id).ToList();
 		}
 
         public Standart GetDocumentStandart(int id)
@@ -374,7 +375,7 @@ namespace UPPY.Services.DataManagerService
         public List<StandartDrawing> GetListStandartDrawing()
 		{
 			_logger.Trace("Trace method GetList for document: {0}", typeof(StandartDrawing).Name);
-		    return _dataManagers.GetListCollection<StandartDrawing>();
+		    return _dataManagers.GetListCollection<StandartDrawing>().OrderBy(x => x.Id).ToList();
 		}
 
         public StandartDrawing GetDocumentStandartDrawing(int id)
@@ -410,7 +411,7 @@ namespace UPPY.Services.DataManagerService
         public List<SuperTaskToDistrict> GetListSuperTaskToDistrict()
 		{
 			_logger.Trace("Trace method GetList for document: {0}", typeof(SuperTaskToDistrict).Name);
-		    return _dataManagers.GetListCollection<SuperTaskToDistrict>();
+		    return _dataManagers.GetListCollection<SuperTaskToDistrict>().OrderBy(x => x.Id).ToList();
 		}
 
         public SuperTaskToDistrict GetDocumentSuperTaskToDistrict(int id)
@@ -446,7 +447,7 @@ namespace UPPY.Services.DataManagerService
         public List<TaskToDistrict> GetListTaskToDistrict()
 		{
 			_logger.Trace("Trace method GetList for document: {0}", typeof(TaskToDistrict).Name);
-		    return _dataManagers.GetListCollection<TaskToDistrict>();
+		    return _dataManagers.GetListCollection<TaskToDistrict>().OrderBy(x => x.Id).ToList();
 		}
 
         public TaskToDistrict GetDocumentTaskToDistrict(int id)
@@ -482,7 +483,7 @@ namespace UPPY.Services.DataManagerService
         public List<TechOperation> GetListTechOperation()
 		{
 			_logger.Trace("Trace method GetList for document: {0}", typeof(TechOperation).Name);
-		    return _dataManagers.GetListCollection<TechOperation>();
+		    return _dataManagers.GetListCollection<TechOperation>().OrderBy(x => x.Id).ToList();
 		}
 
         public TechOperation GetDocumentTechOperation(int id)
@@ -518,7 +519,7 @@ namespace UPPY.Services.DataManagerService
         public List<TechRoute> GetListTechRoute()
 		{
 			_logger.Trace("Trace method GetList for document: {0}", typeof(TechRoute).Name);
-		    return _dataManagers.GetListCollection<TechRoute>();
+		    return _dataManagers.GetListCollection<TechRoute>().OrderBy(x => x.Id).ToList();
 		}
 
         public TechRoute GetDocumentTechRoute(int id)
@@ -549,13 +550,85 @@ namespace UPPY.Services.DataManagerService
 	    
         #endregion
 	    
+	    	    #region WorkHourStandartDrawing
+	    
+        public List<WorkHourStandartDrawing> GetListWorkHourStandartDrawing()
+		{
+			_logger.Trace("Trace method GetList for document: {0}", typeof(WorkHourStandartDrawing).Name);
+		    return _dataManagers.GetListCollection<WorkHourStandartDrawing>().OrderBy(x => x.Id).ToList();
+		}
+
+        public WorkHourStandartDrawing GetDocumentWorkHourStandartDrawing(int id)
+		{
+			_logger.Trace("Trace method GetDocument for document: {0}. Id: {1}", typeof(WorkHourStandartDrawing).Name, id);
+			return _dataManagers.GetDocument<WorkHourStandartDrawing>(id);
+		}
+		
+		public WorkHourStandartDrawing InsertWorkHourStandartDrawing(TicketAutUser ticket, WorkHourStandartDrawing doc)
+		{
+			_logger.Trace("Trace method Insert for document: {0}. User: {1}", typeof(WorkHourStandartDrawing).Name, ticket);
+		    _dataManagers.Insert(doc, ticket);
+		    return doc;
+		}
+		
+		public WorkHourStandartDrawing UpdateWorkHourStandartDrawing(TicketAutUser ticket, WorkHourStandartDrawing doc)
+		{
+			_logger.Trace("Trace method Update for document: {0}. Id: {2}. User: {1}", typeof(WorkHourStandartDrawing).Name, ticket, doc.Id);
+		    _dataManagers.Update(doc, ticket);
+			return doc;
+		}
+		
+		public void DeleteWorkHourStandartDrawing(TicketAutUser ticket, WorkHourStandartDrawing doc)
+		{
+			_logger.Trace("Trace method Delete for document: {0}. Id: {2}. User: {1}", typeof(WorkHourStandartDrawing).Name, ticket, doc.Id);
+		    _dataManagers.Delete(doc, ticket);
+		}
+	    
+        #endregion
+	    
+	    	    #region WorkHourDrawing
+	    
+        public List<WorkHourDrawing> GetListWorkHourDrawing()
+		{
+			_logger.Trace("Trace method GetList for document: {0}", typeof(WorkHourDrawing).Name);
+		    return _dataManagers.GetListCollection<WorkHourDrawing>().OrderBy(x => x.Id).ToList();
+		}
+
+        public WorkHourDrawing GetDocumentWorkHourDrawing(int id)
+		{
+			_logger.Trace("Trace method GetDocument for document: {0}. Id: {1}", typeof(WorkHourDrawing).Name, id);
+			return _dataManagers.GetDocument<WorkHourDrawing>(id);
+		}
+		
+		public WorkHourDrawing InsertWorkHourDrawing(TicketAutUser ticket, WorkHourDrawing doc)
+		{
+			_logger.Trace("Trace method Insert for document: {0}. User: {1}", typeof(WorkHourDrawing).Name, ticket);
+		    _dataManagers.Insert(doc, ticket);
+		    return doc;
+		}
+		
+		public WorkHourDrawing UpdateWorkHourDrawing(TicketAutUser ticket, WorkHourDrawing doc)
+		{
+			_logger.Trace("Trace method Update for document: {0}. Id: {2}. User: {1}", typeof(WorkHourDrawing).Name, ticket, doc.Id);
+		    _dataManagers.Update(doc, ticket);
+			return doc;
+		}
+		
+		public void DeleteWorkHourDrawing(TicketAutUser ticket, WorkHourDrawing doc)
+		{
+			_logger.Trace("Trace method Delete for document: {0}. Id: {2}. User: {1}", typeof(WorkHourDrawing).Name, ticket, doc.Id);
+		    _dataManagers.Delete(doc, ticket);
+		}
+	    
+        #endregion
+	    
 	    
 				#region Hierarchical Drawing
 
 		public List<Drawing> GetFilterListDrawing(int id)
 		{
 			_logger.Trace("Trace method GetList for document: {0}", typeof(Drawing).Name);
-		    return _dataManagers.GetHierarchicalListCollection<Drawing>(id);
+		    return _dataManagers.GetHierarchicalListCollection<Drawing>(id).OrderBy(x => x.Id).ToList();
 		}
 
         public Drawing GetDocumentDrawing(int id)

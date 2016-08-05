@@ -17,18 +17,22 @@ namespace UPPY.Services.DataManagers
 
         public ObjectsAuditor Auditor { get; set; }
 
-        public List<BsonDocument> GetListCollection(Type t)
-        {
-            var docColl = CollectionsContainer.GetBsonDocumentByType(t);
-            var coll = CollectionsContainer.GetMongoCollection(docColl);
-            var res = coll.FindAsync(x => true).Result.ToListAsync().Result;
+        //public List<BsonDocument> GetListCollection(Type t)
+        //{
+        //    var docColl = CollectionsContainer.GetBsonDocumentByType(t);
+        //    var coll = CollectionsContainer.GetMongoCollection(docColl);
+        //    var res = coll.FindAsync(x => true).Result.ToListAsync().Result;
 
-            return res;
-        }
+        //    return res;
+        //}
 
         public List<T> GetListCollection<T>()
         {
             var docColl = CollectionsContainer.GetBsonDocumentByType(typeof (T));
+
+            if (docColl == null)
+                throw new KeyNotFoundException();
+
             var coll = CollectionsContainer.GetMongoCollection<T>(docColl);
 
             return coll.FindAsync(x => true).Result.ToListAsync().Result;
@@ -37,27 +41,35 @@ namespace UPPY.Services.DataManagers
         public T GetDocument<T>(int id)
         {
             var docColl = CollectionsContainer.GetBsonDocumentContainsId(typeof (T), id);
+
+            if (docColl == null)
+                throw new KeyNotFoundException();
+
             var coll = CollectionsContainer.GetMongoCollection(docColl);
             var filter = Builders<BsonDocument>.Filter.Eq("_id", id);
 
             return BsonSerializer.Deserialize<T>(coll.FindAsync(filter).Result.ToListAsync().Result.FirstOrDefault());
         }
 
-        public List<BsonDocument> GetHierarchicalListCollection(Type t, int id)
-        {
-            var docColl = CollectionsContainer.GetBsonDocumentContainsId(t, id);
-            if (docColl != null)
-            {
-                var coll = CollectionsContainer.GetMongoCollection(docColl);
-                return coll.FindAsync(x => true).Result.ToListAsync().Result;
-            }
+        //public List<BsonDocument> GetHierarchicalListCollection(Type t, int id)
+        //{
+        //    var docColl = CollectionsContainer.GetBsonDocumentContainsId(t, id);
+        //    if (docColl != null)
+        //    {
+        //        var coll = CollectionsContainer.GetMongoCollection(docColl);
+        //        return coll.FindAsync(x => true).Result.ToListAsync().Result;
+        //    }
 
-            return null;
-        }
+        //    return null;
+        //}
 
         public List<T> GetHierarchicalListCollection<T>(int id)
         {
             var docColl = CollectionsContainer.GetBsonDocumentContainsId(typeof(T), id);
+
+            if (docColl == null)
+                throw new KeyNotFoundException();
+
             var coll = CollectionsContainer.GetMongoCollection<T>(docColl);
 
             return coll.FindAsync(x => true).Result.ToListAsync().Result;
@@ -65,7 +77,40 @@ namespace UPPY.Services.DataManagers
 
         public void Insert(IHierarchyEntity doc, ITicketAutUser user)
         {
-            
+            if (doc == null)
+                return;
+
+            doc.Id = GetIdDocument(doc.GetType());
+
+            if (doc.ParentId.HasValue)
+            {
+                var docColl = CollectionsContainer.GetBsonDocumentContainsId(doc.GetType(), doc.ParentId.Value);
+
+                if (docColl == null)
+                    throw new KeyNotFoundException();
+
+                var bson = doc.ToBsonDocument();
+                bson.RemoveAt(0);
+
+                var coll = CollectionsContainer.GetMongoCollection(docColl);
+
+                coll.InsertOneAsync(bson).Wait();
+            }
+            else
+            {
+                var docColl = CollectionsContainer.CreateCollection(CollectionsContainer.GetNameCollection(doc.GetType(), doc.Id.Value));
+                if (docColl == null)
+                    throw new KeyNotFoundException("Ошибка при создании коллекции");
+
+                var bson = doc.ToBsonDocument();
+                bson.RemoveAt(0);
+
+                var coll = CollectionsContainer.GetMongoCollection(docColl);
+
+                coll.InsertOneAsync(bson).Wait();
+            }
+
+            Auditor?.AuditOperation(OperationType.Insert, doc, user);
         }
 
         public void Insert(IEntity doc, ITicketAutUser user)
@@ -75,7 +120,12 @@ namespace UPPY.Services.DataManagers
 
             doc.Id = GetIdDocument(doc.GetType());
 
-            var docColl = CollectionsContainer.GetBsonDocumentByType(doc.GetType());
+            var docColl = CollectionsContainer.GetBsonDocumentByType(doc.GetType()) ??
+                          CollectionsContainer.CreateCollection(CollectionsContainer.GetNameCollection(doc.GetType()));
+
+            if (docColl == null)
+                throw new KeyNotFoundException("Ошибка при создании коллекции");
+
             var bson = doc.ToBsonDocument();
             bson.RemoveAt(0);
 
@@ -87,15 +137,14 @@ namespace UPPY.Services.DataManagers
 
         public void Update(IHierarchyEntity doc, ITicketAutUser user)
         {
-
-        }
-
-        public void Update(IEntity doc, ITicketAutUser user)
-        {
             if (doc?.Id == null)
                 return;
 
-            var docColl = CollectionsContainer.GetBsonDocumentByType(doc.GetType());
+            var docColl = CollectionsContainer.GetBsonDocumentContainsId(doc.GetType(), doc.Id.Value);
+
+            if (docColl == null)
+                throw new KeyNotFoundException();
+
             var bson = doc.ToBsonDocument();
             bson.RemoveAt(0);
 
@@ -104,12 +153,46 @@ namespace UPPY.Services.DataManagers
 
             coll.ReplaceOneAsync(filter, bson);
 
-            Auditor?.AuditOperation(OperationType.Insert, doc, user);
+            Auditor?.AuditOperation(OperationType.Update, doc, user);
+        }
+
+        public void Update(IEntity doc, ITicketAutUser user)
+        {
+            if (doc?.Id == null)
+                return;
+
+            var docColl = CollectionsContainer.GetBsonDocumentByType(doc.GetType());
+
+            if (docColl == null)
+                throw new KeyNotFoundException();
+
+            var bson = doc.ToBsonDocument();
+            bson.RemoveAt(0);
+
+            var coll = CollectionsContainer.GetMongoCollection(docColl);
+            var filter = Builders<BsonDocument>.Filter.Eq("_id", doc.Id);
+
+            coll.ReplaceOneAsync(filter, bson);
+
+            Auditor?.AuditOperation(OperationType.Update, doc, user);
         }
 
         public void Delete(IHierarchyEntity doc, ITicketAutUser user)
         {
+            if (doc?.Id == null)
+                return;
 
+            var docColl = CollectionsContainer.GetBsonDocumentContainsId(doc.GetType(), doc.Id.Value);
+
+            if (docColl == null)
+                throw new KeyNotFoundException();
+
+            var filter = Builders<BsonDocument>.Filter.Eq("_id", doc.Id);
+
+            var coll = CollectionsContainer.GetMongoCollection(docColl);
+            coll.DeleteOneAsync(filter);
+
+            Auditor?.AuditOperation(OperationType.Delete, doc, user);
         }
 
         public void Delete(IEntity doc, ITicketAutUser user)
@@ -118,6 +201,10 @@ namespace UPPY.Services.DataManagers
                 return;
 
             var docColl = CollectionsContainer.GetBsonDocumentByType(doc.GetType());
+
+            if (docColl == null)
+                throw new KeyNotFoundException();
+
             var filter = Builders<BsonDocument>.Filter.Eq("_id", doc.Id);
 
             var coll = CollectionsContainer.GetMongoCollection(docColl);
@@ -159,6 +246,11 @@ namespace UPPY.Services.DataManagers
                     BsonSerializer.Deserialize<DocsId>(
                         coll.FindOneAndUpdateAsync<BsonDocument>(filter, incrDocIdOptions).Result).DocId;
             }
+        }
+
+        private string CreateCollName(int id)
+        {
+            return "drawings_" + id;
         }
     }
 

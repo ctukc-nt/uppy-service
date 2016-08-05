@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using Core.Domain.Model;
 using Core.Security;
 using UPPY.Services.Core;
+using System.Linq;
 
 namespace UPPY.Services.DataManagerService
 {
@@ -32,7 +33,9 @@ namespace UPPY.Services.DataManagerService
             "SuperTaskToDistrict",
             "TaskToDistrict",
             "TechOperation",
-            "TechRoute"
+            "TechRoute",
+			"WorkHourStandartDrawing",
+                "WorkHourDrawing",
         };
 
 		var listHierarch = new List<string>
@@ -50,7 +53,7 @@ namespace UPPY.Services.DataManagerService
         public List<<#= className #>> GetList<#= className #>()
 		{
 			_logger.Trace("Trace method GetList for document: {0}", typeof(<#= className #>).Name);
-		    return _dataManagers.GetListCollection<<#= className #>>();
+		    return _dataManagers.GetListCollection<<#= className #>>().OrderBy(x => x.Id).ToList();
 		}
 
         public <#= className #> GetDocument<#= className #>(int id)
@@ -94,7 +97,7 @@ namespace UPPY.Services.DataManagerService
 		public List<<#= className #>> GetFilterList<#= className #>(int id)
 		{
 			_logger.Trace("Trace method GetList for document: {0}", typeof(<#= className #>).Name);
-		    return _dataManagers.GetHierarchicalListCollection<<#= className #>>(id);
+		    return _dataManagers.GetHierarchicalListCollection<<#= className #>>(id).OrderBy(x => x.Id).ToList();
 		}
 
         public <#= className #> GetDocument<#= className #>(int id)
