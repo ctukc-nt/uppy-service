@@ -94,10 +94,16 @@ namespace UPPY.Services.DataManagerService
 		#>
 		#region Hierarchical <#= className #>
 
-		public List<<#= className #>> GetFilterList<#= className #>(int id)
+		public List<<#= className #>> GetContainsIdList<#= className #>(int id)
 		{
 			_logger.Trace("Trace method GetList for document: {0}", typeof(<#= className #>).Name);
 		    return _dataManagers.GetHierarchicalListCollection<<#= className #>>(id).OrderBy(x => x.Id).ToList();
+		}
+
+		public List<<#= className #>> GetChildrensForIdList<#= className #>(int id)
+		{
+			_logger.Trace("Trace method GetList for document: {0}", typeof(<#= className #>).Name);
+		    return GetAllChildrensCashed(id, _dataManagers.GetHierarchicalListCollection<<#= className #>>(id).OrderBy(x => x.Id).ToList());
 		}
 
         public <#= className #> GetDocument<#= className #>(int id)

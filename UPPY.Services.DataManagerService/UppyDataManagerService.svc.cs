@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
 using System.ServiceModel.Description;
 using System.ServiceModel.Dispatcher;
+using Core.Interfaces;
 using NLog;
 using UPPY.Services.DataManagers;
 
@@ -23,6 +26,24 @@ namespace UPPY.Services.DataManagerService
         {
             _dataManagers = dataManagers;
             _logger.Trace("Created instance");
+        }
+
+        private List<T> GetAllChildrensCashed<T>(int? parentId, List<T> cashed) where T:IHierarchyEntity
+        {
+            var result = new List<T>();
+            var childrens = GetChildrenDrawingsCashed(parentId, cashed);
+            result.AddRange(childrens);
+            foreach (var child in childrens)
+            {
+                result.AddRange(GetAllChildrensCashed<T>(child.Id, cashed));
+            }
+
+            return result;
+        }
+
+        private List<T> GetChildrenDrawingsCashed<T>(int? parentId, List<T> cashed) where T : IHierarchyEntity
+        {
+            return cashed.Where(x => x.ParentId == parentId).ToList();
         }
     }
 
