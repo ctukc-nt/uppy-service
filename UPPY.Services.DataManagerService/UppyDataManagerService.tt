@@ -56,6 +56,25 @@ namespace UPPY.Services.DataManagerService
 		    return _dataManagers.GetListCollection<<#= className #>>().OrderBy(x => x.Id).ToList();
 		}
 
+		[OperationContract]
+		List<HistoryRecord<<#= className #>>> GetHistoryList<#= className #>()
+		{
+			return null;
+		}
+
+
+		[OperationContract]
+        List<HistoryRecord<<#= className #>>> GetHistoryDoc<#= className #>(<#= className #> doc)
+		{
+			return null;
+		}
+
+		[OperationContract]
+        List<HistoryRecord<<#= className #>>> GetHistoryUpdates<#= className #>()
+		{
+			return null;
+		}
+
         public <#= className #> GetDocument<#= className #>(int id)
 		{
 			_logger.Trace("Trace method GetDocument for document: {0}. Id: {1}", typeof(<#= className #>).Name, id);
