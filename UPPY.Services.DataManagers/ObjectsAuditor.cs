@@ -11,7 +11,7 @@ using MongoDB.Driver;
 
 namespace UPPY.Services.DataManagers
 {
-    public class ObjectsAuditor
+    public class ObjectsAuditor : IGetterHistoryRecords, IObjectAuditor
     {
         private readonly IMongoDatabase _mongoDb;
 
@@ -25,6 +25,7 @@ namespace UPPY.Services.DataManagers
             var task = new Task<AuditResult>(() =>
             {
                 var docJson = doc.ToJson();
+
                 var collection = _mongoDb.GetCollection<Audit>(GetCollAuditName(operationType));
                 collection.InsertOneAsync(new Audit()
                 {
@@ -47,7 +48,8 @@ namespace UPPY.Services.DataManagers
         {
             var filterByOperation = Builders<Audit>.Filter.Eq("Operation", operation);
             var filterByType = Builders<Audit>.Filter.Eq("ObjectType", typeof(T).Name);
-            var filterById = Builders<Audit>.Filter.Regex("JsonFormatObject", "\"_id\" :" + doc.Id);
+            var bsonRegexId = new BsonRegularExpression("(\"_id\" : " + doc.Id + ")");
+            var filterById = Builders<Audit>.Filter.Regex("JsonFormatObject", bsonRegexId);
 
             var commonFilter = Builders<Audit>.Filter.And(filterByOperation, filterByType, filterById);
             var collName = GetCollAuditName(operation);
@@ -58,21 +60,22 @@ namespace UPPY.Services.DataManagers
         public List<Audit> GetDocOperations<T>(T doc) where T : IEntity
         {
             var filterByType = Builders<Audit>.Filter.Eq("ObjectType", typeof(T).Name);
-            var filterById = Builders<Audit>.Filter.Regex("JsonFormatObject", "\"_id\" : " + doc.Id);
+            var bsonRegexId = new BsonRegularExpression("(\"_id\" : " + doc.Id + ")");
+            var filterById = Builders<Audit>.Filter.Regex("JsonFormatObject", bsonRegexId);
 
-            var filterByOperation = Builders<Audit>.Filter.Eq("Operation", OperationType.Insert);
+            var filterByOperation = Builders<Audit>.Filter.Eq("Operation", OperationType.Insert.ToString());
             var commonFilter = Builders<Audit>.Filter.And(filterByOperation, filterByType, filterById);
             var collName = GetCollAuditName(OperationType.Insert);
 
             var insertOper = ListOperations<T>(collName, commonFilter);
 
-            filterByOperation = Builders<Audit>.Filter.Eq("Operation", OperationType.Update);
+            filterByOperation = Builders<Audit>.Filter.Eq("Operation", OperationType.Update.ToString());
             commonFilter = Builders<Audit>.Filter.And(filterByOperation, filterByType, filterById);
             collName = GetCollAuditName(OperationType.Update);
 
             var updateOper = ListOperations<T>(collName, commonFilter);
 
-            filterByOperation = Builders<Audit>.Filter.Eq("Operation", OperationType.Delete);
+            filterByOperation = Builders<Audit>.Filter.Eq("Operation", OperationType.Delete.ToString());
             commonFilter = Builders<Audit>.Filter.And(filterByOperation, filterByType, filterById);
             collName = GetCollAuditName(OperationType.Delete);
 
@@ -85,7 +88,7 @@ namespace UPPY.Services.DataManagers
 
         public List<Audit> GetListOperations<T>(OperationType operation)
         {
-            var filterByOperation = Builders<Audit>.Filter.Eq("Operation", operation);
+            var filterByOperation = Builders<Audit>.Filter.Eq("Operation", operation.ToString());
             var filterByType = Builders<Audit>.Filter.Eq("ObjectType", typeof(T).Name);
             var commonFilter = Builders<Audit>.Filter.And(filterByOperation, filterByType);
             var collName = GetCollAuditName(operation);
@@ -121,6 +124,16 @@ namespace UPPY.Services.DataManagers
             var collection = _mongoDb.GetCollection<Audit>(collName);
             return collection.FindAsync(commonFilter).Result.ToListAsync();
         }
+    }
+
+    public interface IObjectAuditor
+    {
+        Task<AuditResult> AuditOperation(OperationType operationType, IEntity doc, ITicketAutUser user);
+    }
+
+    public interface IGetterHistoryRecords
+    {
+        List<Audit> GetDocOperations<T>(T doc) where T : IEntity;
     }
 
     public enum AuditResult

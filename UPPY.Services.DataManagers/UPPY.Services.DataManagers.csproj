@@ -49,7 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommonEntityDataManagers.cs" />
+    <Compile Include="EntityCommonDataManagers.cs" />
     <Compile Include="CollectionsContainer.cs" />
     <Compile Include="ObjectsAuditor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

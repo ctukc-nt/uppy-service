@@ -71,8 +71,11 @@ namespace UPPY.Services.DataManagerService
             kernel.Bind(typeof(MongoDbConnection)).ToMethod(x => x.Kernel.Get<ConnectionFactory>().GetConnection());
             kernel.Bind(typeof(IMongoDatabase)).ToMethod(x => x.Kernel.Get<ConnectionFactory>().GetConnection().Database);
 
+
             kernel.Bind(typeof(CollectionsContainer)).To<CollectionsContainer>();
+            kernel.Bind(typeof(IGetterHistoryRecords)).ToMethod(x =>  x.Kernel.Get<ConnectionFactory>().GetConnection().Database);
             kernel.Bind(typeof(EntityCommonDataManagers)).ToMethod(x => new EntityCommonDataManagers() { CollectionsContainer = x.Kernel.Get<CollectionsContainer>() });
+            kernel.Bind(typeof(HistoryEntityManager)).ToMethod(x => new HistoryEntityManager() { Auditor = x.Kernel.Get<IGetterHistoryRecords>() });
 
 
         }

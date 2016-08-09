@@ -13,9 +13,10 @@ namespace UPPY.Services.DataManagers
     public class EntityCommonDataManagers
     {
         private static readonly object SectionGetId = new object();
+
         public CollectionsContainer CollectionsContainer { get; set; }
 
-        public ObjectsAuditor Auditor { get; set; }
+        public IObjectAuditor Auditor { get; set; }
 
         public List<T> GetListCollection<T>()
         {
