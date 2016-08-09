@@ -3,6 +3,8 @@ using Core.Domain.Model;
 using Core.Security;
 using UPPY.Services.Core;
 using System.Linq;
+using Core.Versions;
+using UPPY.Services.DataManagers;
 
 namespace UPPY.Services.DataManagerService
 {
@@ -17,24 +19,11 @@ namespace UPPY.Services.DataManagerService
 			_logger.Trace("Trace method GetList for document: {0}", typeof(BillInnerShift).Name);
 		    return _dataManagers.GetListCollection<BillInnerShift>().OrderBy(x => x.Id).ToList();
 		}
-
-		[OperationContract]
-		List<HistoryRecord<BillInnerShift>> GetHistoryListBillInnerShift()
+		
+        public List<HistoryRecord<BillInnerShift>> GetHistoryDocBillInnerShift(BillInnerShift doc)
 		{
-			return null;
-		}
-
-
-		[OperationContract]
-        List<HistoryRecord<BillInnerShift>> GetHistoryDocBillInnerShift(BillInnerShift doc)
-		{
-			return null;
-		}
-
-		[OperationContract]
-        List<HistoryRecord<BillInnerShift>> GetHistoryUpdatesBillInnerShift()
-		{
-			return null;
+			_logger.Trace("Trace method GetHistoryList for document: {0}", typeof(BillInnerShift).Name);
+			return _historyManager.GetHistoryDoc(doc);
 		}
 
         public BillInnerShift GetDocumentBillInnerShift(int id)
@@ -72,24 +61,11 @@ namespace UPPY.Services.DataManagerService
 			_logger.Trace("Trace method GetList for document: {0}", typeof(BillShift).Name);
 		    return _dataManagers.GetListCollection<BillShift>().OrderBy(x => x.Id).ToList();
 		}
-
-		[OperationContract]
-		List<HistoryRecord<BillShift>> GetHistoryListBillShift()
+		
+        public List<HistoryRecord<BillShift>> GetHistoryDocBillShift(BillShift doc)
 		{
-			return null;
-		}
-
-
-		[OperationContract]
-        List<HistoryRecord<BillShift>> GetHistoryDocBillShift(BillShift doc)
-		{
-			return null;
-		}
-
-		[OperationContract]
-        List<HistoryRecord<BillShift>> GetHistoryUpdatesBillShift()
-		{
-			return null;
+			_logger.Trace("Trace method GetHistoryList for document: {0}", typeof(BillShift).Name);
+			return _historyManager.GetHistoryDoc(doc);
 		}
 
         public BillShift GetDocumentBillShift(int id)
@@ -127,24 +103,11 @@ namespace UPPY.Services.DataManagerService
 			_logger.Trace("Trace method GetList for document: {0}", typeof(ExcludeDrawing).Name);
 		    return _dataManagers.GetListCollection<ExcludeDrawing>().OrderBy(x => x.Id).ToList();
 		}
-
-		[OperationContract]
-		List<HistoryRecord<ExcludeDrawing>> GetHistoryListExcludeDrawing()
+		
+        public List<HistoryRecord<ExcludeDrawing>> GetHistoryDocExcludeDrawing(ExcludeDrawing doc)
 		{
-			return null;
-		}
-
-
-		[OperationContract]
-        List<HistoryRecord<ExcludeDrawing>> GetHistoryDocExcludeDrawing(ExcludeDrawing doc)
-		{
-			return null;
-		}
-
-		[OperationContract]
-        List<HistoryRecord<ExcludeDrawing>> GetHistoryUpdatesExcludeDrawing()
-		{
-			return null;
+			_logger.Trace("Trace method GetHistoryList for document: {0}", typeof(ExcludeDrawing).Name);
+			return _historyManager.GetHistoryDoc(doc);
 		}
 
         public ExcludeDrawing GetDocumentExcludeDrawing(int id)
@@ -182,24 +145,11 @@ namespace UPPY.Services.DataManagerService
 			_logger.Trace("Trace method GetList for document: {0}", typeof(Gost).Name);
 		    return _dataManagers.GetListCollection<Gost>().OrderBy(x => x.Id).ToList();
 		}
-
-		[OperationContract]
-		List<HistoryRecord<Gost>> GetHistoryListGost()
+		
+        public List<HistoryRecord<Gost>> GetHistoryDocGost(Gost doc)
 		{
-			return null;
-		}
-
-
-		[OperationContract]
-        List<HistoryRecord<Gost>> GetHistoryDocGost(Gost doc)
-		{
-			return null;
-		}
-
-		[OperationContract]
-        List<HistoryRecord<Gost>> GetHistoryUpdatesGost()
-		{
-			return null;
+			_logger.Trace("Trace method GetHistoryList for document: {0}", typeof(Gost).Name);
+			return _historyManager.GetHistoryDoc(doc);
 		}
 
         public Gost GetDocumentGost(int id)
@@ -237,24 +187,11 @@ namespace UPPY.Services.DataManagerService
 			_logger.Trace("Trace method GetList for document: {0}", typeof(Order).Name);
 		    return _dataManagers.GetListCollection<Order>().OrderBy(x => x.Id).ToList();
 		}
-
-		[OperationContract]
-		List<HistoryRecord<Order>> GetHistoryListOrder()
+		
+        public List<HistoryRecord<Order>> GetHistoryDocOrder(Order doc)
 		{
-			return null;
-		}
-
-
-		[OperationContract]
-        List<HistoryRecord<Order>> GetHistoryDocOrder(Order doc)
-		{
-			return null;
-		}
-
-		[OperationContract]
-        List<HistoryRecord<Order>> GetHistoryUpdatesOrder()
-		{
-			return null;
+			_logger.Trace("Trace method GetHistoryList for document: {0}", typeof(Order).Name);
+			return _historyManager.GetHistoryDoc(doc);
 		}
 
         public Order GetDocumentOrder(int id)
@@ -292,24 +229,11 @@ namespace UPPY.Services.DataManagerService
 			_logger.Trace("Trace method GetList for document: {0}", typeof(PackingList).Name);
 		    return _dataManagers.GetListCollection<PackingList>().OrderBy(x => x.Id).ToList();
 		}
-
-		[OperationContract]
-		List<HistoryRecord<PackingList>> GetHistoryListPackingList()
+		
+        public List<HistoryRecord<PackingList>> GetHistoryDocPackingList(PackingList doc)
 		{
-			return null;
-		}
-
-
-		[OperationContract]
-        List<HistoryRecord<PackingList>> GetHistoryDocPackingList(PackingList doc)
-		{
-			return null;
-		}
-
-		[OperationContract]
-        List<HistoryRecord<PackingList>> GetHistoryUpdatesPackingList()
-		{
-			return null;
+			_logger.Trace("Trace method GetHistoryList for document: {0}", typeof(PackingList).Name);
+			return _historyManager.GetHistoryDoc(doc);
 		}
 
         public PackingList GetDocumentPackingList(int id)
@@ -347,24 +271,11 @@ namespace UPPY.Services.DataManagerService
 			_logger.Trace("Trace method GetList for document: {0}", typeof(ProfileWorkHour).Name);
 		    return _dataManagers.GetListCollection<ProfileWorkHour>().OrderBy(x => x.Id).ToList();
 		}
-
-		[OperationContract]
-		List<HistoryRecord<ProfileWorkHour>> GetHistoryListProfileWorkHour()
+		
+        public List<HistoryRecord<ProfileWorkHour>> GetHistoryDocProfileWorkHour(ProfileWorkHour doc)
 		{
-			return null;
-		}
-
-
-		[OperationContract]
-        List<HistoryRecord<ProfileWorkHour>> GetHistoryDocProfileWorkHour(ProfileWorkHour doc)
-		{
-			return null;
-		}
-
-		[OperationContract]
-        List<HistoryRecord<ProfileWorkHour>> GetHistoryUpdatesProfileWorkHour()
-		{
-			return null;
+			_logger.Trace("Trace method GetHistoryList for document: {0}", typeof(ProfileWorkHour).Name);
+			return _historyManager.GetHistoryDoc(doc);
 		}
 
         public ProfileWorkHour GetDocumentProfileWorkHour(int id)
@@ -402,24 +313,11 @@ namespace UPPY.Services.DataManagerService
 			_logger.Trace("Trace method GetList for document: {0}", typeof(RateWorkHour).Name);
 		    return _dataManagers.GetListCollection<RateWorkHour>().OrderBy(x => x.Id).ToList();
 		}
-
-		[OperationContract]
-		List<HistoryRecord<RateWorkHour>> GetHistoryListRateWorkHour()
+		
+        public List<HistoryRecord<RateWorkHour>> GetHistoryDocRateWorkHour(RateWorkHour doc)
 		{
-			return null;
-		}
-
-
-		[OperationContract]
-        List<HistoryRecord<RateWorkHour>> GetHistoryDocRateWorkHour(RateWorkHour doc)
-		{
-			return null;
-		}
-
-		[OperationContract]
-        List<HistoryRecord<RateWorkHour>> GetHistoryUpdatesRateWorkHour()
-		{
-			return null;
+			_logger.Trace("Trace method GetHistoryList for document: {0}", typeof(RateWorkHour).Name);
+			return _historyManager.GetHistoryDoc(doc);
 		}
 
         public RateWorkHour GetDocumentRateWorkHour(int id)
@@ -457,24 +355,11 @@ namespace UPPY.Services.DataManagerService
 			_logger.Trace("Trace method GetList for document: {0}", typeof(Setting).Name);
 		    return _dataManagers.GetListCollection<Setting>().OrderBy(x => x.Id).ToList();
 		}
-
-		[OperationContract]
-		List<HistoryRecord<Setting>> GetHistoryListSetting()
+		
+        public List<HistoryRecord<Setting>> GetHistoryDocSetting(Setting doc)
 		{
-			return null;
-		}
-
-
-		[OperationContract]
-        List<HistoryRecord<Setting>> GetHistoryDocSetting(Setting doc)
-		{
-			return null;
-		}
-
-		[OperationContract]
-        List<HistoryRecord<Setting>> GetHistoryUpdatesSetting()
-		{
-			return null;
+			_logger.Trace("Trace method GetHistoryList for document: {0}", typeof(Setting).Name);
+			return _historyManager.GetHistoryDoc(doc);
 		}
 
         public Setting GetDocumentSetting(int id)
@@ -512,24 +397,11 @@ namespace UPPY.Services.DataManagerService
 			_logger.Trace("Trace method GetList for document: {0}", typeof(Standart).Name);
 		    return _dataManagers.GetListCollection<Standart>().OrderBy(x => x.Id).ToList();
 		}
-
-		[OperationContract]
-		List<HistoryRecord<Standart>> GetHistoryListStandart()
+		
+        public List<HistoryRecord<Standart>> GetHistoryDocStandart(Standart doc)
 		{
-			return null;
-		}
-
-
-		[OperationContract]
-        List<HistoryRecord<Standart>> GetHistoryDocStandart(Standart doc)
-		{
-			return null;
-		}
-
-		[OperationContract]
-        List<HistoryRecord<Standart>> GetHistoryUpdatesStandart()
-		{
-			return null;
+			_logger.Trace("Trace method GetHistoryList for document: {0}", typeof(Standart).Name);
+			return _historyManager.GetHistoryDoc(doc);
 		}
 
         public Standart GetDocumentStandart(int id)
@@ -567,24 +439,11 @@ namespace UPPY.Services.DataManagerService
 			_logger.Trace("Trace method GetList for document: {0}", typeof(StandartDrawing).Name);
 		    return _dataManagers.GetListCollection<StandartDrawing>().OrderBy(x => x.Id).ToList();
 		}
-
-		[OperationContract]
-		List<HistoryRecord<StandartDrawing>> GetHistoryListStandartDrawing()
+		
+        public List<HistoryRecord<StandartDrawing>> GetHistoryDocStandartDrawing(StandartDrawing doc)
 		{
-			return null;
-		}
-
-
-		[OperationContract]
-        List<HistoryRecord<StandartDrawing>> GetHistoryDocStandartDrawing(StandartDrawing doc)
-		{
-			return null;
-		}
-
-		[OperationContract]
-        List<HistoryRecord<StandartDrawing>> GetHistoryUpdatesStandartDrawing()
-		{
-			return null;
+			_logger.Trace("Trace method GetHistoryList for document: {0}", typeof(StandartDrawing).Name);
+			return _historyManager.GetHistoryDoc(doc);
 		}
 
         public StandartDrawing GetDocumentStandartDrawing(int id)
@@ -622,24 +481,11 @@ namespace UPPY.Services.DataManagerService
 			_logger.Trace("Trace method GetList for document: {0}", typeof(SuperTaskToDistrict).Name);
 		    return _dataManagers.GetListCollection<SuperTaskToDistrict>().OrderBy(x => x.Id).ToList();
 		}
-
-		[OperationContract]
-		List<HistoryRecord<SuperTaskToDistrict>> GetHistoryListSuperTaskToDistrict()
+		
+        public List<HistoryRecord<SuperTaskToDistrict>> GetHistoryDocSuperTaskToDistrict(SuperTaskToDistrict doc)
 		{
-			return null;
-		}
-
-
-		[OperationContract]
-        List<HistoryRecord<SuperTaskToDistrict>> GetHistoryDocSuperTaskToDistrict(SuperTaskToDistrict doc)
-		{
-			return null;
-		}
-
-		[OperationContract]
-        List<HistoryRecord<SuperTaskToDistrict>> GetHistoryUpdatesSuperTaskToDistrict()
-		{
-			return null;
+			_logger.Trace("Trace method GetHistoryList for document: {0}", typeof(SuperTaskToDistrict).Name);
+			return _historyManager.GetHistoryDoc(doc);
 		}
 
         public SuperTaskToDistrict GetDocumentSuperTaskToDistrict(int id)
@@ -677,24 +523,11 @@ namespace UPPY.Services.DataManagerService
 			_logger.Trace("Trace method GetList for document: {0}", typeof(TaskToDistrict).Name);
 		    return _dataManagers.GetListCollection<TaskToDistrict>().OrderBy(x => x.Id).ToList();
 		}
-
-		[OperationContract]
-		List<HistoryRecord<TaskToDistrict>> GetHistoryListTaskToDistrict()
+		
+        public List<HistoryRecord<TaskToDistrict>> GetHistoryDocTaskToDistrict(TaskToDistrict doc)
 		{
-			return null;
-		}
-
-
-		[OperationContract]
-        List<HistoryRecord<TaskToDistrict>> GetHistoryDocTaskToDistrict(TaskToDistrict doc)
-		{
-			return null;
-		}
-
-		[OperationContract]
-        List<HistoryRecord<TaskToDistrict>> GetHistoryUpdatesTaskToDistrict()
-		{
-			return null;
+			_logger.Trace("Trace method GetHistoryList for document: {0}", typeof(TaskToDistrict).Name);
+			return _historyManager.GetHistoryDoc(doc);
 		}
 
         public TaskToDistrict GetDocumentTaskToDistrict(int id)
@@ -732,24 +565,11 @@ namespace UPPY.Services.DataManagerService
 			_logger.Trace("Trace method GetList for document: {0}", typeof(TechOperation).Name);
 		    return _dataManagers.GetListCollection<TechOperation>().OrderBy(x => x.Id).ToList();
 		}
-
-		[OperationContract]
-		List<HistoryRecord<TechOperation>> GetHistoryListTechOperation()
+		
+        public List<HistoryRecord<TechOperation>> GetHistoryDocTechOperation(TechOperation doc)
 		{
-			return null;
-		}
-
-
-		[OperationContract]
-        List<HistoryRecord<TechOperation>> GetHistoryDocTechOperation(TechOperation doc)
-		{
-			return null;
-		}
-
-		[OperationContract]
-        List<HistoryRecord<TechOperation>> GetHistoryUpdatesTechOperation()
-		{
-			return null;
+			_logger.Trace("Trace method GetHistoryList for document: {0}", typeof(TechOperation).Name);
+			return _historyManager.GetHistoryDoc(doc);
 		}
 
         public TechOperation GetDocumentTechOperation(int id)
@@ -787,24 +607,11 @@ namespace UPPY.Services.DataManagerService
 			_logger.Trace("Trace method GetList for document: {0}", typeof(TechRoute).Name);
 		    return _dataManagers.GetListCollection<TechRoute>().OrderBy(x => x.Id).ToList();
 		}
-
-		[OperationContract]
-		List<HistoryRecord<TechRoute>> GetHistoryListTechRoute()
+		
+        public List<HistoryRecord<TechRoute>> GetHistoryDocTechRoute(TechRoute doc)
 		{
-			return null;
-		}
-
-
-		[OperationContract]
-        List<HistoryRecord<TechRoute>> GetHistoryDocTechRoute(TechRoute doc)
-		{
-			return null;
-		}
-
-		[OperationContract]
-        List<HistoryRecord<TechRoute>> GetHistoryUpdatesTechRoute()
-		{
-			return null;
+			_logger.Trace("Trace method GetHistoryList for document: {0}", typeof(TechRoute).Name);
+			return _historyManager.GetHistoryDoc(doc);
 		}
 
         public TechRoute GetDocumentTechRoute(int id)
@@ -842,24 +649,11 @@ namespace UPPY.Services.DataManagerService
 			_logger.Trace("Trace method GetList for document: {0}", typeof(WorkHourStandartDrawing).Name);
 		    return _dataManagers.GetListCollection<WorkHourStandartDrawing>().OrderBy(x => x.Id).ToList();
 		}
-
-		[OperationContract]
-		List<HistoryRecord<WorkHourStandartDrawing>> GetHistoryListWorkHourStandartDrawing()
+		
+        public List<HistoryRecord<WorkHourStandartDrawing>> GetHistoryDocWorkHourStandartDrawing(WorkHourStandartDrawing doc)
 		{
-			return null;
-		}
-
-
-		[OperationContract]
-        List<HistoryRecord<WorkHourStandartDrawing>> GetHistoryDocWorkHourStandartDrawing(WorkHourStandartDrawing doc)
-		{
-			return null;
-		}
-
-		[OperationContract]
-        List<HistoryRecord<WorkHourStandartDrawing>> GetHistoryUpdatesWorkHourStandartDrawing()
-		{
-			return null;
+			_logger.Trace("Trace method GetHistoryList for document: {0}", typeof(WorkHourStandartDrawing).Name);
+			return _historyManager.GetHistoryDoc(doc);
 		}
 
         public WorkHourStandartDrawing GetDocumentWorkHourStandartDrawing(int id)
@@ -897,24 +691,11 @@ namespace UPPY.Services.DataManagerService
 			_logger.Trace("Trace method GetList for document: {0}", typeof(WorkHourDrawing).Name);
 		    return _dataManagers.GetListCollection<WorkHourDrawing>().OrderBy(x => x.Id).ToList();
 		}
-
-		[OperationContract]
-		List<HistoryRecord<WorkHourDrawing>> GetHistoryListWorkHourDrawing()
+		
+        public List<HistoryRecord<WorkHourDrawing>> GetHistoryDocWorkHourDrawing(WorkHourDrawing doc)
 		{
-			return null;
-		}
-
-
-		[OperationContract]
-        List<HistoryRecord<WorkHourDrawing>> GetHistoryDocWorkHourDrawing(WorkHourDrawing doc)
-		{
-			return null;
-		}
-
-		[OperationContract]
-        List<HistoryRecord<WorkHourDrawing>> GetHistoryUpdatesWorkHourDrawing()
-		{
-			return null;
+			_logger.Trace("Trace method GetHistoryList for document: {0}", typeof(WorkHourDrawing).Name);
+			return _historyManager.GetHistoryDoc(doc);
 		}
 
         public WorkHourDrawing GetDocumentWorkHourDrawing(int id)
@@ -958,6 +739,12 @@ namespace UPPY.Services.DataManagerService
 		{
 			_logger.Trace("Trace method GetList for document: {0}", typeof(Drawing).Name);
 		    return GetAllChildrensCashed(id, _dataManagers.GetHierarchicalListCollection<Drawing>(id).OrderBy(x => x.Id).ToList());
+		}
+
+		public List<HistoryRecord<Drawing>> GetHistoryDocDrawing(Drawing doc)
+		{
+			_logger.Trace("Trace method GetHistoryDoc for document: {0}", typeof(Drawing).Name);
+			return _historyManager.GetHistoryDoc(doc);
 		}
 
         public Drawing GetDocumentDrawing(int id)

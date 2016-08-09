@@ -10,21 +10,12 @@ using MongoDB.Driver;
 
 namespace UPPY.Services.DataManagers
 {
-    public class CommonEntityDataManagers
+    public class EntityCommonDataManagers
     {
         private static readonly object SectionGetId = new object();
         public CollectionsContainer CollectionsContainer { get; set; }
 
         public ObjectsAuditor Auditor { get; set; }
-
-        //public List<BsonDocument> GetListCollection(Type t)
-        //{
-        //    var docColl = CollectionsContainer.GetBsonDocumentByType(t);
-        //    var coll = CollectionsContainer.GetMongoCollection(docColl);
-        //    var res = coll.FindAsync(x => true).Result.ToListAsync().Result;
-
-        //    return res;
-        //}
 
         public List<T> GetListCollection<T>()
         {
@@ -50,18 +41,6 @@ namespace UPPY.Services.DataManagers
 
             return BsonSerializer.Deserialize<T>(coll.FindAsync(filter).Result.ToListAsync().Result.FirstOrDefault());
         }
-
-        //public List<BsonDocument> GetHierarchicalListCollection(Type t, int id)
-        //{
-        //    var docColl = CollectionsContainer.GetBsonDocumentContainsId(t, id);
-        //    if (docColl != null)
-        //    {
-        //        var coll = CollectionsContainer.GetMongoCollection(docColl);
-        //        return coll.FindAsync(x => true).Result.ToListAsync().Result;
-        //    }
-
-        //    return null;
-        //}
 
         public List<T> GetHierarchicalListCollection<T>(int id)
         {
@@ -246,11 +225,6 @@ namespace UPPY.Services.DataManagers
                     BsonSerializer.Deserialize<DocsId>(
                         coll.FindOneAndUpdateAsync<BsonDocument>(filter, incrDocIdOptions).Result).DocId;
             }
-        }
-
-        private string CreateCollName(int id)
-        {
-            return "drawings_" + id;
         }
     }
 

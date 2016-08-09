@@ -9,6 +9,8 @@ using Core.Domain.Model;
 using Core.Security;
 using UPPY.Services.Core;
 using System.Linq;
+using Core.Versions;
+using UPPY.Services.DataManagers;
 
 namespace UPPY.Services.DataManagerService
 {
@@ -55,24 +57,11 @@ namespace UPPY.Services.DataManagerService
 			_logger.Trace("Trace method GetList for document: {0}", typeof(<#= className #>).Name);
 		    return _dataManagers.GetListCollection<<#= className #>>().OrderBy(x => x.Id).ToList();
 		}
-
-		[OperationContract]
-		List<HistoryRecord<<#= className #>>> GetHistoryList<#= className #>()
+		
+        public List<HistoryRecord<<#= className #>>> GetHistoryDoc<#= className #>(<#= className #> doc)
 		{
-			return null;
-		}
-
-
-		[OperationContract]
-        List<HistoryRecord<<#= className #>>> GetHistoryDoc<#= className #>(<#= className #> doc)
-		{
-			return null;
-		}
-
-		[OperationContract]
-        List<HistoryRecord<<#= className #>>> GetHistoryUpdates<#= className #>()
-		{
-			return null;
+			_logger.Trace("Trace method GetHistoryList for document: {0}", typeof(<#= className #>).Name);
+			return _historyManager.GetHistoryDoc(doc);
 		}
 
         public <#= className #> GetDocument<#= className #>(int id)
@@ -123,6 +112,12 @@ namespace UPPY.Services.DataManagerService
 		{
 			_logger.Trace("Trace method GetList for document: {0}", typeof(<#= className #>).Name);
 		    return GetAllChildrensCashed(id, _dataManagers.GetHierarchicalListCollection<<#= className #>>(id).OrderBy(x => x.Id).ToList());
+		}
+
+		public List<HistoryRecord<<#= className #>>> GetHistoryDoc<#= className #>(<#= className #> doc)
+		{
+			_logger.Trace("Trace method GetHistoryDoc for document: {0}", typeof(<#= className #>).Name);
+			return _historyManager.GetHistoryDoc(doc);
 		}
 
         public <#= className #> GetDocument<#= className #>(int id)

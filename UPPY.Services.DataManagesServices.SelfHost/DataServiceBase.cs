@@ -70,7 +70,7 @@ namespace UPPY.Services.DataManagersServicesSelfHost
             kernel.Bind(typeof(IMongoDatabase)).ToMethod(x => x.Kernel.Get<ConnectionFactory>().GetConnection().Database);
 
             kernel.Bind(typeof(CollectionsContainer)).To<CollectionsContainer>();
-            kernel.Bind(typeof(CommonEntityDataManagers)).ToMethod(x => new CommonEntityDataManagers() { CollectionsContainer = x.Kernel.Get<CollectionsContainer>() });
+            kernel.Bind(typeof(EntityCommonDataManagers)).ToMethod(x => new EntityCommonDataManagers() { CollectionsContainer = x.Kernel.Get<CollectionsContainer>() });
 
             return kernel;
         }

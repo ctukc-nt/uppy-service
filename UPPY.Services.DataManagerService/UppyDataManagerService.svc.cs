@@ -16,16 +16,16 @@ namespace UPPY.Services.DataManagerService
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     [LoggingServiceBehavior]
     public partial class UppyDataManagerService
-
     {
         private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
 
-        private readonly CommonEntityDataManagers _dataManagers;
+        private readonly EntityCommonDataManagers _dataManagers;
+        private readonly HistoryEntityManager _historyManager;
 
-        public UppyDataManagerService(CommonEntityDataManagers dataManagers)
+        public UppyDataManagerService(EntityCommonDataManagers dataManagers, HistoryEntityManager historyManager)
         {
             _dataManagers = dataManagers;
-            _logger.Trace("Created instance");
+            _historyManager = historyManager;
         }
 
         private List<T> GetAllChildrensCashed<T>(int? parentId, List<T> cashed) where T:IHierarchyEntity
@@ -35,7 +35,7 @@ namespace UPPY.Services.DataManagerService
             result.AddRange(childrens);
             foreach (var child in childrens)
             {
-                result.AddRange(GetAllChildrensCashed<T>(child.Id, cashed));
+                result.AddRange(GetAllChildrensCashed(child.Id, cashed));
             }
 
             return result;
