@@ -1,4 +1,4 @@
 [submodule "core"]
 	path = core
-	url = D:/programming/Uppy
+	url = https://github.com/ctukc-nt/core.git
 	branch = develop
