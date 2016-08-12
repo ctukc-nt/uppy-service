@@ -3,6 +3,7 @@ using Core.Domain.Model;
 using Core.Security;
 using UPPY.Services.Core;
 using System.Linq;
+using Core.Interfaces;
 using Core.Versions;
 using UPPY.Services.DataManagers;
 
@@ -455,7 +456,7 @@ namespace UPPY.Services.DataManagerService
         public StandartDrawing InsertStandartDrawing(TicketAutUser ticket, StandartDrawing doc)
         {
             _logger.Trace("Trace method Insert for document: {0}. User: {1}", typeof(StandartDrawing).Name, ticket);
-            _dataManagers.Insert(doc, ticket);
+            _dataManagers.Insert((IEntity)doc, ticket);
             return doc;
         }
 
