@@ -41,6 +41,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\UPPY.Services.DataService\Bin\Core.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
@@ -125,23 +129,19 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\core\Core.Domain\Core.Domain.csproj">
+    <ProjectReference Include="..\core2\Core.Domain\Core.Domain.csproj">
       <Project>{4810D67A-7646-42F1-9806-920043665FE7}</Project>
       <Name>Core.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\core\Core\Core.csproj">
-      <Project>{876F668F-5017-4CEE-8AE4-91E9B0E9E6B6}</Project>
-      <Name>Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\core\Mongo.Common\Mongo.Common.csproj">
+    <ProjectReference Include="..\core2\Mongo.Common\Mongo.Common.csproj">
       <Project>{371A01EB-92FF-4FEF-871D-DA6E19A8FDD8}</Project>
       <Name>Mongo.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\core\UPPY.DataBase.Mongo\UPPY.DataBase.Mongo.csproj">
+    <ProjectReference Include="..\core2\UPPY.DataBase.Mongo\UPPY.DataBase.Mongo.csproj">
       <Project>{3DEAC9BA-56EE-41A1-9472-849E0574880F}</Project>
       <Name>UPPY.DataBase.Mongo</Name>
     </ProjectReference>
-    <ProjectReference Include="..\core\UPPY.Services.Core\UPPY.Services.Core.csproj">
+    <ProjectReference Include="..\core2\UPPY.Services.Core\UPPY.Services.Core.csproj">
       <Project>{3157A005-3765-48E3-A695-ABEC4D9A0C6A}</Project>
       <Name>UPPY.Services.Core</Name>
     </ProjectReference>

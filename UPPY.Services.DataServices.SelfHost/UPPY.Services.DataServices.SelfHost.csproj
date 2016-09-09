@@ -34,6 +34,9 @@
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Core">
+      <HintPath>..\UPPY.Services.DataManagerService\Bin\Core.dll</HintPath>
+    </Reference>
     <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
       <Private>True</Private>
@@ -90,24 +93,20 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\core\Core.Domain\Core.Domain.csproj">
+    <ProjectReference Include="..\core2\Core.Domain\Core.Domain.csproj">
       <Project>{4810D67A-7646-42F1-9806-920043665FE7}</Project>
       <Name>Core.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\core\Core\Core.csproj">
-      <Project>{876F668F-5017-4CEE-8AE4-91E9B0E9E6B6}</Project>
-      <Name>Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\core\Mongo.Common\Mongo.Common.csproj">
+    <ProjectReference Include="..\core2\Mongo.Common\Mongo.Common.csproj">
       <Project>{371A01EB-92FF-4FEF-871D-DA6E19A8FDD8}</Project>
       <Name>Mongo.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\core\UPPY.DataBase.Mongo\UPPY.DataBase.Mongo.csproj">
+    <ProjectReference Include="..\core2\UPPY.DataBase.Mongo\UPPY.DataBase.Mongo.csproj">
       <Project>{3DEAC9BA-56EE-41A1-9472-849E0574880F}</Project>
       <Name>UPPY.DataBase.Mongo</Name>
     </ProjectReference>
-    <ProjectReference Include="..\core\UPPY.Services.Core\UPPY.Services.Core.csproj">
-      <Project>{3157a005-3765-48e3-a695-abec4d9a0c6a}</Project>
+    <ProjectReference Include="..\core2\UPPY.Services.Core\UPPY.Services.Core.csproj">
+      <Project>{3157A005-3765-48E3-A695-ABEC4D9A0C6A}</Project>
       <Name>UPPY.Services.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\UPPY.Services.DataService\UPPY.Services.DataService.csproj">

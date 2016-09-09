@@ -55,11 +55,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\core\Core\Core.csproj">
+    <ProjectReference Include="..\core2\Core\Core.csproj">
       <Project>{876F668F-5017-4CEE-8AE4-91E9B0E9E6B6}</Project>
       <Name>Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\core\Mongo.Common\Mongo.Common.csproj">
+    <ProjectReference Include="..\core2\Mongo.Common\Mongo.Common.csproj">
       <Project>{371A01EB-92FF-4FEF-871D-DA6E19A8FDD8}</Project>
       <Name>Mongo.Common</Name>
     </ProjectReference>

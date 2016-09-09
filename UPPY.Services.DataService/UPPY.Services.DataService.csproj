@@ -107,28 +107,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\core\Core.Domain\Core.Domain.csproj">
-      <Project>{4810D67A-7646-42F1-9806-920043665FE7}</Project>
-      <Name>Core.Domain</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\core\Core\Core.csproj">
-      <Project>{876F668F-5017-4CEE-8AE4-91E9B0E9E6B6}</Project>
-      <Name>Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\core\Mongo.Common\Mongo.Common.csproj">
-      <Project>{371A01EB-92FF-4FEF-871D-DA6E19A8FDD8}</Project>
-      <Name>Mongo.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\core\UPPY.DataBase.Mongo\UPPY.DataBase.Mongo.csproj">
-      <Project>{3DEAC9BA-56EE-41A1-9472-849E0574880F}</Project>
-      <Name>UPPY.DataBase.Mongo</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\core\UPPY.Services.Core\UPPY.Services.Core.csproj">
-      <Project>{3157A005-3765-48E3-A695-ABEC4D9A0C6A}</Project>
-      <Name>UPPY.Services.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -142,6 +120,28 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\core2\Core.Domain\Core.Domain.csproj">
+      <Project>{4810D67A-7646-42F1-9806-920043665FE7}</Project>
+      <Name>Core.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\core2\Core\Core.csproj">
+      <Project>{876F668F-5017-4CEE-8AE4-91E9B0E9E6B6}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\core2\Mongo.Common\Mongo.Common.csproj">
+      <Project>{371A01EB-92FF-4FEF-871D-DA6E19A8FDD8}</Project>
+      <Name>Mongo.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\core2\UPPY.DataBase.Mongo\UPPY.DataBase.Mongo.csproj">
+      <Project>{3DEAC9BA-56EE-41A1-9472-849E0574880F}</Project>
+      <Name>UPPY.DataBase.Mongo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\core2\UPPY.Services.Core\UPPY.Services.Core.csproj">
+      <Project>{3157A005-3765-48E3-A695-ABEC4D9A0C6A}</Project>
+      <Name>UPPY.Services.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

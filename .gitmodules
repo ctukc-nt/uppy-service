@@ -2,3 +2,6 @@
 	path = core
 	url = https://github.com/ctukc-nt/core.git
 	branch = develop
+[submodule "core2"]
+	path = core2
+	url = https://github.com/ctukc-nt/core
