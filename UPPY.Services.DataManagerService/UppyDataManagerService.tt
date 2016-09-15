@@ -33,6 +33,8 @@ namespace UPPY.Services.DataManagerService
             "Standart",
             "StandartDrawing",
             "SuperTaskToDistrict",
+			"SuperBillInnerShift",
+            "SuperBillShift",
             "TaskToDistrict",
             "TechOperation",
             "TechRoute",

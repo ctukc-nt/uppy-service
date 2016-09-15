@@ -23,6 +23,9 @@ namespace UPPY.Services.DataManagers
             var docColl = CollectionsContainer.GetBsonDocumentByType(typeof (T));
 
             if (docColl == null)
+                docColl = CollectionsContainer.CreateCollection(CollectionsContainer.GetNameCollection(typeof (T)));
+
+            if (docColl == null)
                 throw new KeyNotFoundException();
 
             var coll = CollectionsContainer.GetMongoCollection<T>(docColl);

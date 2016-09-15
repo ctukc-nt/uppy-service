@@ -117,16 +117,16 @@
   <ItemGroup>
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="HistoryEntityManager.cs" />
-    <Compile Include="UppyDataManagerService.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UppyDataManagerService.tt</DependentUpon>
-    </Compile>
     <Compile Include="UppyDataManagerService.svc.cs">
       <DependentUpon>UppyDataManagerService.svc</DependentUpon>
     </Compile>
     <Compile Include="Examples\CompositeType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UppyDataManagerService1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UppyDataManagerService.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\core2\Core.Domain\Core.Domain.csproj">
