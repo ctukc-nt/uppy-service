@@ -870,7 +870,15 @@ namespace UPPY.Services.DataManagerService
             _dataManagers.Delete(doc, ticket);
 		}
 
-		#endregion
-		
-	}
+
+
+        #endregion
+
+        public List<TaskToDistrict> GetListTaskToDistrictByOrderId(int orderId)
+        {
+            _logger.Trace("Trace method GetListTaskToDistrictByOrderId for document: {0}. Id: {1}", typeof(Drawing).Name, orderId);
+            return _dataManagers.GetListCollection<TaskToDistrict>(x => x.OrderId == orderId || x.OrderId == null);
+        }
+
+    }
 }

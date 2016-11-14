@@ -20,10 +20,10 @@ namespace UPPY.Services.DataManagers
 
         public List<T> GetListCollection<T>()
         {
-            var docColl = CollectionsContainer.GetBsonDocumentByType(typeof (T));
+            var docColl = CollectionsContainer.GetBsonDocumentByType(typeof(T));
 
             if (docColl == null)
-                docColl = CollectionsContainer.CreateCollection(CollectionsContainer.GetNameCollection(typeof (T)));
+                docColl = CollectionsContainer.CreateCollection(CollectionsContainer.GetNameCollection(typeof(T)));
 
             if (docColl == null)
                 throw new KeyNotFoundException();
@@ -33,9 +33,24 @@ namespace UPPY.Services.DataManagers
             return coll.FindAsync(x => true).Result.ToListAsync().Result;
         }
 
+        public List<T> GetListCollection<T>(Func<T, bool> filter)
+        {
+            var docColl = CollectionsContainer.GetBsonDocumentByType(typeof(T));
+
+            if (docColl == null)
+                docColl = CollectionsContainer.CreateCollection(CollectionsContainer.GetNameCollection(typeof(T)));
+
+            if (docColl == null)
+                throw new KeyNotFoundException();
+
+            var coll = CollectionsContainer.GetMongoCollection<T>(docColl);
+
+            return coll.FindAsync(x => filter(x)).Result.ToListAsync().Result;
+        }
+
         public T GetDocument<T>(int id)
         {
-            var docColl = CollectionsContainer.GetBsonDocumentContainsId(typeof (T), id);
+            var docColl = CollectionsContainer.GetBsonDocumentContainsId(typeof(T), id);
 
             if (docColl == null)
                 throw new KeyNotFoundException();
@@ -211,7 +226,7 @@ namespace UPPY.Services.DataManagers
 
                 if (rec.Result == 0)
                 {
-                    var res = coll.InsertOneAsync(new DocsId {DocId = 2, DocName = t.Name}.ToBsonDocument());
+                    var res = coll.InsertOneAsync(new DocsId { DocId = 2, DocName = t.Name }.ToBsonDocument());
                     res.Wait();
 
                     if (res.Exception != null)
