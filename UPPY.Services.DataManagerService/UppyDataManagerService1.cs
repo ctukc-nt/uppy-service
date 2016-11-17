@@ -4,6 +4,8 @@ using Core.Security;
 using UPPY.Services.Core;
 using System.Linq;
 using Core.Versions;
+using MongoDB.Bson;
+using MongoDB.Driver;
 using UPPY.Services.DataManagers;
 
 namespace UPPY.Services.DataManagerService
@@ -877,7 +879,10 @@ namespace UPPY.Services.DataManagerService
         public List<TaskToDistrict> GetListTaskToDistrictByOrderId(int orderId)
         {
             _logger.Trace("Trace method GetListTaskToDistrictByOrderId for document: {0}. Id: {1}", typeof(Drawing).Name, orderId);
-            return _dataManagers.GetListCollection<TaskToDistrict>(x => x.OrderId == orderId || x.OrderId == null);
+            var filter = Builders<TaskToDistrict>.Filter.Eq("OrderId", orderId);
+            var filterNullOrder = Builders<TaskToDistrict>.Filter.Eq("OrderId", (int?)null);
+            var orFilter = Builders<TaskToDistrict>.Filter.Or(filter, filterNullOrder);
+            return _dataManagers.GetListCollection<TaskToDistrict>(orFilter);
         }
 
     }

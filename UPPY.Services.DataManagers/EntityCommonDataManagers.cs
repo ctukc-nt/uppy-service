@@ -33,7 +33,7 @@ namespace UPPY.Services.DataManagers
             return coll.FindAsync(x => true).Result.ToListAsync().Result;
         }
 
-        public List<T> GetListCollection<T>(Func<T, bool> filter)
+        public List<T> GetListCollection<T>(FilterDefinition<T> filter)
         {
             var docColl = CollectionsContainer.GetBsonDocumentByType(typeof(T));
 
@@ -44,8 +44,7 @@ namespace UPPY.Services.DataManagers
                 throw new KeyNotFoundException();
 
             var coll = CollectionsContainer.GetMongoCollection<T>(docColl);
-
-            return coll.FindAsync(x => filter(x)).Result.ToListAsync().Result;
+            return coll.FindAsync(filter).Result.ToListAsync().Result;
         }
 
         public T GetDocument<T>(int id)
