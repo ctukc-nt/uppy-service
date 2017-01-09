@@ -117,6 +117,8 @@
   <ItemGroup>
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="HistoryEntityManager.cs" />
+    <Compile Include="LoggingErrorHandler.cs" />
+    <Compile Include="LoggingServiceBehaviorAttribute.cs" />
     <Compile Include="UppyDataManagerService.svc.cs">
       <DependentUpon>UppyDataManagerService.svc</DependentUpon>
     </Compile>

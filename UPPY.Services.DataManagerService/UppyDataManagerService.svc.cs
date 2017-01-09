@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.ServiceModel;
-using System.ServiceModel.Channels;
-using System.ServiceModel.Description;
-using System.ServiceModel.Dispatcher;
+using Core.Domain.Model;
 using Core.Interfaces;
+using Core.Security;
+using MongoDB.Driver;
 using NLog;
 using UPPY.Services.DataManagers;
 
@@ -28,7 +25,7 @@ namespace UPPY.Services.DataManagerService
             _historyManager = historyManager;
         }
 
-        private List<T> GetAllChildrensCashed<T>(int? parentId, List<T> cashed) where T:IHierarchyEntity
+        private List<T> GetAllChildrensCashed<T>(int? parentId, List<T> cashed) where T : IHierarchyEntity
         {
             var result = new List<T>();
             var childrens = GetChildrenDrawingsCashed(parentId, cashed);
@@ -45,45 +42,44 @@ namespace UPPY.Services.DataManagerService
         {
             return cashed.Where(x => x.ParentId == parentId).ToList();
         }
-    }
 
-    internal class LoggingErrorHandler : IErrorHandler
-    {
-        private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
-
-        public void ProvideFault(Exception error, MessageVersion version, ref Message fault)
+        public List<TaskToDistrict> GetListTaskToDistrictByOrderId(int orderId)
         {
-            _logger.Error($"Exception: {0}. MessageVersion: {1}. Message: {2}.", error, version, fault);
+            _logger.Trace("Trace method GetListTaskToDistrictByOrderId for document: {0}. Id: {1}", typeof(Drawing).Name, orderId);
+            var filter = Builders<TaskToDistrict>.Filter.Eq("OrderId", orderId);
+            var filterNullOrder = Builders<TaskToDistrict>.Filter.Eq("OrderId", (int?)null);
+            var orFilter = Builders<TaskToDistrict>.Filter.Or(filter, filterNullOrder);
+            return _dataManagers.GetListCollection<TaskToDistrict>(orFilter);
         }
 
-        public bool HandleError(Exception error)
+        public List<BillInnerShift> GetListBillInnerShiftByOrderId(int orderId)
         {
-            _logger.Error(error);
-            return false; // здесь можно ставить бряки, логировать и т.п.
-        }
-    }
-
-    [AttributeUsage(AttributeTargets.Class)]
-    public class LoggingServiceBehaviorAttribute : Attribute, IServiceBehavior
-    {
-        public void Validate(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase)
-        {
+            _logger.Trace("Trace method BillInnerShift for document: {0}. Id: {1}", typeof(Drawing).Name, orderId);
+            var filter = Builders<BillInnerShift>.Filter.Eq("OrderId", orderId);
+            var filterNullOrder = Builders<BillInnerShift>.Filter.Eq("OrderId", (int?)null);
+            var orFilter = Builders<BillInnerShift>.Filter.Or(filter, filterNullOrder);
+            return _dataManagers.GetListCollection<BillInnerShift>(orFilter);
         }
 
-        public void AddBindingParameters(
-            ServiceDescription serviceDescription,
-            ServiceHostBase serviceHostBase,
-            Collection<ServiceEndpoint> endpoints,
-            BindingParameterCollection bindingParameters)
+        public TechRoute InsertTechRoute(TicketAutUser ticket, TechRoute doc)
         {
-        }
-
-        public void ApplyDispatchBehavior(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase)
-        {
-            foreach (ChannelDispatcher channelDispatcher in serviceHostBase.ChannelDispatchers)
+            _logger.Trace("Trace method Insert for document: {0}. User: {1}", typeof(TechRoute).Name, ticket);
+            var filter = Builders<TechRoute>.Filter.Eq("Name", doc.Name);
+            var coll = _dataManagers.GetListCollection(filter);
+            if (coll.Count > 0)
             {
-                channelDispatcher.ErrorHandlers.Add(new LoggingErrorHandler());
+                return coll.FirstOrDefault();
             }
+
+            _dataManagers.Insert(doc, ticket);
+            return doc;
+        }
+
+        public TechRoute UpdateTechRoute(TicketAutUser ticket, TechRoute doc)
+        {
+            _logger.Trace("Trace method Update for document: {0}. Id: {2}. User: {1}", typeof(TechRoute).Name, ticket, doc.Id);
+            _dataManagers.Update(doc, ticket);
+            return doc;
         }
     }
 }
