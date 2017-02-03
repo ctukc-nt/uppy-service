@@ -39,7 +39,8 @@ namespace UPPY.Services.DataManagerService
             "TechOperation",
             "TechRoute",
 			"WorkHourStandartDrawing",
-                "WorkHourDrawing",
+            "WorkHourDrawing",
+			"InstrumentTechOperation",
         };
 
 		var listHierarch = new List<string>
