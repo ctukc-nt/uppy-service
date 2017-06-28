@@ -81,5 +81,50 @@ namespace UPPY.Services.DataManagerService
             _dataManagers.Update(doc, ticket);
             return doc;
         }
+
+        public void CopyDrawingToAnother(TicketAutUser ticket, int sourceDrawingId, int parentId)
+        {
+            _logger.Trace("Trace method CopyDrawingToAnother for document: {0}. Source id: {2}. Dest id: {3} User: {1}", typeof(Drawing).Name, ticket, sourceDrawingId, parentId);
+            var parent = _dataManagers.GetDocument<Drawing>(parentId);
+            var copyDrawing = CopyDrawingToAnotherParent(sourceDrawingId, parent, ticket);
+
+            if (copyDrawing != null)
+            {
+                CopyChildrens(sourceDrawingId, parent, ticket);
+            }
+        }
+
+        private void CopyChildrens(int parentIdOld, Drawing parent, ITicketAutUser ticket)
+        {
+            var childrensToCopy = GetContainsIdListDrawing(parentIdOld).Where(x => x.ParentId == parentIdOld);
+            foreach (var drawing in childrensToCopy)
+            {
+                var newId = CopyDrawingToAnotherParent(drawing.Id.Value, parent, ticket);
+                if (newId != null)
+                {
+                    CopyChildrens(drawing.Id.Value, newId, ticket);
+                }
+            }
+        }
+
+        private Drawing CopyDrawingToAnotherParent(int idSource, Drawing parent, ITicketAutUser ticket)
+        {
+            var copy = _dataManagers.GetDocument<Drawing>(idSource);
+
+            if (copy != null)
+            {
+                copy.ParentId = parent?.Id;
+                if (parent != null)
+                    copy.CountAll = copy.Count * parent.CountAll;
+
+                copy.RecalculateWeightAll();
+                copy.Id = null;
+
+                _dataManagers.Insert(copy, ticket);
+                return copy;
+            }
+
+            return null;
+        }
     }
 }
