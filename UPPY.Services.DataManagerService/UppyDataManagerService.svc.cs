@@ -90,19 +90,20 @@ namespace UPPY.Services.DataManagerService
 
             if (copyDrawing != null)
             {
-                CopyChildrens(sourceDrawingId, parent, ticket);
+                var list = GetContainsIdListDrawing(sourceDrawingId);
+                CopyChildrens(sourceDrawingId, copyDrawing, list, ticket);
             }
         }
 
-        private void CopyChildrens(int parentIdOld, Drawing parent, ITicketAutUser ticket)
+        private void CopyChildrens(int parentIdOld, Drawing parent, List<Drawing> list, ITicketAutUser ticket)
         {
-            var childrensToCopy = GetContainsIdListDrawing(parentIdOld).Where(x => x.ParentId == parentIdOld);
+            var childrensToCopy = list.Where(x => x.ParentId == parentIdOld);
             foreach (var drawing in childrensToCopy)
             {
                 var newId = CopyDrawingToAnotherParent(drawing.Id.Value, parent, ticket);
                 if (newId != null)
                 {
-                    CopyChildrens(drawing.Id.Value, newId, ticket);
+                    CopyChildrens(drawing.Id.Value, newId, list, ticket);
                 }
             }
         }
