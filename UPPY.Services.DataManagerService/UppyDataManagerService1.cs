@@ -432,48 +432,6 @@ namespace UPPY.Services.DataManagerService
 	    
         #endregion
 	    
-	    	    #region StandartDrawing
-	    
-        public List<StandartDrawing> GetListStandartDrawing()
-		{
-			_logger.Trace("Trace method GetList for document: {0}", typeof(StandartDrawing).Name);
-		    return _dataManagers.GetListCollection<StandartDrawing>().OrderBy(x => x.Id).ToList();
-		}
-		
-        public List<HistoryRecord<StandartDrawing>> GetHistoryDocStandartDrawing(StandartDrawing doc)
-		{
-			_logger.Trace("Trace method GetHistoryList for document: {0}", typeof(StandartDrawing).Name);
-			return _historyManager.GetHistoryDoc(doc);
-		}
-
-        public StandartDrawing GetDocumentStandartDrawing(int id)
-		{
-			_logger.Trace("Trace method GetDocument for document: {0}. Id: {1}", typeof(StandartDrawing).Name, id);
-			return _dataManagers.GetDocument<StandartDrawing>(id);
-		}
-		
-		public StandartDrawing InsertStandartDrawing(TicketAutUser ticket, StandartDrawing doc)
-		{
-			_logger.Trace("Trace method Insert for document: {0}. User: {1}", typeof(StandartDrawing).Name, ticket);
-		    _dataManagers.Insert(doc, ticket);
-		    return doc;
-		}
-		
-		public StandartDrawing UpdateStandartDrawing(TicketAutUser ticket, StandartDrawing doc)
-		{
-			_logger.Trace("Trace method Update for document: {0}. Id: {2}. User: {1}", typeof(StandartDrawing).Name, ticket, doc.Id);
-		    _dataManagers.Update(doc, ticket);
-			return doc;
-		}
-		
-		public void DeleteStandartDrawing(TicketAutUser ticket, StandartDrawing doc)
-		{
-			_logger.Trace("Trace method Delete for document: {0}. Id: {2}. User: {1}", typeof(StandartDrawing).Name, ticket, doc.Id);
-		    _dataManagers.Delete(doc, ticket);
-		}
-	    
-        #endregion
-	    
 	    	    #region SuperTaskToDistrict
 	    
         public List<SuperTaskToDistrict> GetListSuperTaskToDistrict()
@@ -642,6 +600,48 @@ namespace UPPY.Services.DataManagerService
 	    
         #endregion
 	    
+	    	    #region GangTaskToDistrict
+	    
+        public List<GangTaskToDistrict> GetListGangTaskToDistrict()
+		{
+			_logger.Trace("Trace method GetList for document: {0}", typeof(GangTaskToDistrict).Name);
+		    return _dataManagers.GetListCollection<GangTaskToDistrict>().OrderBy(x => x.Id).ToList();
+		}
+		
+        public List<HistoryRecord<GangTaskToDistrict>> GetHistoryDocGangTaskToDistrict(GangTaskToDistrict doc)
+		{
+			_logger.Trace("Trace method GetHistoryList for document: {0}", typeof(GangTaskToDistrict).Name);
+			return _historyManager.GetHistoryDoc(doc);
+		}
+
+        public GangTaskToDistrict GetDocumentGangTaskToDistrict(int id)
+		{
+			_logger.Trace("Trace method GetDocument for document: {0}. Id: {1}", typeof(GangTaskToDistrict).Name, id);
+			return _dataManagers.GetDocument<GangTaskToDistrict>(id);
+		}
+		
+		public GangTaskToDistrict InsertGangTaskToDistrict(TicketAutUser ticket, GangTaskToDistrict doc)
+		{
+			_logger.Trace("Trace method Insert for document: {0}. User: {1}", typeof(GangTaskToDistrict).Name, ticket);
+		    _dataManagers.Insert(doc, ticket);
+		    return doc;
+		}
+		
+		public GangTaskToDistrict UpdateGangTaskToDistrict(TicketAutUser ticket, GangTaskToDistrict doc)
+		{
+			_logger.Trace("Trace method Update for document: {0}. Id: {2}. User: {1}", typeof(GangTaskToDistrict).Name, ticket, doc.Id);
+		    _dataManagers.Update(doc, ticket);
+			return doc;
+		}
+		
+		public void DeleteGangTaskToDistrict(TicketAutUser ticket, GangTaskToDistrict doc)
+		{
+			_logger.Trace("Trace method Delete for document: {0}. Id: {2}. User: {1}", typeof(GangTaskToDistrict).Name, ticket, doc.Id);
+		    _dataManagers.Delete(doc, ticket);
+		}
+	    
+        #endregion
+	    
 	    	    #region TechOperation
 	    
         public List<TechOperation> GetListTechOperation()
@@ -702,6 +702,15 @@ namespace UPPY.Services.DataManagerService
 		{
 			_logger.Trace("Trace method GetDocument for document: {0}. Id: {1}", typeof(TechRoute).Name, id);
 			return _dataManagers.GetDocument<TechRoute>(id);
+		}
+		
+		
+		
+		public TechRoute UpdateTechRoute(TicketAutUser ticket, TechRoute doc)
+		{
+			_logger.Trace("Trace method Update for document: {0}. Id: {2}. User: {1}", typeof(TechRoute).Name, ticket, doc.Id);
+		    _dataManagers.Update(doc, ticket);
+			return doc;
 		}
 		
 		public void DeleteTechRoute(TicketAutUser ticket, TechRoute doc)
@@ -774,12 +783,7 @@ namespace UPPY.Services.DataManagerService
 			return _dataManagers.GetDocument<WorkHourDrawing>(id);
 		}
 		
-		public WorkHourDrawing InsertWorkHourDrawing(TicketAutUser ticket, WorkHourDrawing doc)
-		{
-			_logger.Trace("Trace method Insert for document: {0}. User: {1}", typeof(WorkHourDrawing).Name, ticket);
-		    _dataManagers.Insert(doc, ticket);
-		    return doc;
-		}
+		
 		
 		public WorkHourDrawing UpdateWorkHourDrawing(TicketAutUser ticket, WorkHourDrawing doc)
 		{

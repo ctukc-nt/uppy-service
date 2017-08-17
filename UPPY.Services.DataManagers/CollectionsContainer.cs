@@ -18,6 +18,11 @@ namespace UPPY.Services.DataManagers
         public BsonDocument CreateCollection(string name)
         {
             _mongoDb.CreateCollectionAsync(name).Wait();
+            lock (CachedDocsCollection)
+            {
+                CachedDocsCollection.CachedPointTime = 0;
+            }
+            
             return GetCollectionsByName(name).FirstOrDefault();
         }
 
@@ -68,9 +73,22 @@ namespace UPPY.Services.DataManagers
             return null;
         }
 
+        private static readonly CachedObject<List<BsonDocument>> CachedDocsCollection = new CachedObject<List<BsonDocument>>() {CachedPointTime = 0};
+
         private List<BsonDocument> GetCashedCollection()
         {
-            return _mongoDb.ListCollectionsAsync().Result.ToListAsync().Result;
+            lock (CachedDocsCollection)
+            {
+                if (Environment.TickCount - CachedDocsCollection.CachedPointTime > 60 * 10 * 1000)
+                {
+                    CachedDocsCollection.CachedPointTime = Environment.TickCount;
+                    return CachedDocsCollection.Object = _mongoDb.ListCollectionsAsync().Result.ToListAsync().Result;
+                }
+                else
+                {
+                    return CachedDocsCollection.Object;
+                }
+            }
         }
 
         private List<BsonDocument> GetBsonDocumentsByType(Type t)
