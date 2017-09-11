@@ -1,34 +1,30 @@
-using System;
-using System.Web;
-using Microsoft.Web.Infrastructure.DynamicModuleHelper;
-using Mongo.Common;
-using MongoDB.Driver;
-using Ninject;
-using Ninject.Web.Common;
-using UPPY.DataBase.Mongo;
-using UPPY.Services.Core;
-using UPPY.Services.DataManagers;
-using UPPY.Services.DataManagerService;
+[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(UPPY.Services.DataManagerService.App_Start.NinjectWebCommon), "Start")]
+[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(UPPY.Services.DataManagerService.App_Start.NinjectWebCommon), "Stop")]
 
-[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(NinjectWebCommon), "Start")]
-[assembly: WebActivatorEx.ApplicationShutdownMethod(typeof(NinjectWebCommon), "Stop")]
-
-namespace UPPY.Services.DataManagerService
+namespace UPPY.Services.DataManagerService.App_Start
 {
-    public static class NinjectWebCommon
+    using System;
+    using System.Web;
+
+    using Microsoft.Web.Infrastructure.DynamicModuleHelper;
+
+    using Ninject;
+    using Ninject.Web.Common;
+
+    public static class NinjectWebCommon 
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
 
         /// <summary>
         /// Starts the application
         /// </summary>
-        public static void Start()
+        public static void Start() 
         {
             DynamicModuleUtility.RegisterModule(typeof(OnePerRequestHttpModule));
             DynamicModuleUtility.RegisterModule(typeof(NinjectHttpModule));
             bootstrapper.Initialize(CreateKernel);
         }
-
+        
         /// <summary>
         /// Stops the application.
         /// </summary>
@@ -36,7 +32,7 @@ namespace UPPY.Services.DataManagerService
         {
             bootstrapper.ShutDown();
         }
-
+        
         /// <summary>
         /// Creates the kernel that will manage your application.
         /// </summary>
@@ -65,19 +61,6 @@ namespace UPPY.Services.DataManagerService
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            kernel.Bind(typeof(IUppyDataService)).To<UppyDataManagerService>();
-
-            kernel.Bind(typeof(ConnectionFactory)).To(typeof(ConnectionFactory));
-            kernel.Bind(typeof(MongoDbConnection)).ToMethod(x => x.Kernel.Get<ConnectionFactory>().GetConnection());
-            kernel.Bind(typeof(IMongoDatabase)).ToMethod(x => x.Kernel.Get<ConnectionFactory>().GetConnection().Database);
-
-
-            kernel.Bind(typeof(CollectionsContainer)).To<CollectionsContainer>();
-            kernel.Bind(typeof(IGetterHistoryRecords)).ToMethod(x =>  x.Kernel.Get<ConnectionFactory>().GetConnection().Database);
-            kernel.Bind(typeof(EntityCommonDataManagers)).ToMethod(x => new EntityCommonDataManagers() { CollectionsContainer = x.Kernel.Get<CollectionsContainer>() });
-            kernel.Bind(typeof(HistoryEntityManager)).ToMethod(x => new HistoryEntityManager() { Auditor = x.Kernel.Get<IGetterHistoryRecords>() });
-
-
-        }
+        }        
     }
 }

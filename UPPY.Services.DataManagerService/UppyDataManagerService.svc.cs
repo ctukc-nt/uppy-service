@@ -157,7 +157,7 @@ namespace UPPY.Services.DataManagerService
             _logger.Trace("Trace method Insert for document: {0}. User: {1}", typeof(WorkHourDrawing).Name, ticket);
              var filterDrawing = Builders<WorkHourDrawing>.Filter.Eq("DrawingId", doc.DrawingId);
             var filtetTechOper = Builders<WorkHourDrawing>.Filter.Eq("TechOperationId", doc.TechOperationId);
-            var orFilter = Builders<WorkHourDrawing>.Filter.Or(filterDrawing, filtetTechOper);
+            var orFilter = Builders<WorkHourDrawing>.Filter.And(filterDrawing, filtetTechOper);
             var coll = _dataManagers.GetListCollection(orFilter);
             if (coll.Count > 0)
             {
@@ -187,6 +187,40 @@ namespace UPPY.Services.DataManagerService
 
             _dataManagers.Insert(doc, ticket);
             return doc;
+        }
+
+
+        public List<GangTaskToDistrict> GetListGangTaskToDistrictByTaskId(int taskId)
+        {
+            _logger.Trace("Trace method GetListGangTaskToDistrictByTaskId for document: {0}. TaskId: {1}", typeof(GangTaskToDistrict).Name, taskId);
+            var filter = Builders<GangTaskToDistrict>.Filter.Eq("TaskToDistrictId", taskId);
+            //var filterNullOrder = Builders<GangTaskToDistrict>.Filter.Eq("OrderId", (int?)null);
+            //var orFilter = Builders<GangTaskToDistrict>.Filter.Or(filter, filterNullOrder);
+            return _dataManagers.GetListCollection(filter);
+        }
+
+        public List<GangTaskToDistrict> GetListGangTaskToDistrictByOrderId(int orderId)
+        {
+            _logger.Trace("Trace method GetListGangTaskToDistrictByOrderId for document: {0}. OrderId: {1}", typeof(GangTaskToDistrict).Name, orderId);
+            var filter = Builders<GangTaskToDistrict>.Filter.Eq("OrderId", orderId);
+            var filterNullOrder = Builders<GangTaskToDistrict>.Filter.Eq("OrderId", (int?)null);
+            var orFilter = Builders<GangTaskToDistrict>.Filter.Or(filter, filterNullOrder);
+            return _dataManagers.GetListCollection(orFilter);
+        }
+
+        public WorkHourDrawing GetWorkHourDrawingDocument(int techOperationId, int drawingId)
+        {
+            _logger.Trace("Trace method Insert for document: {0}. ", typeof(WorkHourDrawing).Name);
+            var filterDrawing = Builders<WorkHourDrawing>.Filter.Eq("DrawingId", drawingId);
+            var filtetTechOper = Builders<WorkHourDrawing>.Filter.Eq("TechOperationId", techOperationId);
+            var orFilter = Builders<WorkHourDrawing>.Filter.And(filterDrawing, filtetTechOper);
+            var coll = _dataManagers.GetListCollection(orFilter);
+            if (coll.Count > 0)
+            {
+                return coll.FirstOrDefault();
+            }
+
+            return null;
         }
     }
 }
