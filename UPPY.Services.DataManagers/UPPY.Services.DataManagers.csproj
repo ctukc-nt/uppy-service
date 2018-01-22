@@ -64,6 +64,10 @@
       <Project>{371A01EB-92FF-4FEF-871D-DA6E19A8FDD8}</Project>
       <Name>Mongo.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\core2\Utils.Common\Utils.Common.csproj">
+      <Project>{49232DD5-96D7-45CD-A063-09FA9C148849}</Project>
+      <Name>Utils.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

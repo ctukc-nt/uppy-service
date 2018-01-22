@@ -16,6 +16,6 @@ namespace UPPY.Services.DataManagers
         /// <summary>
         /// Точка кэширования
         /// </summary>
-        public int CachedPointTime { get; set; }
+        public DateTime CachedPointTime { get; set; }
     }
 }

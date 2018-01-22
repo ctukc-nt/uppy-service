@@ -4,6 +4,7 @@ using Core.Domain.Model;
 using Core.Interfaces;
 using Core.Security;
 using Core.Versions;
+using MongoDB.Bson;
 using MongoDB.Driver;
 using NLog;
 using UPPY.Services.DataManagers;
@@ -73,6 +74,22 @@ namespace UPPY.Services.DataManagerService
                 var list = GetContainsIdListDrawing(sourceDrawingId);
                 CopyChildrens(sourceDrawingId, copyDrawing, list, ticket);
             }
+        }
+
+        public List<PackingList> GetPackingListsByOrderId(int orderId)
+        {
+            _logger.Trace("Trace method GetPackingListsByOrderId for document: {0}. Id: {1}", typeof(Drawing).Name, orderId);
+            var filter = Builders<PackingList>.Filter.Eq("OrderId", orderId);
+            var filterNullOrder = Builders<PackingList>.Filter.Eq("OrderId", (int?)null);
+            var orFilter = Builders<PackingList>.Filter.Or(filter, filterNullOrder);
+            return _dataManagers.GetListCollection<PackingList>(orFilter);
+        }
+
+        public List<WorkHourStandartDrawing> GetWorkHoursStandartsByStandartDrawingId(int standartDrawingId)
+        {
+            _logger.Trace("Trace method GetWorkHoursStandartsByStandartDrawingId for document: {0}. Id: {1}", typeof(WorkHourStandartDrawing).Name, standartDrawingId);
+            var filter = Builders<WorkHourStandartDrawing>.Filter.Eq("StandartDrawingId", standartDrawingId);
+            return _dataManagers.GetListCollection<WorkHourStandartDrawing>(filter);
         }
 
         private void CopyChildrens(int parentIdOld, Drawing parent, List<Drawing> list, ITicketAutUser ticket)
@@ -155,24 +172,12 @@ namespace UPPY.Services.DataManagerService
         public WorkHourDrawing InsertWorkHourDrawing(TicketAutUser ticket, WorkHourDrawing doc)
         {
             _logger.Trace("Trace method Insert for document: {0}. User: {1}", typeof(WorkHourDrawing).Name, ticket);
-             var filterDrawing = Builders<WorkHourDrawing>.Filter.Eq("DrawingId", doc.DrawingId);
-            var filtetTechOper = Builders<WorkHourDrawing>.Filter.Eq("TechOperationId", doc.TechOperationId);
-            var orFilter = Builders<WorkHourDrawing>.Filter.And(filterDrawing, filtetTechOper);
-            var coll = _dataManagers.GetListCollection(orFilter);
-            if (coll.Count > 0)
-            {
-                var oldDoc = coll.FirstOrDefault();
-                oldDoc.Type = doc.Type;
-                oldDoc.WorkHour = doc.WorkHour;
-                _dataManagers.Update(oldDoc, ticket);
-                return oldDoc;
-            }
-            else
-            {
-                _dataManagers.Insert(doc, ticket);
-                return doc;
-            }
-            
+            var filterDrawing = Builders<BsonDocument>.Filter.Eq("DrawingId", doc.DrawingId);
+            var filtetTechOper = Builders<BsonDocument>.Filter.Eq("TechOperationId", doc.TechOperationId);
+            var filter = Builders<BsonDocument>.Filter.And(filterDrawing, filtetTechOper);
+            _dataManagers.Delete(doc.GetType(), filter);
+            _dataManagers.Insert(doc, ticket);
+            return doc;
         }
 
         public TechRoute InsertTechRoute(TicketAutUser ticket, TechRoute doc)
@@ -221,6 +226,39 @@ namespace UPPY.Services.DataManagerService
             }
 
             return null;
+        }
+
+        public List<SuperStandart> GetLazyListSuperStandart(TicketAutUser ticket)
+        {
+            _logger.Trace("Trace method GetLazyList for document: {0}", typeof(SuperStandart).Name);
+            var res = _dataManagers.GetListCollection<SuperStandart>();
+            foreach (var superStandart in res)
+            {
+                foreach (var superStandartListStandart in superStandart.ListStandarts)
+                {
+                    superStandartListStandart.Positions = new List<PositionStandart>();
+                }
+            }
+
+            return res.OrderBy(x => x.Id).ToList();
+        }
+
+        public List<Standart> GetLazyListStandart(TicketAutUser ticket)
+        {
+            _logger.Trace("Trace method GetLazyList for document: {0}", typeof(Standart).Name);
+            var res = _dataManagers.GetListCollection<Standart>();
+            foreach (var standart in res)
+            {
+                standart.Positions = new List<PositionStandart>();
+            }
+
+            return res.OrderBy(x => x.Id).ToList();
+        }
+
+        public List<StandartDrawing> GetDocumentsStandartDrawing(List<int> ids)
+        {
+            _logger.Trace("Trace method GetDocuments for document: {0}", typeof(StandartDrawing).Name);
+            return _dataManagers.GetDocuments<StandartDrawing>(ids);
         }
     }
 }

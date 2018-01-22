@@ -30,7 +30,7 @@ namespace UPPY.ServerService
                 _logger.Debug("Drop flag");
             }
 
-        }, _listInited, (uint)120000, 10 * 60000);
+        }, _listInited, (uint)1000 * 60 * 60, 1000 * 60 * 60);
 
         public UppyService(IUppyDataManagersFactory dataManagersFactory)
         {
@@ -46,111 +46,16 @@ namespace UPPY.ServerService
 
         public List<FileDrawingsOrders> GetAllFileDrawingsOrders()
         {
-            if (!_listInited && !_taskInProgress)
-            {
-                CreateAllFileDrawingsOrdersBw();
-                return _list;
-            }
+            _logger.Trace("Method: {0}, List inited: {1}. Task in progress: {2}", "GetAllFileDrawingsOrders", _listInited, _taskInProgress);
 
             while (!_listInited)
             {
                 Thread.Sleep(100);
             }
 
+            _logger.Trace("End wait method: {0}, List inited: {1}. Task in progress: {2}", "GetAllFileDrawingsOrders", _listInited, _taskInProgress);
+
             return _list;
-        }
-
-        private void CreateAllFileDrawingsOrders()
-        {
-            if (_taskInProgress)
-                return;
-
-            _taskInProgress = true;
-            _raiseRefreshList = false;
-
-            try
-            {
-                _logger.Trace("Raise method: {0}", "GetAllFileDrawingsOrders");
-
-                var orders = _dataManagersFactory.GetDataManager<Order>();
-                var listOrders = orders.GetListCollection();
-
-                var listTasks = new List<Task<List<FileDrawingsOrders>>>();
-
-                foreach (var order in listOrders)
-                {
-
-                    var taskGetFiles = new Task<List<FileDrawingsOrders>>(() =>
-                    {
-                        _logger.Trace("Method: {0}, Begin Order: {1}", "GetAllFileDrawingsOrders", order.OrderNo);
-                        var copyOrder = order;
-                        var drawingsDataManager =
-                            _dataManagersFactory.GetFilteredByTopParentDrawingClassDataManager(copyOrder.DrawingId);
-                        var draws = drawingsDataManager.GetListCollection();
-
-                        var res = (from drawing in draws
-                                   from uppyFileInfo in drawing.Files
-                                   select
-                                       new FileDrawingsOrders
-                                       {
-                                           FileInfo = uppyFileInfo,
-                                           Drawings = new List<Drawing> { drawing },
-                                           Orders = new List<Order> { copyOrder }
-                                       }).ToList();
-                        _logger.Trace("Method: {0}, End Order: {1}", "GetAllFileDrawingsOrders", order.OrderNo);
-                        return res;
-                    });
-
-                    taskGetFiles.Start();
-                    listTasks.Add(taskGetFiles);
-                }
-
-                _logger.Trace("Method: {0}, Wait tasks.", "GetAllFileDrawingsOrders");
-
-                Task.WhenAll(listTasks.Cast<Task>().ToArray());
-
-                var resFiles = new List<FileDrawingsOrders>();
-                foreach (var task in listTasks)
-                {
-                    resFiles.AddRange(task.Result);
-                }
-
-                _logger.Trace("Method: {0}, Group files.", "GetAllFileDrawingsOrders");
-
-                var list =
-                    resFiles.GroupBy(x => x.FileInfo, result => result, new UppyFileInfoComparer())
-                        .Select(g => new FileDrawingsOrders
-                        {
-                            FileInfo = g.Key,
-                            Drawings = g.Aggregate(
-                                (res1, res2) =>
-                                {
-                                    res1.Drawings.AddRange(res2.Drawings);
-                                    return res1;
-                                }).Drawings.Distinct(new DrawingByIdComparer()).ToList(),
-                            Orders = g.Aggregate((res1, res2) =>
-                            {
-                                res1.Orders.AddRange(res2.Orders);
-                                return res1;
-                            }).Orders.Distinct(new OrderEqualityComparer()).ToList()
-                        });
-
-                _logger.Info("End method: {0}", "GetAllFileDrawingsOrders");
-
-                _list = list.ToList();
-                _listInited = true;
-                _taskInProgress = false;
-
-            }
-            catch (Exception e)
-            {
-                _logger.Error(e);
-            }
-            finally
-            {
-                _listInited = true;
-                _taskInProgress = false;
-            }
         }
 
         private void CreateAllFileDrawingsOrdersBw()
@@ -161,16 +66,18 @@ namespace UPPY.ServerService
             _taskInProgress = true;
             _raiseRefreshList = false;
 
+            _taskPoolCount = 0;
+
             try
             {
                 _logger.Trace("Raise method: {0}", "GetAllFileDrawingsOrders");
                 _tempRes = new List<List<FileDrawingsOrders>>();
                 var orders = _dataManagersFactory.GetDataManager<Order>();
-                var listOrders = orders.GetListCollection();
+                var listOrders = orders.GetListCollection().ToList();
 
                 for (int i = 0; i < listOrders.Count; i++)
                 {
-                    _logger.Trace("Processed order: {0} from {1}.", i, listOrders.Count);
+                    _logger.Trace("Processed order: {0} from {1}.", i + 1, listOrders.Count);
                     AddTask(listOrders[i]);
                 }
 
@@ -178,10 +85,14 @@ namespace UPPY.ServerService
 
                 while (true)
                 {
-                    if (_taskPool.Count>0)
+                    if (_taskPool.Count > 0 && _taskPoolCount > 0)
+                    {
                         Thread.Sleep(5000);
+                        _logger.Trace("Method: {0}, Task pool count: {1}", "GetAllFileDrawingsOrders", _taskPoolCount);
+                    }
                     else
                     {
+
                         break;
                     }
                 }
@@ -214,11 +125,10 @@ namespace UPPY.ServerService
                             }).Orders.Distinct(new OrderEqualityComparer()).ToList()
                         });
 
-                _logger.Info("End method: {0}", "GetAllFileDrawingsOrders");
-
                 _list = list.ToList();
                 _listInited = true;
                 _taskInProgress = false;
+                _logger.Trace("End method: {0}, List inited: {1}. Task in progress: {2}", "GetAllFileDrawingsOrders", _listInited, _taskInProgress);
 
             }
             catch (Exception e)
@@ -257,6 +167,7 @@ namespace UPPY.ServerService
         }
 
         private List<BackgroundWorker> _taskPool = new List<BackgroundWorker>();
+        private byte _taskPoolCount = 0;
         private List<List<FileDrawingsOrders>> _tempRes = new List<List<FileDrawingsOrders>>();
         private byte _maxTaskCount = 50;
         private bool _taskPoolFree;
@@ -265,31 +176,32 @@ namespace UPPY.ServerService
         {
             while (true)
             {
-                if (_taskPool.Count <= _maxTaskCount)
+                if (_taskPoolCount <= _maxTaskCount)
                 {
+                    _taskPoolCount++;
                     var bw = new BackgroundWorker();
                     bw.RunWorkerCompleted += Bw_RunWorkerCompleted;
                     bw.DoWork += (sender, args) =>
                     {
                         var res = new List<FileDrawingsOrders>();
-                   
+
                         try
                         {
                             _logger.Trace("Method: {0}, Begin Order: {1}", "GetAllFileDrawingsOrders", order.OrderNo);
                             var copyOrder = order;
                             var drawingsDataManager =
-                                _dataManagersFactory.GetFilteredByTopParentDrawingClassDataManager(copyOrder.DrawingId);
+                                _dataManagersFactory.GetFilteredDrawingsByContainsId(copyOrder.DrawingId);
                             var draws = drawingsDataManager.GetListCollection();
 
                             res = (from drawing in draws
-                                from uppyFileInfo in drawing.Files
-                                select
-                                new FileDrawingsOrders
-                                {
-                                    FileInfo = uppyFileInfo,
-                                    Drawings = new List<Drawing> { drawing },
-                                    Orders = new List<Order> { copyOrder }
-                                }).ToList();
+                                   from uppyFileInfo in drawing.Files
+                                   select
+                                   new FileDrawingsOrders
+                                   {
+                                       FileInfo = uppyFileInfo,
+                                       Drawings = new List<Drawing> { drawing },
+                                       Orders = new List<Order> { copyOrder }
+                                   }).ToList();
                             _logger.Trace("Method: {0}, End Order: {1}", "GetAllFileDrawingsOrders", order.OrderNo);
                             args.Result = res;
                         }
@@ -299,6 +211,7 @@ namespace UPPY.ServerService
                             args.Result = new List<FileDrawingsOrders>();
                         }
                     };
+
 
                     _taskPool.Add(bw);
                     bw.RunWorkerAsync();
@@ -313,10 +226,12 @@ namespace UPPY.ServerService
 
         private void Bw_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            --_taskPoolCount;
             _tempRes.Add((List<FileDrawingsOrders>)e.Result);
-            _taskPool.Remove((BackgroundWorker) sender);
+            _taskPool.Remove((BackgroundWorker)sender);
             ((BackgroundWorker)sender).Dispose();
             _taskPoolFree = true;
+
         }
     }
 }

@@ -41,6 +41,7 @@ namespace UPPY.Services.DataManagerService
 			"WorkHourStandartDrawing",
             "WorkHourDrawing",
 			"InstrumentTechOperation",
+			"SuperStandart"
         };
 
 		var listHierarch = new List<string>
@@ -48,10 +49,16 @@ namespace UPPY.Services.DataManagerService
 			"Drawing",
 		};
 
+		var listLazyLoad = new List<string>
+		{
+			"SuperStandart",
+			"Standart",
+		};
+
 
     
 	    foreach(var className in list)
-	    {
+	    { 
 	    #>
 	    #region <#= className #>
 	    
@@ -59,6 +66,12 @@ namespace UPPY.Services.DataManagerService
 		{
 			_logger.Trace("Trace method GetList for document: {0}", typeof(<#= className #>).Name);
 		    return _dataManagers.GetListCollection<<#= className #>>().OrderBy(x => x.Id).ToList();
+		}
+
+		public List<<#= className #>> GetDocuments<#= className #>(List<int> ids)
+		{
+			_logger.Trace("Trace method GetDocuments for document: {0}", typeof(<#= className #>).Name);
+		    return _dataManagers.GetDocuments<<#= className #>>(ids).OrderBy(x => x.Id).ToList();
 		}
 		
         public List<HistoryRecord<<#= className #>>> GetHistoryDoc<#= className #>(<#= className #> doc)
@@ -153,7 +166,6 @@ namespace UPPY.Services.DataManagerService
 		public void Delete<#= className #>(TicketAutUser ticket, <#= className #> doc)
 		{
 			_logger.Trace("Trace method Delete for document: {0}. Id: {2}. User: {1}", typeof(<#= className #>).Name, ticket, doc.Id);
-		    logger.Trace("Trace method Delete for document: {0}. Id: {2}. User: {1}", typeof(Drawing).Name, ticket, doc.Id);
             var childs = GetAllChildrensCashed(doc.Id, _dataManagers.GetHierarchicalListCollection<<#= className #>>(doc.Id.Value).OrderByDescending(x => x.Id).ToList());
             foreach (var child in childs)
             {
@@ -164,6 +176,23 @@ namespace UPPY.Services.DataManagerService
 		}
 
 		#endregion
+		<#
+		}
+		#>
+
+		<#
+		foreach(var className in listLazyLoad)
+		{
+		#>
+			#region <#= className #>
+
+		    public List<<#= className #>> GetLazyList<#= className #>(TicketAutUser ticket)
+			{
+				_logger.Trace("Trace method GetLazyList for document: {0}", typeof(<#= className #>).Name);
+				return _dataManagers.GetListCollection<<#= className #>>().OrderBy(x => x.Id).ToList();
+			}
+			
+			#endregion
 		<#
 		}
 		#>
