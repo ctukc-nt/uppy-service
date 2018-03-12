@@ -49,6 +49,7 @@ namespace UPPY.Services.DataManagerService
         {
             _logger.Trace("Trace method GetListTaskToDistrictByOrderId for document: {0}. Id: {1}", typeof(Drawing).Name, orderId);
             var filter = Builders<TaskToDistrict>.Filter.Eq("OrderId", orderId);
+            //var filterArr = Builders<TaskToDistrict>.Filter.Where();
             var filterNullOrder = Builders<TaskToDistrict>.Filter.Eq("OrderId", (int?)null);
             var orFilter = Builders<TaskToDistrict>.Filter.Or(filter, filterNullOrder);
             return _dataManagers.GetListCollection<TaskToDistrict>(orFilter);
@@ -176,7 +177,34 @@ namespace UPPY.Services.DataManagerService
             var filtetTechOper = Builders<BsonDocument>.Filter.Eq("TechOperationId", doc.TechOperationId);
             var filter = Builders<BsonDocument>.Filter.And(filterDrawing, filtetTechOper);
             _dataManagers.Delete(doc.GetType(), filter);
-            _dataManagers.Insert(doc, ticket);
+            if (doc.WorkHour > 0)
+            {
+                _dataManagers.Insert(doc, ticket);
+            }
+            else
+            {
+                doc.Id = null;
+            }
+
+            return doc;
+        }
+
+        public WorkHourStandartDrawing InsertWorkHourStandartDrawing(TicketAutUser ticket, WorkHourStandartDrawing doc)
+        {
+            _logger.Trace("Trace method Insert for document: {0}. User: {1}", typeof(WorkHourStandartDrawing).Name, ticket);
+            var filterDrawing = Builders<BsonDocument>.Filter.Eq("StandartDrawingId", doc.StandartDrawingId);
+            var filtetTechOper = Builders<BsonDocument>.Filter.Eq("TechOperationId", doc.TechOperationId);
+            var filter = Builders<BsonDocument>.Filter.And(filterDrawing, filtetTechOper);
+            
+            _dataManagers.Delete(doc.GetType(), filter);
+            if (doc.WorkHour > 0)
+            {
+                _dataManagers.Insert(doc, ticket);
+            }
+            else
+            {
+                doc.Id = null;
+            }
             return doc;
         }
 

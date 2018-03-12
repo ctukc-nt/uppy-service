@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Core.Interfaces;
 using MongoDB.Bson;
 using MongoDB.Driver;
 
@@ -59,17 +60,22 @@ namespace UPPY.Services.DataManagers
         {
             var collections = GetBsonDocumentsByType(t);
 
+            if (t.GetInterfaces().All(x=>x != typeof(IHierarchyEntity)))
+            {
+                return collections.FirstOrDefault();
+            }
+
             lock (CachedIds)
             {
                 var cachedColl = CachedIds.FirstOrDefault(x => x.Value.Object.Any(y => y == id));
                 if (cachedColl.Value != null)
                 {
-                    var filtCollections = (from coll in collections
-                                           let elemName = coll.Elements.FirstOrDefault(y => y.Name == "name")
-                                           where elemName.Value.AsString == cachedColl.Key
-                                           select coll).ToList();
-
-                    return filtCollections[0];
+                    var collection = (from coll in collections
+                                      let elemName = coll.Elements.FirstOrDefault(y => y.Name == "name")
+                                      where elemName.Value.AsString == cachedColl.Key
+                                      select coll).ToList().FirstOrDefault();
+                    if (collection != null)
+                        return collection;
                 }
             }
 
