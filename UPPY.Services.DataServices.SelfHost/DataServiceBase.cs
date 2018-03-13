@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 using System.ServiceProcess;
-using Core.Domain.Interdaces;
+using Core.Domain.Interfaces.SpecialsDataManagers;
 using Core.Interfaces;
 using Core.Security;
 using Mongo.Common;

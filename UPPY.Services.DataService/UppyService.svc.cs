@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Core.Domain.Comparers;
-using Core.Domain.Interdaces;
+using Core.Domain.Interfaces.SpecialsDataManagers;
 using Core.Domain.Model;
 using NLog;
 using UPPY.Services.Core;

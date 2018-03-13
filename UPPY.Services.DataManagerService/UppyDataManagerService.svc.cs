@@ -45,11 +45,11 @@ namespace UPPY.Services.DataManagerService
             return cashed.Where(x => x.ParentId == parentId).ToList();
         }
 
-        public List<TaskToDistrict> GetListTaskToDistrictByOrderId(int orderId)
+        public List<TaskToDistrict> GetListTaskToDistrictByOrderId(List<int> orderId)
         {
             _logger.Trace("Trace method GetListTaskToDistrictByOrderId for document: {0}. Id: {1}", typeof(Drawing).Name, orderId);
             var filter = Builders<TaskToDistrict>.Filter.Eq("OrderId", orderId);
-            var filterArr = Builders<TaskToDistrict>.Filter.Where(y => y.Orders.Any(x => x.Id == orderId));
+            var filterArr = Builders<TaskToDistrict>.Filter.Where(y => y.Orders.Any(x => orderId.Contains(x.Id.Value)) || orderId.Contains(y.OrderId.Value));
             var filterNullOrder = Builders<TaskToDistrict>.Filter.Eq("OrderId", (int?)null);
             var orFilter = Builders<TaskToDistrict>.Filter.Or(filter, filterNullOrder, filterArr);
             return _dataManagers.GetListCollection(orFilter);
@@ -223,19 +223,19 @@ namespace UPPY.Services.DataManagerService
         }
 
 
-        public List<GangTaskToDistrict> GetListGangTaskToDistrictByTaskId(int taskId)
+        public List<GangTaskToDistrict> GetListGangTaskToDistrictByTaskId(List<int> taskId)
         {
             _logger.Trace("Trace method GetListGangTaskToDistrictByTaskId for document: {0}. TaskId: {1}", typeof(GangTaskToDistrict).Name, taskId);
-            var filter = Builders<GangTaskToDistrict>.Filter.Eq("TaskToDistrictId", taskId);
+            var filter = Builders<GangTaskToDistrict>.Filter.Where(x => taskId.Contains(x.TaskToDistrictId.Value));
             //var filterNullOrder = Builders<GangTaskToDistrict>.Filter.Eq("OrderId", (int?)null);
             //var orFilter = Builders<GangTaskToDistrict>.Filter.Or(filter, filterNullOrder);
             return _dataManagers.GetListCollection(filter);
         }
 
-        public List<GangTaskToDistrict> GetListGangTaskToDistrictByOrderId(int orderId)
+        public List<GangTaskToDistrict> GetListGangTaskToDistrictByOrderId(List<int> ordersId)
         {
-            _logger.Trace("Trace method GetListGangTaskToDistrictByOrderId for document: {0}. OrderId: {1}", typeof(GangTaskToDistrict).Name, orderId);
-            var filter = Builders<GangTaskToDistrict>.Filter.Eq("OrderId", orderId);
+            _logger.Trace("Trace method GetListGangTaskToDistrictByOrderId for document: {0}. OrderId: {1}", typeof(GangTaskToDistrict).Name, ordersId);
+            var filter = Builders<GangTaskToDistrict>.Filter.Where(x => ordersId.Contains(x.OrderId.Value));
             var filterNullOrder = Builders<GangTaskToDistrict>.Filter.Eq("OrderId", (int?)null);
             var orFilter = Builders<GangTaskToDistrict>.Filter.Or(filter, filterNullOrder);
             return _dataManagers.GetListCollection(orFilter);
