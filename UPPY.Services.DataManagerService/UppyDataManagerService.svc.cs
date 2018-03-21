@@ -6,6 +6,7 @@ using Core.Security;
 using Core.Versions;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using Ninject.Infrastructure.Language;
 using NLog;
 using UPPY.Services.DataManagers;
 
@@ -226,17 +227,17 @@ namespace UPPY.Services.DataManagerService
         public List<GangTaskToDistrict> GetListGangTaskToDistrictByTaskId(List<int> taskId)
         {
             _logger.Trace("Trace method GetListGangTaskToDistrictByTaskId for document: {0}. TaskId: {1}", typeof(GangTaskToDistrict).Name, taskId);
-            var filter = Builders<GangTaskToDistrict>.Filter.Where(x => taskId.Contains(x.TaskToDistrictId.Value));
-            //var filterNullOrder = Builders<GangTaskToDistrict>.Filter.Eq("OrderId", (int?)null);
-            //var orFilter = Builders<GangTaskToDistrict>.Filter.Or(filter, filterNullOrder);
-            return _dataManagers.GetListCollection(filter);
+            var filter = Builders<GangTaskToDistrict>.Filter.Where(y => y.TaskToDistricts.Any(x => taskId.Contains(x.Id.Value)));
+            var filterNullOrder = Builders<GangTaskToDistrict>.Filter.Where(x => x.Orders.Count == 0);
+            var orFilter = Builders<GangTaskToDistrict>.Filter.Or(filter, filterNullOrder);
+            return _dataManagers.GetListCollection(orFilter);
         }
 
         public List<GangTaskToDistrict> GetListGangTaskToDistrictByOrderId(List<int> ordersId)
         {
             _logger.Trace("Trace method GetListGangTaskToDistrictByOrderId for document: {0}. OrderId: {1}", typeof(GangTaskToDistrict).Name, ordersId);
-            var filter = Builders<GangTaskToDistrict>.Filter.Where(x => ordersId.Contains(x.OrderId.Value));
-            var filterNullOrder = Builders<GangTaskToDistrict>.Filter.Eq("OrderId", (int?)null);
+            var filter = Builders<GangTaskToDistrict>.Filter.Where(y => y.Orders.Any(x => ordersId.Contains(x.Id.Value)));
+            var filterNullOrder = Builders<GangTaskToDistrict>.Filter.Where(x=>x.Orders.Count == 0);
             var orFilter = Builders<GangTaskToDistrict>.Filter.Or(filter, filterNullOrder);
             return _dataManagers.GetListCollection(orFilter);
         }
