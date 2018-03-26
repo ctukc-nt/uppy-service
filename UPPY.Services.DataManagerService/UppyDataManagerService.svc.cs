@@ -56,12 +56,12 @@ namespace UPPY.Services.DataManagerService
             return _dataManagers.GetListCollection(orFilter);
         }
 
-        public List<BillInnerShift> GetListBillInnerShiftByOrderId(int orderId)
+        public List<BillInnerShift> GetListBillInnerShiftByOrderId(List<int> orderId)
         {
             _logger.Trace("Trace method BillInnerShift for document: {0}. Id: {1}", typeof(Drawing).Name, orderId);
-            var filter = Builders<BillInnerShift>.Filter.Eq("OrderId", orderId);
+            var filterArr = Builders<BillInnerShift>.Filter.Where(y => y.Orders.Any(x => orderId.Contains(x.Id.Value)) || orderId.Contains(y.OrderId.Value));
             var filterNullOrder = Builders<BillInnerShift>.Filter.Eq("OrderId", (int?)null);
-            var orFilter = Builders<BillInnerShift>.Filter.Or(filter, filterNullOrder);
+            var orFilter = Builders<BillInnerShift>.Filter.Or(filterArr, filterNullOrder);
             return _dataManagers.GetListCollection<BillInnerShift>(orFilter);
         }
 
@@ -237,7 +237,7 @@ namespace UPPY.Services.DataManagerService
         {
             _logger.Trace("Trace method GetListGangTaskToDistrictByOrderId for document: {0}. OrderId: {1}", typeof(GangTaskToDistrict).Name, ordersId);
             var filter = Builders<GangTaskToDistrict>.Filter.Where(y => y.Orders.Any(x => ordersId.Contains(x.Id.Value)));
-            var filterNullOrder = Builders<GangTaskToDistrict>.Filter.Where(x=>x.Orders.Count == 0);
+            var filterNullOrder = Builders<GangTaskToDistrict>.Filter.Where(x => x.Orders.Count == 0);
             var orFilter = Builders<GangTaskToDistrict>.Filter.Or(filter, filterNullOrder);
             return _dataManagers.GetListCollection(orFilter);
         }
