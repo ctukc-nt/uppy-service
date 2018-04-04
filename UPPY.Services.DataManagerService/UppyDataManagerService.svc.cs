@@ -65,6 +65,16 @@ namespace UPPY.Services.DataManagerService
             return _dataManagers.GetListCollection<BillInnerShift>(orFilter);
         }
 
+        public List<BillShift> GetListBillShiftsByOrderId(List<int> orderId)
+        {
+            _logger.Trace("Trace method GetListBillShiftsByOrderId for document: {0}. Id: {1}", typeof(BillShift).Name, orderId);
+            var filterArr = Builders<BillShift>.Filter.Where(y => y.Orders.Any(x => orderId.Contains(x.Id.Value)) || orderId.Contains(y.OrderId.Value));
+            var filterNullOrder = Builders<BillShift>.Filter.Eq("OrderId", (int?)null);
+            var orFilter = Builders<BillShift>.Filter.Or(filterArr, filterNullOrder);
+            return _dataManagers.GetListCollection<BillShift>(orFilter);
+        }
+
+
         public void CopyDrawingToAnother(TicketAutUser ticket, int sourceDrawingId, int parentId)
         {
             _logger.Trace("Trace method CopyDrawingToAnother for document: {0}. Source id: {2}. Dest id: {3} User: {1}", typeof(Drawing).Name, ticket, sourceDrawingId, parentId);

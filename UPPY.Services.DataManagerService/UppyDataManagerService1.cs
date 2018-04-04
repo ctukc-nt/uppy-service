@@ -915,7 +915,9 @@ namespace UPPY.Services.DataManagerService
             _dataManagers.Delete(doc, ticket);
 		}
 
-		#endregion
+       
+
+        #endregion
 		
 	}
 }
