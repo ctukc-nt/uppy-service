@@ -6,7 +6,6 @@ using Core.Security;
 using Core.Versions;
 using MongoDB.Bson;
 using MongoDB.Driver;
-using Ninject.Infrastructure.Language;
 using NLog;
 using UPPY.Services.DataManagers;
 
@@ -49,10 +48,10 @@ namespace UPPY.Services.DataManagerService
         public List<TaskToDistrict> GetListTaskToDistrictByOrderId(List<int> orderId)
         {
             _logger.Trace("Trace method GetListTaskToDistrictByOrderId for document: {0}. Id: {1}", typeof(Drawing).Name, orderId);
-            var filter = Builders<TaskToDistrict>.Filter.Eq("OrderId", orderId);
+            //var filter = Builders<TaskToDistrict>.Filter.Eq("OrderId", orderId);
             var filterArr = Builders<TaskToDistrict>.Filter.Where(y => y.Orders.Any(x => orderId.Contains(x.Id.Value)) || orderId.Contains(y.OrderId.Value));
-            var filterNullOrder = Builders<TaskToDistrict>.Filter.Eq("OrderId", (int?)null);
-            var orFilter = Builders<TaskToDistrict>.Filter.Or(filter, filterNullOrder, filterArr);
+            //var filterNullOrder = Builders<TaskToDistrict>.Filter.Eq("OrderId", (int?)null);
+            var orFilter = Builders<TaskToDistrict>.Filter.Or(filterArr);
             return _dataManagers.GetListCollection(orFilter);
         }
 
@@ -60,18 +59,18 @@ namespace UPPY.Services.DataManagerService
         {
             _logger.Trace("Trace method BillInnerShift for document: {0}. Id: {1}", typeof(Drawing).Name, orderId);
             var filterArr = Builders<BillInnerShift>.Filter.Where(y => y.Orders.Any(x => orderId.Contains(x.Id.Value)) || orderId.Contains(y.OrderId.Value));
-            var filterNullOrder = Builders<BillInnerShift>.Filter.Eq("OrderId", (int?)null);
-            var orFilter = Builders<BillInnerShift>.Filter.Or(filterArr, filterNullOrder);
-            return _dataManagers.GetListCollection<BillInnerShift>(orFilter);
+            //var filterNullOrder = Builders<BillInnerShift>.Filter.Eq("OrderId", (int?)null);
+            var orFilter = Builders<BillInnerShift>.Filter.Or(filterArr);
+            return _dataManagers.GetListCollection(orFilter);
         }
 
         public List<BillShift> GetListBillShiftsByOrderId(List<int> orderId)
         {
             _logger.Trace("Trace method GetListBillShiftsByOrderId for document: {0}. Id: {1}", typeof(BillShift).Name, orderId);
             var filterArr = Builders<BillShift>.Filter.Where(y => y.Orders.Any(x => orderId.Contains(x.Id.Value)) || orderId.Contains(y.OrderId.Value));
-            var filterNullOrder = Builders<BillShift>.Filter.Eq("OrderId", (int?)null);
-            var orFilter = Builders<BillShift>.Filter.Or(filterArr, filterNullOrder);
-            return _dataManagers.GetListCollection<BillShift>(orFilter);
+            //var filterNullOrder = Builders<BillShift>.Filter.Eq("OrderId", (int?)null);
+            var orFilter = Builders<BillShift>.Filter.Or(filterArr);
+            return _dataManagers.GetListCollection(orFilter);
         }
 
 
@@ -94,14 +93,14 @@ namespace UPPY.Services.DataManagerService
             var filter = Builders<PackingList>.Filter.Eq("OrderId", orderId);
             var filterNullOrder = Builders<PackingList>.Filter.Eq("OrderId", (int?)null);
             var orFilter = Builders<PackingList>.Filter.Or(filter, filterNullOrder);
-            return _dataManagers.GetListCollection<PackingList>(orFilter);
+            return _dataManagers.GetListCollection(orFilter);
         }
 
         public List<WorkHourStandartDrawing> GetWorkHoursStandartsByStandartDrawingId(int standartDrawingId)
         {
             _logger.Trace("Trace method GetWorkHoursStandartsByStandartDrawingId for document: {0}. Id: {1}", typeof(WorkHourStandartDrawing).Name, standartDrawingId);
             var filter = Builders<WorkHourStandartDrawing>.Filter.Eq("StandartDrawingId", standartDrawingId);
-            return _dataManagers.GetListCollection<WorkHourStandartDrawing>(filter);
+            return _dataManagers.GetListCollection(filter);
         }
 
         private void CopyChildrens(int parentIdOld, Drawing parent, List<Drawing> list, ITicketAutUser ticket)
