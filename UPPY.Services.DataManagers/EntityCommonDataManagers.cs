@@ -272,7 +272,26 @@ namespace UPPY.Services.DataManagers
             return coll.FindAsync(filter).Result.ToListAsync().Result;
         }
 
-        
+        public void InsertBlockDocument(Object doc)
+        {
+            if (doc == null)
+                return;
+
+            var docColl = CollectionsContainer.GetBsonDocumentByType(doc.GetType()) ??
+                          CollectionsContainer.CreateCollection(CollectionsContainer.GetNameCollection(doc.GetType()));
+
+            if (docColl == null)
+                throw new KeyNotFoundException("Ошибка при создании коллекции");
+
+            var bson = doc.ToBsonDocument();
+            bson.RemoveAt(0);
+
+            var coll = CollectionsContainer.GetMongoCollection(docColl);
+
+            coll.InsertOneAsync(bson).Wait();
+        }
+
+
     }
 
     public enum OperationType

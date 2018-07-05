@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Core.Domain.Model;
 using Core.Interfaces;
@@ -7,6 +8,7 @@ using Core.Versions;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using NLog;
+using UPPY.Services.Core;
 using UPPY.Services.DataManagers;
 
 namespace UPPY.Services.DataManagerService
@@ -62,6 +64,11 @@ namespace UPPY.Services.DataManagerService
             //var filterNullOrder = Builders<BillInnerShift>.Filter.Eq("OrderId", (int?)null);
             var orFilter = Builders<BillInnerShift>.Filter.Or(filterArr);
             return _dataManagers.GetListCollection(orFilter);
+        }
+
+        public List<BillShift> GetListBillShiftsByOrderId(object ordersId)
+        {
+            throw new System.NotImplementedException();
         }
 
         public List<BillShift> GetListBillShiftsByOrderId(List<int> orderId)
@@ -249,6 +256,42 @@ namespace UPPY.Services.DataManagerService
             var filterNullOrder = Builders<GangTaskToDistrict>.Filter.Where(x => x.Orders.Count == 0);
             var orFilter = Builders<GangTaskToDistrict>.Filter.Or(filter, filterNullOrder);
             return _dataManagers.GetListCollection(orFilter);
+        }
+
+        public BlockedDocument GetBlocked(int id, string docType)
+        {
+            _logger.Trace("Trace method GetBlocked for document: {0}. Doc id: {1}", docType, id);
+            var filter = Builders<BlockedDocument>.Filter.Where(y => y.DocClass == docType && y.DocId == id);
+            return _dataManagers.GetListCollection(filter).FirstOrDefault();
+        }
+
+        public bool SetBlocked(TicketAutUser ticket, int id, string docType)
+        {
+            _logger.Trace("Trace method GetBlocked for document: {0}. Doc id: {1}", docType, id);
+            
+            if (GetBlocked(id, docType) == null)
+            {
+                _dataManagers.InsertBlockDocument(new BlockedDocument() {Date = DateTime.Now, DocClass = docType, DocId = id, Login = ticket.Login, Id = Environment.ProcessorCount});
+                return true;
+            }
+
+            return false;
+        }
+
+        public bool RemoveBlocked(TicketAutUser ticket, int id, string docType)
+        {
+            _logger.Trace("Trace method GetBlocked for document: {0}. Doc id: {1}", docType, id);
+            if (this.GetBlocked(id, docType) == null)
+            {
+                return false;
+            }
+
+            var filterDt = Builders<BsonDocument>.Filter.Eq("DocClass", docType);
+            var filterId = Builders<BsonDocument>.Filter.Eq("DocId", id);
+            var filterLogin = Builders<BsonDocument>.Filter.Eq("Login", ticket.Login);
+            var filter = Builders<BsonDocument>.Filter.And(filterId, filterDt, filterLogin);
+            _dataManagers.Delete(typeof(BlockedDocument), filter);
+            return true;
         }
 
         public WorkHourDrawing GetWorkHourDrawingDocument(int techOperationId, int drawingId)

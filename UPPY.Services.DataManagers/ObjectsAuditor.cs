@@ -60,7 +60,7 @@ namespace UPPY.Services.DataManagers
         public List<Audit> GetDocOperations<T>(T doc) where T : IEntity
         {
             var filterByType = Builders<Audit>.Filter.Eq("ObjectType", typeof(T).Name);
-            var bsonRegexId = new BsonRegularExpression("(\"_id\" : " + doc.Id + ")");
+            var bsonRegexId = new BsonRegularExpression("/(\"_id\" : " + doc.Id+",)/");
             var filterById = Builders<Audit>.Filter.Regex("JsonFormatObject", bsonRegexId);
 
             var filterByOperation = Builders<Audit>.Filter.Eq("Operation", OperationType.Insert.ToString());
