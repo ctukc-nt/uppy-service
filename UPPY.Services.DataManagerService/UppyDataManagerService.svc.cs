@@ -271,7 +271,7 @@ namespace UPPY.Services.DataManagerService
             
             if (GetBlocked(id, docType) == null)
             {
-                _dataManagers.InsertBlockDocument(new BlockedDocument() {Date = DateTime.Now, DocClass = docType, DocId = id, Login = ticket.Login, Id = Environment.ProcessorCount});
+                _dataManagers.InsertBlockDocument(new BlockedDocument() {Date = DateTime.Now, DocClass = docType, DocId = id, Login = ticket.Login, Id = Environment.TickCount});
                 return true;
             }
 
