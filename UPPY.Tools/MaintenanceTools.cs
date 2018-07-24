@@ -7,9 +7,13 @@ using System.Threading.Tasks;
 using Core.Domain.Model;
 using Core.Security;
 using Mongo.Common;
-using Mongo.Common.MongoAdditional.Service;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
 using UPPY.DataBase.Mongo.DataManager.Drawings;
+using UPPY.Services.DataManagers;
+using UPPY.Services.DataManagerService;
+
 
 namespace UPPY.Tools
 {
@@ -487,6 +491,37 @@ namespace UPPY.Tools
                     {
                         dataManager.Delete(source);
                     }
+                }
+            }
+        }
+
+        public void RestoreDrawings()
+        {
+            var conStr = ConfigurationManager.ConnectionStrings["mongoServer"].ToString();
+            var dbName = ConfigurationManager.ConnectionStrings["dbName"].ToString();
+            var date = new DateTime(2018, 7, 24, 0, 0, 0);
+            var auditor = new ObjectsAuditor((new MongoDbConnection(conStr, dbName)).Database);
+            EntityCommonDataManagers ent = new EntityCommonDataManagers();
+            ent.CollectionsContainer =
+                new CollectionsContainer((new MongoDbConnection(conStr, dbName)).Database);
+
+            RestoreDrawings(292502, date, auditor, ent);
+            
+        }
+
+        private void RestoreDrawings(int parent, DateTime date, ObjectsAuditor auditor, EntityCommonDataManagers ent)
+        {
+            var list = auditor.GetDeletedByParentId<Drawing>(parent);
+
+            foreach (var audit in list)
+            {
+                if (audit.DateOperation > date)
+                {
+                    var doc = (Drawing)BsonSerializer.Deserialize(BsonDocument.Parse(audit.JsonFormatObject),
+                        typeof(Drawing));
+
+                    ent.RestoreDocument(doc, null);
+                    RestoreDrawings(doc.Id.Value, date, auditor, ent);
                 }
             }
         }

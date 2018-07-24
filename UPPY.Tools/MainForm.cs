@@ -4,6 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Core.Domain.Model;
+using Mongo.Common;
+using UPPY.Services.DataManagers;
+using UPPY.Services.DataManagerService;
 
 namespace UPPY.Tools
 {
@@ -253,6 +256,12 @@ namespace UPPY.Tools
             clbValues.DataSource = task.Result;
 
             CloseProgressForm();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MaintenanceTools tools = new MaintenanceTools();
+            tools.RestoreDrawings();
         }
     }
 }

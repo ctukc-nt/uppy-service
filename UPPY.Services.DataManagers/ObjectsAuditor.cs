@@ -57,6 +57,17 @@ namespace UPPY.Services.DataManagers
             return ListOperations<T>(collName, commonFilter).Result;
         }
 
+        public List<Audit> GetDeletedByParentId<T>(int parentId) where T : IEntity
+        {
+            var filterByOperation = Builders<Audit>.Filter.Eq("Operation", "Delete");
+            var filterByType = Builders<Audit>.Filter.Eq("ObjectType", typeof(T).Name);
+            var bsonRegexId = new BsonRegularExpression("(\"ParentId\" : " + parentId + ")");
+            var filterById = Builders<Audit>.Filter.Regex("JsonFormatObject", bsonRegexId);
+            var collName = GetCollAuditName(OperationType.Delete);
+            var commonFilter = Builders<Audit>.Filter.And(filterByOperation, filterByType, filterById);
+            return ListOperations<T>(collName, commonFilter).Result;
+        }
+
         public List<Audit> GetDocOperations<T>(T doc) where T : IEntity
         {
             var filterByType = Builders<Audit>.Filter.Eq("ObjectType", typeof(T).Name);

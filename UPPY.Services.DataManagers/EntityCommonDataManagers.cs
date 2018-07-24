@@ -106,6 +106,31 @@ namespace UPPY.Services.DataManagers
             Auditor?.AuditOperation(OperationType.Insert, doc, user);
         }
 
+        public void RestoreDocument(IHierarchyEntity doc, ITicketAutUser user)
+        {
+            if (doc == null)
+                return;
+
+            BsonDocument docColl = null;
+
+            if (doc.ParentId.HasValue)
+            {
+                docColl = CollectionsContainer.GetBsonDocumentContainsId(doc.GetType(), doc.ParentId.Value);
+                if (docColl == null)
+                    throw new KeyNotFoundException();
+            }
+
+            var bson = doc.ToBsonDocument();
+            bson.RemoveAt(0);
+
+            var coll = CollectionsContainer.GetMongoCollection(docColl);
+            coll.InsertOneAsync(bson).Wait();
+
+            CollectionsContainer.InsertIdCollection(docColl, doc.Id.Value);
+
+            Auditor?.AuditOperation(OperationType.Insert, doc, user);
+        }
+
         public void Insert(IEntity doc, ITicketAutUser user)
         {
             if (doc == null)
