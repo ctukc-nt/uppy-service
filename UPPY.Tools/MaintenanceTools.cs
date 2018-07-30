@@ -499,13 +499,13 @@ namespace UPPY.Tools
         {
             var conStr = ConfigurationManager.ConnectionStrings["mongoServer"].ToString();
             var dbName = ConfigurationManager.ConnectionStrings["dbName"].ToString();
-            var date = new DateTime(2018, 7, 24, 0, 0, 0);
+            var date = new DateTime(2017, 7, 24, 0, 0, 0);
             var auditor = new ObjectsAuditor((new MongoDbConnection(conStr, dbName)).Database);
             EntityCommonDataManagers ent = new EntityCommonDataManagers();
             ent.CollectionsContainer =
                 new CollectionsContainer((new MongoDbConnection(conStr, dbName)).Database);
 
-            RestoreDrawings(292502, date, auditor, ent);
+            RestoreDrawings(282966, date, auditor, ent);
             
         }
 
